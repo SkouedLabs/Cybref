@@ -2219,6 +2219,17 @@ sources:
     output: registries/wireshark_manuf.txt
     min_lines: 10000
 
+  wireshark_ethertypes:
+    name: Wireshark EtherTypes
+    group: weekly
+    homepage: https://github.com/wireshark/wireshark
+    description: >-
+      EtherType table as Wireshark's own dissector knows it - short protocol names where the
+      IEEE registry only names the assignee, plus the values in real-world use that the
+      registry never recorded. Companion to `ieee_ethertypes`, not a replacement for it.
+    url: https://raw.githubusercontent.com/wireshark/wireshark/master/epan/dissectors/packet-ethertype.c
+    output: registries/wireshark_ethertypes.txt
+
   usb_ids:
     name: USB IDs
     group: weekly
@@ -2664,13 +2675,72 @@ sources:
     url: https://raw.githubusercontent.com/wireshark/wireshark/master/epan/dissectors/packet-iec104.c
     output: registries/iec60870_5_104_asdu_types.txt
 
+  # IEEE Registration Authority, straight from the registry (same CSV schema for all of them:
+  # Registry,Assignment,Organization Name,Organization Address). No user_agent override: the
+  # tool's own identifying User-Agent is served fine, and min_lines is what catches the case
+  # where the host answers an nginx 404 page with a .csv name.
+  ieee_oui:
+    name: IEEE MA-L (OUI)
+    group: weekly
+    homepage: https://standards.ieee.org/products-programs/regauth/
+    description: MAC address large-block assignments (MA-L) - the 24-bit OUI prefixes behind most vendor lookups.
+    url: https://standards-oui.ieee.org/oui/oui.csv
+    output: registries/ieee_oui.csv
+    min_lines: 20000
+
+  ieee_oui36:
+    name: IEEE MA-S (OUI-36)
+    group: weekly
+    homepage: https://standards.ieee.org/products-programs/regauth/
+    description: MAC address small-block assignments (MA-S, 36-bit prefixes).
+    url: https://standards-oui.ieee.org/oui36/oui36.csv
+    output: registries/ieee_oui36.csv
+    min_lines: 3000
+
+  ieee_mam_oui28:
+    name: IEEE MA-M (OUI-28)
+    group: weekly
+    homepage: https://standards.ieee.org/products-programs/regauth/
+    description: MAC address medium-block assignments (MA-M, 28-bit prefixes).
+    url: https://standards-oui.ieee.org/oui28/mam.csv
+    output: registries/ieee_mam_oui28.csv
+    min_lines: 3000
+
+  ieee_iab:
+    name: IEEE IAB
+    group: weekly
+    homepage: https://standards.ieee.org/products-programs/regauth/
+    description: Individual Address Blocks - legacy registry, closed to new assignments but still seen on the wire.
+    url: https://standards-oui.ieee.org/iab/iab.csv
+    output: registries/ieee_iab.csv
+    min_lines: 2000
+
+  ieee_cid:
+    name: IEEE CID
+    group: weekly
+    homepage: https://standards.ieee.org/products-programs/regauth/
+    description: Company IDs - identifiers for protocols that need no globally unique MAC.
+    url: https://standards-oui.ieee.org/cid/cid.csv
+    output: registries/ieee_cid.csv
+    min_lines: 100
+
+  ieee_manid:
+    name: IEEE MANID
+    group: weekly
+    homepage: https://standards.ieee.org/products-programs/regauth/
+    description: Manufacturer IDs, as used by IEEE 1588 / PTP and other time-sensitive networking standards.
+    url: https://standards-oui.ieee.org/manid/manid.csv
+    output: registries/ieee_manid.csv
+    min_lines: 80
+
   ieee_ethertypes:
     name: IEEE EtherTypes Registry
     group: weekly
-    homepage: https://github.com/wireshark/wireshark
-    description: "Official EtherType registry (layer-2 protocols: IPv4, ARP, VLAN 802.1Q, PROFINET, GOOSE...), from the Wireshark dissector source."
-    url: https://raw.githubusercontent.com/wireshark/wireshark/master/epan/dissectors/packet-ethertype.c
-    output: registries/ieee_ethertypes.txt
+    homepage: https://standards.ieee.org/products-programs/regauth/
+    description: "Official EtherType registry straight from the IEEE Registration Authority (layer-2 protocols: IPv4, ARP, VLAN 802.1Q, PROFINET, GOOSE...), with the assignee and its declared protocol."
+    url: https://standards-oui.ieee.org/ethertype/eth.csv
+    output: registries/ieee_ethertypes.csv
+    min_lines: 2000
 
   iso_3166_countries:
     name: ISO 3166 Country Codes & Regions

@@ -12,7 +12,8 @@
 #
 # FIELDS
 #   name, group (daily|weekly|mobile), homepage, description   required, used in docs
-#   url          one URL or a list of fallbacks; supports {today:%Y-%m} / {last_month:%Y-%m}
+#   url          one URL or a list of fallbacks, tried in order; supports the date placeholders
+#                {today:%Y-%m} / {last_month:%Y-%m} / {month_2:%Y-%m} / {month_3:%Y-%m}
 #   output       file path (or list / glob patterns for processors)
 #   extract      gunzip | unzip   (member: name or glob inside the zip)
 #   encoding     source charset, re-encoded to UTF-8 (e.g. utf-16)
@@ -613,6 +614,12 @@ sources:
     description: Full NVD CVE JSON 2.0 feeds per year + recent + modified (original gzip, re-downloaded only when NVD's sha256 changes).
     processor: nvd_cve_feeds
     output: vulnerabilities/nvd/nvdcve-2.0-*.json.gz
+    # The recent and modified feeds are rolling windows: their size halves whenever NVD works
+    # through a backlog, which trips the shrink guard on a perfectly good download. Every feed
+    # is checked against the sha256 NVD publishes in its .meta, a stronger guarantee than a
+    # size heuristic, so the heuristic is turned off here rather than tuned to a number that
+    # will trip again.
+    shrink_guard: 0
     options: {dir: vulnerabilities/nvd}
 
   nvd_cve_recent:
@@ -625,6 +632,9 @@ sources:
       NVD parser reads it as is.
     processor: nvd_cve_recent
     output: vulnerabilities/nvd_cve_recent.json.gz
+    # A rolling window shrinks legitimately over a quiet week or a holiday period; min_cves
+    # is the real floor, this only has to catch a truncated download.
+    shrink_guard: 0.3
     options: {days: 7, min_cves: 300}
 
   nvd_cpe:
@@ -2179,6 +2189,8 @@ sources:
     url:
       - https://www.afnic.fr/wp-media/ftp/documentsOpenData/{last_month:%Y%m}_OPENDATA_A-NomsDeDomaineEnPointFr.zip
       - https://www.afnic.fr/wp-media/ftp/documentsOpenData/{today:%Y%m}_OPENDATA_A-NomsDeDomaineEnPointFr.zip
+      - https://www.afnic.fr/wp-media/ftp/documentsOpenData/{month_2:%Y%m}_OPENDATA_A-NomsDeDomaineEnPointFr.zip
+      - https://www.afnic.fr/wp-media/ftp/documentsOpenData/{month_3:%Y%m}_OPENDATA_A-NomsDeDomaineEnPointFr.zip
     output: domains/afnic/*.csv.gz
     options: {dir: domains/afnic}
 
@@ -2190,6 +2202,8 @@ sources:
     url:
       - https://www.afnic.fr/wp-media/ftp/documentsOpenData/{last_month:%Y%m}_OPENDATA_I-BureauxDEnregistrementDuPointFr.zip
       - https://www.afnic.fr/wp-media/ftp/documentsOpenData/{today:%Y%m}_OPENDATA_I-BureauxDEnregistrementDuPointFr.zip
+      - https://www.afnic.fr/wp-media/ftp/documentsOpenData/{month_2:%Y%m}_OPENDATA_I-BureauxDEnregistrementDuPointFr.zip
+      - https://www.afnic.fr/wp-media/ftp/documentsOpenData/{month_3:%Y%m}_OPENDATA_I-BureauxDEnregistrementDuPointFr.zip
     output: domains/afnic_opendata_registrars.csv
     extract: unzip
     member: "*.csv"

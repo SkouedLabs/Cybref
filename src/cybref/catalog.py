@@ -78,10 +78,18 @@ class Source:
         return self.outputs[0].split("/", 1)[0]
 
     def resolved_urls(self, today: date | None = None) -> list[str]:
-        """Expand {today:%Y-%m} / {last_month:%Y-%m} placeholders."""
+        """Expand {today:%Y-%m} / {last_month:%Y-%m} / {month_2:%Y-%m} / {month_3:%Y-%m}.
+
+        month_2 and month_3 reach two and three months back, for publishers whose lag is
+        longer than a month or simply irregular: AFNIC's monthly open data is routinely
+        still two months behind, and a two-URL chain leaves the source failing until it lands.
+        """
         today = today or date.today()
-        last_month = today.replace(day=1) - timedelta(days=1)
-        return [u.format(today=today, last_month=last_month) for u in self.urls]
+        months = [today]
+        for _ in range(3):
+            months.append(months[-1].replace(day=1) - timedelta(days=1))
+        return [u.format(today=today, last_month=months[1],
+                         month_2=months[2], month_3=months[3]) for u in self.urls]
 
     def resolved_headers(self) -> dict[str, str]:
         """Substitute ${ENV} values; drop headers whose variable is unset."""

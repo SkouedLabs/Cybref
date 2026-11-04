@@ -2144,6 +2144,20 @@ sources:
     url: https://data.iana.org/rdap/dns.json
     output: domains/whois_rdap_bootstrap_dns.json
 
+  afnic_creations:
+    name: AFNIC daily creations
+    group: daily
+    homepage: https://www.afnic.fr/
+    description: >-
+      Newly created .fr .re .pm .tf .wf .yt domains over a rolling 7-day window, rebuilt daily
+      from AFNIC's per-day creation files (domain;tld;creation_date). AFNIC publishes no deletion
+      feed, so a domain listed here may already be gone: the monthly open data stays the
+      authority on what is currently registered.
+    processor: afnic_creations
+    output: domains/afnic_creations.csv
+    min_lines: 12000
+    options: {days: 7, min_domains: 10000}
+
   afnic_opendata_domains:
     name: AFNIC .fr open data - domains
     group: weekly

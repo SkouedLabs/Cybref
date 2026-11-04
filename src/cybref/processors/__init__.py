@@ -59,6 +59,7 @@ def _transform(ctx: Context, raw) -> None:
 PROCESSORS = {
     "usb_ids": registries.usb_ids,
     "afnic_domains": afnic.domains,
+    "afnic_creations": afnic.creations,
     "github_advisories": github.github_advisories,
     "lottunnels": github.lottunnels,
     "misp_warninglists": github.misp_warninglists,

@@ -67,5 +67,6 @@ PROCESSORS = {
     "nvd_cpe_dictionary": nvd.cpe_dictionary,
     "mobile_cve": mobile.mobile_cve,
     "euvd_exploited": apis.euvd_exploited,
+    "euvd_full": apis.euvd_full,
     "mitre_atlas": apis.mitre_atlas,
 }

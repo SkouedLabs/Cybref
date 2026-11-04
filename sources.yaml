@@ -531,20 +531,17 @@ sources:
     processor: euvd_exploited
     output: vulnerabilities/enisa_euvd_exploited.json
 
-  enisa_euvd_all:
+  enisa_euvd:
     name: EUVD full
     group: weekly
     homepage: https://euvd.enisa.europa.eu/
     description: >-
-      Full European Vulnerability Database (ENISA, 400k+ entries): the whole stream as gzipped
-      NDJSON plus one JSON array per publication year. Crawled from the EUVD search API, which
-      has no bulk export and caps pages at 100 entries.
+      Full European Vulnerability Database (ENISA, 400k+ entries), one JSON array per year like
+      the NVD feeds. Crawled from the EUVD search API, which has no bulk export and caps pages
+      at 100 entries.
     processor: euvd_full
-    output:
-      - vulnerabilities/euvd/enisa_euvd_all.jsonl.gz
-      - vulnerabilities/euvd/enisa_euvd_all_*.json.gz
-    min_lines: 300000
-    options: {dir: vulnerabilities/euvd, first_year: 1999, min_entries: 350000}
+    output: vulnerabilities/euvd/enisa_euvd_*.json.gz
+    options: {dir: vulnerabilities/euvd, stem: enisa_euvd, first_year: 1999, min_entries: 350000}
 
   first_epss:
     name: EPSS

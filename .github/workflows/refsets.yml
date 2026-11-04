@@ -4,12 +4,13 @@ name: Refsets
 
 on:
   schedule:
+    - cron: '7 */2 * * *'  # frequent sources, on NVD's own two-hourly regeneration cycle
     - cron: '17 1 * * *'   # daily sources
     - cron: '17 3 * * 0'   # weekly sources, then the mobile CVE catalog (needs fresh NVD feeds)
   workflow_dispatch:
     inputs:
       groups:
-        description: 'Groups to run, in order (daily weekly mobile)'
+        description: 'Groups to run, in order (frequent daily weekly mobile)'
         default: 'daily'
       only:
         description: 'Optional: comma-separated source ids (overrides groups)'
@@ -84,7 +85,11 @@ jobs:
           [ "$IN_FORCE" = "true" ] && extra+=(--force)
 
           if [ "$EVENT" = "schedule" ]; then
-            [ "$CRON" = "17 3 * * 0" ] && groups="weekly mobile" || groups="daily"
+            case "$CRON" in
+              '17 3 * * 0') groups="weekly mobile" ;;
+              '17 1 * * *') groups="daily" ;;
+              *)            groups="frequent" ;;
+            esac
           else
             groups="${IN_GROUPS:-daily}"
           fi

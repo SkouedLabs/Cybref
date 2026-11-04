@@ -10,8 +10,8 @@ from .catalog import CATEGORIES, Source
 from .engine import Result
 from .validate import detect_format
 
-FREQ = {"daily": "Daily", "weekly": "Weekly", "mobile": "Weekly"}
-STALE_DAYS = {"daily": 3, "weekly": 15, "mobile": 15}
+FREQ = {"frequent": "2-hourly", "daily": "Daily", "weekly": "Weekly", "mobile": "Weekly"}
+STALE_DAYS = {"frequent": 1, "daily": 3, "weekly": 15, "mobile": 15}
 _START, _END = "<!-- catalog:start -->", "<!-- catalog:end -->"
 
 

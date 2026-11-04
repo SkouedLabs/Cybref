@@ -615,6 +615,18 @@ sources:
     output: vulnerabilities/nvd/nvdcve-2.0-*.json.gz
     options: {dir: vulnerabilities/nvd}
 
+  nvd_cve_recent:
+    name: NVD CVE recent
+    group: frequent
+    homepage: https://nvd.nist.gov/vuln/data-feeds
+    description: >-
+      CVEs published over a rolling 7-day window, rebuilt from NVD's `recent` feed every two
+      hours (the cadence at which NVD regenerates it). Same shape as the NVD 2.0 feeds, so any
+      NVD parser reads it as is.
+    processor: nvd_cve_recent
+    output: vulnerabilities/nvd_cve_recent.json.gz
+    options: {days: 7, min_cves: 300}
+
   nvd_cpe:
     name: NVD CPE dictionary
     group: weekly

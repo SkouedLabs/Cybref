@@ -65,6 +65,7 @@ PROCESSORS = {
     "misp_warninglists": github.misp_warninglists,
     "osv_zip": osv.advisories_zip,
     "nvd_cve_feeds": nvd.cve_feeds,
+    "nvd_cve_recent": nvd.cve_recent,
     "nvd_cpe_dictionary": nvd.cpe_dictionary,
     "mobile_cve": mobile.mobile_cve,
     "euvd_exploited": apis.euvd_exploited,

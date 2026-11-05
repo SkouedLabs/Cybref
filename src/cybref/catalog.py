@@ -13,7 +13,7 @@ from pathlib import Path
 import yaml
 
 GROUPS = ("frequent", "daily", "weekly", "mobile")
-EXTRACTS = (None, "gunzip", "unzip")
+EXTRACTS = (None, "gunzip", "unzip", "xz")
 
 # Category = top-level folder of the published files.
 CATEGORIES = {

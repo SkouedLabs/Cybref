@@ -14,6 +14,7 @@ import copy
 import fnmatch
 import gzip
 import hashlib
+import lzma
 import json
 import logging
 import shutil
@@ -29,7 +30,7 @@ import httpx
 
 from .catalog import Source
 from .http import FetchMeta, NotModified, download, make_client
-from .validate import ValidationError, count_records, validate
+from .validate import MAX_FILE_BYTES, ValidationError, count_records, validate
 
 logger = logging.getLogger("cybref")
 
@@ -37,6 +38,8 @@ STATE = ".cybref/state.json"
 PUBLIC_CATALOG = "catalog.json"
 RESERVED = {".cybref", PUBLIC_CATALOG, "README.md", ".git", ".github", ".gitattributes"}
 RETRY_COOLDOWN = 60.0
+# Leave headroom under the publication limit: a shard landing exactly on it fails the run.
+SHARD_LIMIT = int(MAX_FILE_BYTES * 0.8)
 
 
 # --------------------------------------------------------------------------- file helpers
@@ -80,6 +83,32 @@ def gunzip_file(src: Path, dst: Path) -> None:
         shutil.copyfileobj(fin, fout, 8 << 20)
 
 
+XZ_MAGIC = bytes.fromhex("fd377a585a00")
+
+
+def unxz_file(src: Path, dst: Path) -> None:
+    with src.open("rb") as fh:
+        magic = fh.read(6)
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    if magic != XZ_MAGIC:  # already decoded by the HTTP layer
+        shutil.move(src, dst)
+        return
+    with lzma.open(src, "rb") as fin, dst.open("wb") as fout:
+        shutil.copyfileobj(fin, fout, 8 << 20)
+
+
+def zstd_open(path: Path):
+    """Read handle on a .zst file. Python 3.14 ships `compression.zstd`; older
+    interpreters fall back to the `zstandard` wheel declared in pyproject."""
+    try:
+        from compression import zstd
+    except ImportError:
+        import zstandard
+
+        return zstandard.ZstdDecompressor().stream_reader(path.open("rb"))
+    return zstd.open(path, "rb")
+
+
 def unzip_member(src: Path, dst: Path, member: str | None) -> None:
     with zipfile.ZipFile(src) as zf:
         names = [n for n in zf.namelist() if not n.endswith("/")]
@@ -90,6 +119,69 @@ def unzip_member(src: Path, dst: Path, member: str | None) -> None:
         dst.parent.mkdir(parents=True, exist_ok=True)
         with zf.open(names[0]) as fin, dst.open("wb") as fout:
             shutil.copyfileobj(fin, fout, 8 << 20)
+
+
+class ShardWriter:
+    """Write a JSON array across as many gzipped shards as the size limit requires.
+
+    A single array is the nicest thing to consume, but GitHub refuses files over 100 MB
+    and the published corpora (Ubuntu advisories, a busy CVE year, Red Hat's VEX) pass it.
+    Splitting on a record count does not work: record sizes vary by two orders of
+    magnitude, so equal counts give wildly unequal files. This rolls over on the
+    compressed bytes actually written, which also makes the cut deterministic - the same
+    records in the same order always land in the same shards, so the engine republishes
+    only what really moved.
+
+    `name(i)` returns the path of shard *i* (1-based); rows are raw JSON, no separators.
+    """
+
+    def __init__(self, name, limit: int = SHARD_LIMIT):
+        self._name = name
+        self._limit = limit
+        self._index = 0
+        self._raw = None
+        self._gz = None
+        self._rows = 0
+        self.shards: list[Path] = []
+
+    def _open(self) -> None:
+        self._index += 1
+        path = self._name(self._index)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        self._raw = path.open("wb")
+        self._gz = gzip.GzipFile(filename="", mode="wb", fileobj=self._raw, mtime=0)
+        self._gz.write(b"[")
+        self._rows = 0
+        self.shards.append(path)
+
+    def _close_shard(self) -> None:
+        if self._gz is None:
+            return
+        self._gz.write(b"]")
+        self._gz.close()
+        self._raw.close()
+        self._gz = self._raw = None
+
+    def write(self, row: bytes) -> None:
+        if self._gz is None:
+            self._open()
+        elif self._rows and self._raw.tell() >= self._limit:
+            # tell() trails the deflate buffer by at most a few KB, which the margin
+            # between the limit and GitHub's own covers.
+            self._close_shard()
+            self._open()
+        self._gz.write((b"," if self._rows else b"") + row)
+        self._rows += 1
+
+    def close(self) -> int:
+        self._close_shard()
+        return self._index
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        self.close()
 
 
 def write_json(path: Path, obj, *, indent: int | None = None) -> None:

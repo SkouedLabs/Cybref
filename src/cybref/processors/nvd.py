@@ -7,6 +7,7 @@ import gzip
 import hashlib
 import json
 import logging
+import lzma
 import tarfile
 from contextlib import ExitStack
 from datetime import date, datetime, timedelta, timezone
@@ -213,3 +214,59 @@ def _nvd_published(entry: dict) -> datetime | None:
     except ValueError:
         return None
     return parsed if parsed.tzinfo else parsed.replace(tzinfo=timezone.utc)
+
+
+_FKIE_RELEASE = "https://github.com/fkie-cad/nvd-json-data-feeds/releases/latest/download"
+
+
+async def fkie_feeds(ctx: Context) -> None:
+    """Fraunhofer FKIE's rebuild of the NVD CVE corpus, one feed per year.
+
+    The NVD 2.0 bulk feeds NIST publishes lag behind its own API and need a key to be
+    read incrementally; FKIE regenerates the whole corpus daily from the API and ships
+    it as `CVE-<year>.json.xz` release assets with a `.meta` carrying the sha256 of the
+    decompressed JSON. The .xz is a quarter the size of the equivalent .gz, so the
+    transfer is cheap, and an unchanged year is skipped on its sha256 like the NVD feeds.
+    Republished as .json.gz to keep one compression format across the catalog.
+    """
+    first_year = int(ctx.options.get("first_year", 1999))
+    folder = ctx.options["dir"].rstrip("/")
+    stem = ctx.options.get("stem", ctx.source.id)
+    known: dict = ctx.state.setdefault("sha256", {})
+    years = list(range(first_year, date.today().year + 1))
+    sem = asyncio.Semaphore(3)
+
+    async def one(year: int) -> None:
+        name = f"CVE-{year}"
+        out = f"{folder}/{stem}_{year}.json.gz"
+        async with sem:
+            sha = None
+            try:
+                sha = _meta_sha256(await get_text(ctx.client, f"{_FKIE_RELEASE}/{name}.meta"))
+            except Exception as exc:  # noqa: BLE001 - meta is an optimisation only
+                logger.warning("[fkie] %s.meta unavailable: %s", name, exc)
+            if sha and not ctx.force and known.get(name) == sha and ctx.published(out).is_file():
+                return
+            archive = ctx.work / f"{name}.json.xz"
+            await ctx.download(f"{_FKIE_RELEASE}/{name}.json.xz", archive)
+            actual = await asyncio.to_thread(_unxz_to_gzip, archive, ctx.path(out))
+            if sha and actual != sha:
+                raise ValueError(f"{name}: sha256 mismatch with .meta (corrupted download?)")
+            if sha:
+                known[name] = sha
+
+    results = await asyncio.gather(*(one(y) for y in years), return_exceptions=True)
+    failed = [f"{y}: {r}" for y, r in zip(years, results) if isinstance(r, Exception)]
+    if len(failed) == len(years):
+        raise RuntimeError("; ".join(failed)[:400])
+    ctx.errors.extend(failed)
+
+
+def _unxz_to_gzip(archive: Path, target: Path) -> str:
+    """Decompress the .xz straight into a deterministic .gz, hashing the JSON on the way."""
+    h = hashlib.sha256()
+    with lzma.open(archive, "rb") as fin, gzip_open_write(target) as fout:
+        while chunk := fin.read(8 << 20):
+            h.update(chunk)
+            fout.write(chunk)
+    return h.hexdigest()

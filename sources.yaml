@@ -607,6 +607,36 @@ sources:
     processor: github_advisories
     output: vulnerabilities/github_advisories.json.gz
 
+  cvelistv5:
+    name: CVE Program records (cvelistV5)
+    group: daily
+    homepage: https://github.com/CVEProject/cvelistV5
+    description: >-
+      The CVE Program's own record list in CVE JSON 5.1 - the CNA containers every other
+      database derives from, before enrichment. Published as one gzipped array per CVE
+      year, rebuilt from the midnight snapshot release.
+    processor: cvelist_v5
+    output: vulnerabilities/cvelistv5/cvelistv5_*.json.gz
+    options: {dir: vulnerabilities/cvelistv5, stem: cvelistv5, min_records: 200000}
+
+  # DISABLED - weight. Red Hat's VEX corpus publishes every affected package NVR across
+  # the whole portfolio, which is 1.4 GB over 42 shards: too much for a branch that is
+  # force-pushed whole at each run. The `redhat_csaf_vex` processor is kept and tested;
+  # uncomment to publish it. The CIRCL VEX index (circl_vex_index) covers the same
+  # ground as a 15 MB index, without the per-product detail.
+  #redhat_csaf_vex:
+  #  name: Red Hat CSAF VEX
+  #  group: weekly
+  #  homepage: https://access.redhat.com/security/data/csaf/v2/vex/
+  #  description: >-
+  #    Red Hat's VEX statements in CSAF 2.0: for every CVE, which Red Hat products are
+  #    affected, which are not and why, with the remediation. Taken from the dated
+  #    `tar.zst` corpus Red Hat publishes, split into one gzipped array per year.
+  #  processor: redhat_csaf_vex
+  #  output: vulnerabilities/redhat_vex/redhat_csaf_vex_*.json.gz
+  #  options: {dir: vulnerabilities/redhat_vex, stem: redhat_csaf_vex, min_documents: 50000}
+
+
   nvd_cve:
     name: NVD CVE
     group: weekly
@@ -636,6 +666,19 @@ sources:
     # is the real floor, this only has to catch a truncated download.
     shrink_guard: 0.3
     options: {days: 7, min_cves: 300}
+
+  fkie_nvd_cve:
+    name: FKIE NVD CVE feeds
+    group: daily
+    homepage: https://github.com/fkie-cad/nvd-json-data-feeds
+    description: >-
+      Fraunhofer FKIE's daily rebuild of the complete NVD CVE corpus, one JSON feed per
+      year. Regenerated from the NVD API every night, so it carries enrichment the NIST
+      bulk feeds publish later, and it needs no API key. Each year is skipped when its
+      published sha256 has not moved.
+    processor: fkie_nvd_feeds
+    output: vulnerabilities/fkie_nvd/fkie_nvd_cve_*.json.gz
+    options: {dir: vulnerabilities/fkie_nvd, stem: fkie_nvd_cve, first_year: 1999}
 
   nvd_cpe:
     name: NVD CPE dictionary
@@ -1090,6 +1133,485 @@ sources:
     output: vulnerabilities/osv_pypi.json.gz
     compress: true
 
+
+  # --- OSV.dev ecosystems (one gzipped JSON array of advisories per ecosystem)
+  osv_debian:
+    name: OSV.dev - Debian advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: Debian Security Advisories and tracker data, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/Debian/all.zip
+    output: vulnerabilities/osv_debian.json.gz
+    compress: true
+    options: {min_advisories: 5000}
+
+  osv_suse:
+    name: OSV.dev - SUSE advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: SUSE Linux security updates, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/SUSE/all.zip
+    output: vulnerabilities/osv_suse.json.gz
+    compress: true
+    options: {min_advisories: 3000}
+
+  osv_opensuse:
+    name: OSV.dev - openSUSE advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: openSUSE security updates, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/openSUSE/all.zip
+    output: vulnerabilities/osv_opensuse.json.gz
+    compress: true
+    options: {min_advisories: 2000}
+
+  osv_openeuler:
+    name: OSV.dev - openEuler advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: openEuler security advisories, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/openEuler/all.zip
+    output: vulnerabilities/osv_openeuler.json.gz
+    compress: true
+    options: {min_advisories: 2000}
+
+  osv_azure_linux:
+    name: OSV.dev - Azure Linux advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: Microsoft Azure Linux (CBL-Mariner) advisories, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/Azure%20Linux/all.zip
+    output: vulnerabilities/osv_azure_linux.json.gz
+    compress: true
+    options: {min_advisories: 1000}
+
+  osv_tuxcare:
+    name: OSV.dev - TuxCare advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: TuxCare extended lifecycle support advisories, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/TuxCare/all.zip
+    output: vulnerabilities/osv_tuxcare.json.gz
+    compress: true
+    options: {min_advisories: 500}
+
+  osv_cleanstart:
+    name: OSV.dev - CleanStart advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: CleanStart OS package advisories, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/CleanStart/all.zip
+    output: vulnerabilities/osv_cleanstart.json.gz
+    compress: true
+    options: {min_advisories: 500}
+
+  osv_redhat:
+    name: OSV.dev - Red Hat advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: Red Hat security advisories (RHSA) in OSV form, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/Red%20Hat/all.zip
+    output: vulnerabilities/osv_redhat.json.gz
+    compress: true
+    options: {min_advisories: 2000}
+
+  osv_linux:
+    name: OSV.dev - Linux advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: Linux kernel CVE records in OSV form, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/Linux/all.zip
+    output: vulnerabilities/osv_linux.json.gz
+    compress: true
+    options: {min_advisories: 2000}
+
+  osv_go:
+    name: OSV.dev - Go advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: Go vulnerability database advisories, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/Go/all.zip
+    output: vulnerabilities/osv_go.json.gz
+    compress: true
+    options: {min_advisories: 1000}
+
+  osv_packagist:
+    name: OSV.dev - Packagist advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: PHP / Composer package advisories, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/Packagist/all.zip
+    output: vulnerabilities/osv_packagist.json.gz
+    compress: true
+    options: {min_advisories: 1000}
+
+  osv_maven:
+    name: OSV.dev - Maven advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: Java / Maven Central package advisories, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/Maven/all.zip
+    output: vulnerabilities/osv_maven.json.gz
+    compress: true
+    options: {min_advisories: 1000}
+
+  osv_bitnami:
+    name: OSV.dev - Bitnami advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: Bitnami application stack advisories, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/Bitnami/all.zip
+    output: vulnerabilities/osv_bitnami.json.gz
+    compress: true
+    options: {min_advisories: 1000}
+
+  osv_android:
+    name: OSV.dev - Android advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: Android and AOSP security bulletins in OSV form, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/Android/all.zip
+    output: vulnerabilities/osv_android.json.gz
+    compress: true
+    options: {min_advisories: 1000}
+
+  osv_alpine:
+    name: OSV.dev - Alpine advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: Alpine Linux secdb advisories in OSV form, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/Alpine/all.zip
+    output: vulnerabilities/osv_alpine.json.gz
+    compress: true
+    options: {min_advisories: 1000}
+
+  osv_almalinux:
+    name: OSV.dev - AlmaLinux advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: AlmaLinux errata in OSV form, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/AlmaLinux/all.zip
+    output: vulnerabilities/osv_almalinux.json.gz
+    compress: true
+    options: {min_advisories: 1000}
+
+  osv_rocky:
+    name: OSV.dev - Rocky Linux advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: Rocky Linux errata in OSV form, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/Rocky%20Linux/all.zip
+    output: vulnerabilities/osv_rocky.json.gz
+    compress: true
+    options: {min_advisories: 500}
+
+  osv_mageia:
+    name: OSV.dev - Mageia advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: Mageia security advisories, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/Mageia/all.zip
+    output: vulnerabilities/osv_mageia.json.gz
+    compress: true
+    options: {min_advisories: 500}
+
+  osv_echo:
+    name: OSV.dev - Echo advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: Echo container image package advisories, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/Echo/all.zip
+    output: vulnerabilities/osv_echo.json.gz
+    compress: true
+    options: {min_advisories: 300}
+
+  osv_root:
+    name: OSV.dev - Root advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: Root (rootprojects) package advisories, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/Root/all.zip
+    output: vulnerabilities/osv_root.json.gz
+    compress: true
+    options: {min_advisories: 300}
+
+  osv_alpaquita:
+    name: OSV.dev - Alpaquita advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: BellSoft Alpaquita Linux advisories, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/Alpaquita/all.zip
+    output: vulnerabilities/osv_alpaquita.json.gz
+    compress: true
+    options: {min_advisories: 300}
+
+  osv_nuget:
+    name: OSV.dev - NuGet advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: .NET / NuGet package advisories, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/NuGet/all.zip
+    output: vulnerabilities/osv_nuget.json.gz
+    compress: true
+    options: {min_advisories: 500}
+
+  osv_oss_fuzz:
+    name: OSV.dev - OSS-Fuzz advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: Issues found by Google OSS-Fuzz, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/OSS-Fuzz/all.zip
+    output: vulnerabilities/osv_oss_fuzz.json.gz
+    compress: true
+    options: {min_advisories: 500}
+
+  osv_hex:
+    name: OSV.dev - Hex advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: Erlang / Elixir Hex package advisories, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/Hex/all.zip
+    output: vulnerabilities/osv_hex.json.gz
+    compress: true
+    options: {min_advisories: 100}
+
+  osv_bellsoft:
+    name: OSV.dev - BellSoft Hardened Containers advisories
+    group: daily
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: BellSoft hardened container advisories, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/BellSoft%20Hardened%20Containers/all.zip
+    output: vulnerabilities/osv_bellsoft.json.gz
+    compress: true
+    options: {min_advisories: 50}
+
+  osv_julia:
+    name: OSV.dev - Julia advisories
+    group: weekly
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: Julia package advisories, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/Julia/all.zip
+    output: vulnerabilities/osv_julia.json.gz
+    compress: true
+    options: {min_advisories: 50}
+
+  osv_hackage:
+    name: OSV.dev - Hackage advisories
+    group: weekly
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: Haskell / Hackage security advisories, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/Hackage/all.zip
+    output: vulnerabilities/osv_hackage.json.gz
+    compress: true
+    options: {min_advisories: 20}
+
+  osv_opam:
+    name: OSV.dev - opam advisories
+    group: weekly
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: OCaml / opam security advisories, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/opam/all.zip
+    output: vulnerabilities/osv_opam.json.gz
+    compress: true
+    options: {min_advisories: 10}
+
+  osv_github_actions:
+    name: OSV.dev - GitHub Actions advisories
+    group: weekly
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: GitHub Actions advisories, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/GitHub%20Actions/all.zip
+    output: vulnerabilities/osv_github_actions.json.gz
+    compress: true
+    options: {min_advisories: 10}
+
+  osv_swifturl:
+    name: OSV.dev - SwiftURL advisories
+    group: weekly
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: Swift package advisories, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/SwiftURL/all.zip
+    output: vulnerabilities/osv_swifturl.json.gz
+    compress: true
+    options: {min_advisories: 10}
+
+  osv_pub:
+    name: OSV.dev - Pub advisories
+    group: weekly
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: Dart / Flutter pub package advisories, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/Pub/all.zip
+    output: vulnerabilities/osv_pub.json.gz
+    compress: true
+    options: {min_advisories: 5}
+
+  osv_cran:
+    name: OSV.dev - CRAN advisories
+    group: weekly
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: R / CRAN package advisories, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/CRAN/all.zip
+    output: vulnerabilities/osv_cran.json.gz
+    compress: true
+    options: {min_advisories: 3}
+
+  osv_redhat_lightwell:
+    name: OSV.dev - Red Hat Lightwell advisories
+    group: weekly
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: Red Hat Lightwell image advisories, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/Red%20Hat%20Lightwell/all.zip
+    output: vulnerabilities/osv_redhat_lightwell.json.gz
+    compress: true
+    options: {min_advisories: 20}
+
+  osv_vscode:
+    name: OSV.dev - VSCode advisories
+    group: weekly
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: Visual Studio Code extension advisories, merged into one JSON array.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/VSCode/all.zip
+    output: vulnerabilities/osv_vscode.json.gz
+    compress: true
+    options: {min_advisories: 3}
+
+  osv_npm:
+    name: OSV.dev - npm advisories
+    group: weekly
+    homepage: https://osv-vulnerabilities.storage.googleapis.com/
+    description: >-
+      npm package advisories. Too large for one file, so the merged array is cut into
+      equal-sized shards numbered in order.
+    processor: osv_zip
+    url: https://osv-vulnerabilities.storage.googleapis.com/npm/all.zip
+    output: vulnerabilities/osv/osv_npm_*.json.gz
+    options: {dir: vulnerabilities/osv, stem: osv_npm, shard: true, min_advisories: 100000}
+
+  # DISABLED - weight. Ubuntu Security Notices carry a package-version matrix per
+  # release, which merges to 681 MB over 9 shards. Uncomment to publish it; the
+  # size-based sharding handles it (tested).
+  #osv_ubuntu:
+  #  name: OSV.dev - Ubuntu advisories
+  #  group: weekly
+  #  homepage: https://osv-vulnerabilities.storage.googleapis.com/
+  #  description: >-
+  #    Ubuntu Security Notices (USN) in OSV form. Too large for one file, so the merged array is cut into
+  #    equal-sized shards numbered in order.
+  #  processor: osv_zip
+  #  url: https://osv-vulnerabilities.storage.googleapis.com/Ubuntu/all.zip
+  #  output: vulnerabilities/osv/osv_ubuntu_*.json.gz
+  #  options: {dir: vulnerabilities/osv, stem: osv_ubuntu, shard: true, min_advisories: 50000}
+
+
+  # --- CIRCL Vulnerability-Lookup (GCVE): the federated catalogues the API exposes
+
+  circl_kev:
+    name: KEV federated catalogue (CIRCL)
+    group: daily
+    homepage: https://vulnerability.circl.lu/kev-catalogs
+    description: >-
+      Every known-exploited vulnerability of the five GCVE BCP-07 catalogues federated by
+      CIRCL - CISA, ENISA/EU CSIRTs, Shadowserver, Previdian and CIRCL itself - with the
+      exploitation status, its reason and the publishing origin. Roughly four times the
+      coverage of the CISA catalogue alone.
+    processor: circl_collection
+    output: vulnerabilities/circl_kev.json.gz
+    compress: true
+    options: {endpoint: kev, key: uuid, min_records: 4000}
+
+  circl_sightings_exploited:
+    name: Exploitation sightings (CIRCL)
+    group: daily
+    homepage: https://vulnerability.circl.lu/sightings/
+    description: >-
+      Observed exploitation evidence collected by CIRCL from advisories, gists, social
+      media and RSS feeds, restricted to the `exploited` sighting type: each row ties a
+      vulnerability to the source that reported it being exploited, with a timestamp.
+    processor: circl_collection
+    output: vulnerabilities/circl_sightings_exploited.json.gz
+    compress: true
+    options:
+      endpoint: sighting
+      key: uuid
+      params: {type: exploited}
+      min_records: 50000
+
+  circl_vex_index:
+    name: VEX index (CIRCL)
+    group: weekly
+    homepage: https://vulnerability.circl.lu/vex/
+    description: >-
+      Index of every VEX statement Vulnerability-Lookup holds (Red Hat, SUSE, Microsoft and
+      others), mapping a vulnerability to its product impact, status and release dates.
+    processor: circl_collection
+    output: vulnerabilities/circl_vex_index.json.gz
+    compress: true
+    options: {endpoint: vex, key: [meta_source, id], min_records: 300000}
+
+  circl_bundles:
+    name: Vulnerability bundles (CIRCL)
+    group: weekly
+    homepage: https://vulnerability.circl.lu/bundles/
+    description: Curated groups of related vulnerabilities (campaigns, product lines) published by CIRCL analysts.
+    processor: circl_collection
+    output: vulnerabilities/circl_bundles.json
+    options: {endpoint: bundle, key: uuid, min_records: 50}
+
+  circl_comments:
+    name: Vulnerability comments (CIRCL)
+    group: weekly
+    homepage: https://vulnerability.circl.lu/comments/
+    description: Analyst commentary attached to individual vulnerabilities in Vulnerability-Lookup.
+    processor: circl_collection
+    output: vulnerabilities/circl_comments.json
+    options: {endpoint: comment, key: uuid, min_records: 50}
+
+  gcve_registry:
+    name: GCVE registry
+    group: weekly
+    homepage: https://gcve.eu/
+    description: >-
+      The Global CVE registry: every GCVE Numbering Authority (GNA) with its allocation
+      block, API, dump endpoint and CPE vendor name - the directory for federating
+      vulnerability sources outside the CVE Program.
+    url: https://gcve.eu/dist/gcve.json
+    output: vulnerabilities/gcve_registry.json
+    min_lines: 1
+
   # ============================================================== frameworks
 
   mitre_attack_enterprise:
@@ -1131,6 +1653,18 @@ sources:
     description: Adversarial Threat Landscape for AI Systems - tactics, techniques and case studies against ML/AI.
     processor: mitre_atlas
     output: frameworks/mitre_atlas.yaml
+
+  mitre_emb3d:
+    name: MITRE EMB3D
+    group: weekly
+    homepage: https://emb3d.mitre.org/
+    description: >-
+      Threat model for embedded devices: adversarial techniques mapped to device
+      properties and mitigations. MITRE publishes no bulk export, so the catalogue is
+      read from the CIRCL Vulnerability-Lookup API.
+    processor: circl_collection
+    output: frameworks/mitre_emb3d.json
+    options: {endpoint: emb3d, key: id, min_records: 50}
 
   mitre_cwe:
     name: MITRE CWE

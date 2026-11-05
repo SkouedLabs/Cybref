@@ -11,9 +11,10 @@ on:
       only:
         description: 'Dry-run fetch of these source ids (comma-separated) into a scratch dir'
         # Keep this list on sources whose host is dependable and that each exercise a
-        # different path (plain json/csv, usb_ids and osv_zip processors): a smoke test
-        # must fail on our code, not on a third-party site being down.
-        default: 'cisa_kev,lolbas,usb_ids,osv_rustsec_cargo,google_play_devices'
+        # different path (plain json/csv, usb_ids and osv_zip processors, the paginated
+        # Vulnerability-Lookup API): a smoke test must fail on our code, not on a
+        # third-party site being down.
+        default: 'cisa_kev,lolbas,usb_ids,osv_rustsec_cargo,google_play_devices,circl_kev'
 
 jobs:
   check:
@@ -30,4 +31,4 @@ jobs:
       - name: Byte-compile
         run: uv run python -m compileall -q src
       - name: Smoke fetch
-        run: uv run cybref fetch --out /tmp/data --no-retry --only "${{ inputs.only || 'cisa_kev,lolbas,usb_ids,osv_rustsec_cargo,google_play_devices' }}"
+        run: uv run cybref fetch --out /tmp/data --no-retry --only "${{ inputs.only || 'cisa_kev,lolbas,usb_ids,osv_rustsec_cargo,google_play_devices,circl_kev' }}"

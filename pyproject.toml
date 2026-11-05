@@ -8,6 +8,9 @@ dependencies = [
     "httpx[brotli]>=0.27",
     "lxml>=5",
     "pyyaml>=6",
+    # Red Hat ships its CSAF VEX corpus as .tar.zst; 3.14 decodes it with the stdlib
+    # (compression.zstd), older interpreters need the wheel.
+    "zstandard>=0.23; python_version < '3.14'",
 ]
 
 [project.scripts]

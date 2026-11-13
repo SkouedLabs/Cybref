@@ -14,7 +14,7 @@ import httpx
 
 logger = logging.getLogger("cybref.http")
 
-DEFAULT_UA = "Cybref/2.0 (+https://github.com/emeryn/CybrefV2)"
+DEFAULT_UA = "Cybref/2.0 (+https://github.com/skouedlabs/Cybref)"
 PER_HOST = 2  # flaky hosts (IEEE...) fail when hammered by parallel requests
 _RETRY_STATUS = {408, 418, 425, 429, 500, 502, 503, 504, 520, 521, 522, 524}
 _MAX_DELAY = 120.0

@@ -25,7 +25,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="cybref", description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--catalog", type=Path, default=Path("sources.yaml"))
-    parser.add_argument("--repo", default=os.environ.get("GITHUB_REPOSITORY", "skouedlabs/Cybref"),
+    parser.add_argument("--repo", default=os.environ.get("GITHUB_REPOSITORY", "SkouedLabs/Cybref"),
                         help="owner/name used for links (default: $GITHUB_REPOSITORY)")
     parser.add_argument("--data-branch", default="main")
     parser.add_argument("-v", "--verbose", action="store_true")

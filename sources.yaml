@@ -692,7 +692,7 @@ sources:
   mobile_cve:
     name: Mobile CVE
     group: mobile
-    homepage: https://github.com/skouedlabs/Cybref/tree/download/src/mcb
+    homepage: https://github.com/SkouedLabs/Cybref/tree/download/src/mcb
     description: Samsung / Pixel / iPhone devices with their patch level, and the CVEs of every mobile bulletin (NVD-enriched). Index + per-year CVE details.
     processor: mobile_cve
     output:

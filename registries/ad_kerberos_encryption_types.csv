@@ -1,0 +1,30 @@
+etype,encryption type,Reference
+0,reserved,[RFC 6448]
+1,des-cbc-crc (deprecated),[RFC 6649]
+2,des-cbc-md4 (deprecated),[RFC 6649]
+3,des-cbc-md5 (deprecated),[RFC 6649]
+4,Reserved,[RFC 3961]
+5,des3-cbc-md5 (deprecated),[RFC 8429]
+6,Reserved,[RFC 3961]
+7,des3-cbc-sha1 (deprecated),[RFC 8429]
+8,Unassigned,
+9,dsaWithSHA1-CmsOID,[RFC 4556]
+10,md5WithRSAEncryption-CmsOID,[RFC 4556]
+11,sha1WithRSAEncryption-CmsOID,[RFC 4556]
+12,rc2CBC-EnvOID,[RFC 4556]
+13,rsaEncryption-EnvOID,[RFC 4556]; [from PKCS#1 v1.5]]
+14,rsaES-OAEP-ENV-OID,[RFC 4556]; [from PKCS#1 v2.0]]
+15,des-ede3-cbc-Env-OID,[RFC 4556]
+16,des3-cbc-sha1-kd (deprecated),[RFC 8429]
+17,aes128-cts-hmac-sha1-96,[RFC 3962]
+18,aes256-cts-hmac-sha1-96,[RFC 3962]
+19,aes128-cts-hmac-sha256-128,[RFC 8009]
+20,aes256-cts-hmac-sha384-192,[RFC 8009]
+21-22,Unassigned,
+23,rc4-hmac (deprecated),[RFC 8429]
+24,rc4-hmac-exp (deprecated),[RFC 6649]
+25,camellia128-cts-cmac,[RFC 6803]
+26,camellia256-cts-cmac,[RFC 6803]
+27-64,Unassigned,
+65,subkey-keymaterial,[(opaque; PacketCable)]
+66-2147483647,Unassigned,

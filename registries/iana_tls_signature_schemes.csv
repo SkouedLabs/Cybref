@@ -1,0 +1,13 @@
+Value,Description,DTLS-OK,Recommended,Reference,Comment
+0,anonymous,Y,N,[RFC 5246]; [RFC 9847],
+1,rsa,Y,Y,[RFC 5246]; [RFC 9847],
+2,dsa,Y,N,[RFC 5246]; [RFC 9847],
+3,ecdsa,Y,Y,[RFC 5246]; [RFC 9847],
+4-6,Reserved,,,[RFC 8447],
+7,ed25519,Y,Y,[RFC 8422]; [RFC 9847],
+8,ed448,Y,Y,[RFC 8422]; [RFC 9847],
+9-63,Reserved,,,[RFC 8447],
+64,gostr34102012_256,Y,N,[1][RFC 9189]; [RFC 9847],
+65,gostr34102012_512,Y,N,[1][RFC 9189]; [RFC 9847],
+66-223,Reserved,,,[RFC 8447],
+224-255,Reserved for Private Use,,,[RFC 5246],

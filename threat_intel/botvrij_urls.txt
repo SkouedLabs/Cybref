@@ -1,0 +1,9 @@
+http://59.110.7.32:8880/uffhxpSy
+http://59.110.7.32:8880/api/getBasicInfo/v1
+http://59.110.7.32:8880/api/Metadata/submit
+ttp://124.222.137.114:9999/3yZR31VK
+http://124.222.137.114:9999/api/updateStatus/v1
+http://124.222.137.114:9999/api/Info/submit
+https://api.wiresguard.com/users/system
+https://api.wiresguard.com/api/getInfo/v1
+https://api.wiresguard.com/api/Info/submit

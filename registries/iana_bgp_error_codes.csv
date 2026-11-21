@@ -1,0 +1,12 @@
+Value,Name,Reference
+0,Reserved,
+1,Message Header Error,[RFC 4271]
+2,OPEN Message Error,[RFC 4271]
+3,UPDATE Message Error,[RFC 4271]
+4,Hold Timer Expired,[RFC 4271]
+5,Finite State Machine Error,[RFC 4271]
+6,Cease,[RFC 4271]
+7,ROUTE-REFRESH Message Error,[RFC 7313]
+8,Send Hold Timer Expired,[RFC 9687]
+9,Loss of LSDB Synchronization,[RFC 9815]
+10-255,Unassigned,

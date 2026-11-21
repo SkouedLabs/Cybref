@@ -1,0 +1,114 @@
+TYPE,Value,Meaning,Reference,Template,Registration Date
+Reserved,0,,[RFC 6895],,2021-03-08
+A,1,a host address,[RFC 1035],,
+NS,2,an authoritative name server,[RFC 1035],,
+MD,3,a mail destination (OBSOLETE - use MX),[RFC 1035],,
+MF,4,a mail forwarder (OBSOLETE - use MX),[RFC 1035],,
+CNAME,5,the canonical name for an alias,[RFC 1035],,
+SOA,6,marks the start of a zone of authority,[RFC 1035],,
+MB,7,a mailbox domain name (EXPERIMENTAL),[RFC 1035],,
+MG,8,a mail group member (EXPERIMENTAL),[RFC 1035],,
+MR,9,a mail rename domain name (EXPERIMENTAL),[RFC 1035],,
+NULL,10,a null RR (EXPERIMENTAL),[RFC 1035],,
+WKS,11,a well known service description,[RFC 1035],,
+PTR,12,a domain name pointer,[RFC 1035],,
+HINFO,13,host information,[RFC 1035],,
+MINFO,14,mailbox or mail list information,[RFC 1035],,
+MX,15,mail exchange,[RFC 1035],,
+TXT,16,text strings,[RFC 1035],,
+RP,17,for Responsible Person,[RFC 1183],,
+AFSDB,18,for AFS Data Base location,[RFC 1183]; [RFC 5864],,
+X25,19,for X.25 PSDN address,[RFC 1183],,
+ISDN,20,for ISDN address,[RFC 1183],,
+RT,21,for Route Through,[RFC 1183],,
+NSAP,22,"for NSAP address, NSAP style A record (DEPRECATED)",[RFC 1706]; [Moving TPC.INT and NSAP.INT infrastructure domains to historic],,
+NSAP-PTR,23,"for domain name pointer, NSAP style (DEPRECATED)",[RFC 1706]; [Moving TPC.INT and NSAP.INT infrastructure domains to historic],,
+SIG,24,for security signature,[RFC 2536]; [RFC 2931]; [RFC 3110]; [RFC 4034],,
+KEY,25,for security key,[RFC 2536]; [RFC 2539]; [RFC 3110]; [RFC 4034],,
+PX,26,X.400 mail mapping information,[RFC 2163],,
+GPOS,27,Geographical Position,[RFC 1712],,
+AAAA,28,IP6 Address,[RFC 3596],,
+LOC,29,Location Information,[RFC 1876],,
+NXT,30,Next Domain (OBSOLETE),[RFC 2535]; [RFC 3755],,
+EID,31,Endpoint Identifier,[Michael_Patton]; [http://ana-3.lcs.mit.edu/~jnc/nimrod/dns.txt],,1995-06
+NIMLOC,32,Nimrod Locator,[1][Michael_Patton]; [http://ana-3.lcs.mit.edu/~jnc/nimrod/dns.txt],,1995-06
+SRV,33,Server Selection,[1][RFC 2782],,
+ATMA,34,ATM Address,"[
+        ATM Forum Technical Committee, ""ATM Name System, V2.0"", Doc ID: AF-DANS-0152.000, July 2000. Available from and held in escrow by IANA.]",,
+NAPTR,35,Naming Authority Pointer,[RFC 3403],,
+KX,36,Key Exchanger,[RFC 2230],,
+CERT,37,CERT,[RFC 4398],,
+A6,38,A6 (OBSOLETE - use AAAA),[RFC 2874]; [RFC 3226]; [RFC 6563],,
+DNAME,39,DNAME,[RFC 6672],,
+SINK,40,SINK,[Donald_E_Eastlake]; [draft-eastlake-kitchen-sink-02],,1997-11
+OPT,41,OPT,[RFC 3225]; [RFC 6891],,
+APL,42,APL,[RFC 3123],,
+DS,43,Delegation Signer,[RFC 4034],,
+SSHFP,44,SSH Key Fingerprint,[RFC 4255],,
+IPSECKEY,45,IPSECKEY,[RFC 4025],,
+RRSIG,46,RRSIG,[RFC 4034],,
+NSEC,47,NSEC,[RFC 4034]; [RFC 9077],,
+DNSKEY,48,DNSKEY,[RFC 4034],,
+DHCID,49,DHCID,[RFC 4701],,
+NSEC3,50,NSEC3,[RFC 5155]; [RFC 9077],,
+NSEC3PARAM,51,NSEC3PARAM,[RFC 5155],,
+TLSA,52,TLSA,[RFC 6698],,
+SMIMEA,53,S/MIME cert association,[RFC 8162],SMIMEA/smimea-completed-template,2015-12-01
+DELEGPARAM,54,"Extensible Delegation Indirection (TEMPORARY - registered 2026-10-16, expires 2027-10-16)",[draft-ietf-deleg-12],,2026-10-16
+HIP,55,Host Identity Protocol,[RFC 8005],,
+NINFO,56,NINFO,[Jim_Reid],NINFO/ninfo-completed-template,2008-01-21
+RKEY,57,RKEY,[Jim_Reid],RKEY/rkey-completed-template,2008-01-21
+TALINK,58,Trust Anchor LINK,[Wouter_Wijngaards],TALINK/talink-completed-template,2010-02-17
+CDS,59,Child DS,[RFC 7344],CDS/cds-completed-template,2011-06-06
+CDNSKEY,60,DNSKEY(s) the Child wants reflected in DS,[RFC 7344],,2014-06-16
+OPENPGPKEY,61,OpenPGP Key,[RFC 7929],OPENPGPKEY/openpgpkey-completed-template,2014-08-12
+CSYNC,62,Child-To-Parent Synchronization,[RFC 7477],,2015-01-27
+ZONEMD,63,Message Digest Over Zone Data,[RFC 8976],ZONEMD/zonemd-completed-template,2018-12-12
+SVCB,64,General-purpose service binding,[RFC 9460],SVCB/svcb-completed-template,2020-06-30
+HTTPS,65,SVCB-compatible type for use with HTTP,[RFC 9460],HTTPS/https-completed-template,2020-06-30
+DSYNC,66,Endpoint discovery for delegation synchronization,[RFC 9859],DSYNC/dsync-completed-template,2024-12-10
+HHIT,67,Hierarchical Host Identity Tag,[RFC 9886],HHIT/hhit-completed-template,2025-05-20
+BRID,68,UAS Broadcast Remote Identification,[RFC 9886],BRID/brid-completed-template,2025-05-20
+UNECE,69,Value coded per a UNECE Recommendation,[draft-woodcock-faltstrom-external-registry-rrtypes-00],UNECE/unece-completed-template,2026-08-20
+ISO,70,Value coded per an ISO standard,[draft-woodcock-faltstrom-external-registry-rrtypes-00],ISO/iso-completed-template,2026-08-20
+Unassigned,71-98,,,,
+SPF,99,,[RFC 7208],,
+UINFO,100,,[IANA-Reserved],,
+UID,101,,[IANA-Reserved],,
+GID,102,,[IANA-Reserved],,
+UNSPEC,103,,[IANA-Reserved],,
+NID,104,,[RFC 6742],ILNP/nid-completed-template,
+L32,105,,[RFC 6742],ILNP/l32-completed-template,
+L64,106,,[RFC 6742],ILNP/l64-completed-template,
+LP,107,,[RFC 6742],ILNP/lp-completed-template,
+EUI48,108,an EUI-48 address,[RFC 7043],EUI48/eui48-completed-template,2013-03-27
+EUI64,109,an EUI-64 address,[RFC 7043],EUI64/eui64-completed-template,2013-03-27
+Unassigned,110-127,,,,
+NXNAME,128,NXDOMAIN indicator for Compact Denial of Existence,[RFC 9824],NXNAME/nxname-completed-template,2024-07-18
+Unassigned,129-248,,,,
+TKEY,249,Transaction Key,[RFC 2930],,
+TSIG,250,Transaction Signature,[RFC 8945],,
+IXFR,251,incremental transfer,[RFC 1995],,
+AXFR,252,transfer of an entire zone,[RFC 1035]; [RFC 5936],,
+MAILB,253,"mailbox-related RRs (MB, MG or MR)",[RFC 1035],,
+MAILA,254,mail agent RRs (OBSOLETE - see MX),[RFC 1035],,
+*,255,A request for some or all records the server has available,[RFC 1035]; [RFC 6895]; [RFC 8482],,
+URI,256,URI,[RFC 7553],URI/uri-completed-template,2011-02-22
+CAA,257,Certification Authority Restriction,[RFC 8659],CAA/caa-completed-template,2011-04-07
+AVC,258,Application Visibility and Control,[Wolfgang_Riedel],AVC/avc-completed-template,2016-02-26
+DOA,259,Digital Object Architecture,[draft-durand-doa-over-dns-02],DOA/doa-completed-template,2017-08-30
+AMTRELAY,260,Automatic Multicast Tunneling Relay,[RFC 8777],AMTRELAY/amtrelay-completed-template,2019-02-06
+RESINFO,261,Resolver Information as Key/Value Pairs,[RFC 9606],RESINFO/resinfo-completed-template,2023-11-02
+WALLET,262,Public wallet address,[Paul_Hoffman],WALLET/wallet-completed-template,2024-06-21
+CLA,263,BP Convergence Layer Adapter,[draft-johnson-dns-ipn-cla-07],CLA/cla-completed-template,2024-07-25
+IPN,264,BP Node Number,[draft-johnson-dns-ipn-cla-07],IPN/ipn-completed-template,2024-07-25
+Unassigned,265-32767,,,,
+TA,32768,DNSSEC Trust Authorities,"[Sam_Weiler]; [
+        Deploying DNSSEC Without a Signed Root.  Technical Report 1999-19,
+Information Networking Institute, Carnegie Mellon University, April 2004.]",,2005-12-13
+DLV,32769,DNSSEC Lookaside Validation (OBSOLETE),[RFC 8749]; [RFC 4431],,
+Unassigned,32770-61439,,,,
+DELEG,61440,"Extensible Delegation (TEMPORARY - registered 2026-10-16, expires 2027-10-16)",[draft-ietf-deleg-12],,2026-10-16
+Unassigned,61441-65279,,,,
+Private use,65280-65534,,,,
+Reserved,65535,,,,

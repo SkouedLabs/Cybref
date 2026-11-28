@@ -1,0 +1,18 @@
+Type,Description,Used In,Reference
+0,Reserved,,[RFC 7296]
+1,Encryption Algorithm (ENCR),"(IKE, GIKE_UPDATE, ESP)",[RFC 7296]; [RFC 9838]
+2,Pseudo-random Function (PRF),(IKE),[RFC 7296]
+3,Integrity Algorithm (INTEG),"(IKE, GIKE_UPDATE, AH, optional in ESP)",[RFC 7296]; [RFC 9838]
+4,Key Exchange Method (KE),"(IKE, optional in AH, ESP)",[RFC 7296]; [RFC 9370]
+5,Sequence Numbers (SN),"(AH, ESP)",[RFC 7296]; [RFC 9827]
+6,Additional Key Exchange 1 (ADDKE1),"(optional in IKE, AH, ESP)",[RFC 9370]
+7,Additional Key Exchange 2 (ADDKE2),"(optional in IKE, AH, ESP)",[RFC 9370]
+8,Additional Key Exchange 3 (ADDKE3),"(optional in IKE, AH, ESP)",[RFC 9370]
+9,Additional Key Exchange 4 (ADDKE4),"(optional in IKE, AH, ESP)",[RFC 9370]
+10,Additional Key Exchange 5 (ADDKE5),"(optional in IKE, AH, ESP)",[RFC 9370]
+11,Additional Key Exchange 6 (ADDKE6),"(optional in IKE, AH, ESP)",[RFC 9370]
+12,Additional Key Exchange 7 (ADDKE7),"(optional in IKE, AH, ESP)",[RFC 9370]
+13,Key Wrap Algorithm (KWA),"(IKE, GIKE_UPDATE)",[RFC 9838]
+14,Group Controller Authentication Method (GCAUTH),(GIKE_UPDATE),[RFC 9838]
+15-240,Unassigned,,
+241-255,Reserved for Private Use,,[RFC 7296]

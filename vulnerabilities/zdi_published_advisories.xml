@@ -1,0 +1,1618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <atom:link href="https://www.zerodayinitiative.com/rss/published/" rel="self" type="application/xml" />
+    <title><![CDATA[ZDI: Published Advisories]]></title>
+    <link>http://www.zerodayinitiative.com/advisories/published/</link>
+    <description><![CDATA[The following is a list of publicly disclosed vulnerabilities discovered by
+                   Zero Day Initiative researchers. While the affected vendor is working on a patch for these
+                   vulnerabilities, TrendAI customers are protected from exploitation by security filters
+                   delivered ahead of public disclosure. All security vulnerabilities that are acquired by the
+                   Zero Day Initiative are handled according to the ZDI Disclosure Policy.
+        ]]></description>
+    <pubDate>Sat, 28 Nov 2026 02:56:50 -0600</pubDate>
+    <copyright>Trend Micro, all rights reserved</copyright>
+    <language>en</language>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1159: X.Org Server PCF Font Parsing Out-Of-Bounds Read Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-33183</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1159/</link>
+      <description><![CDATA[This vulnerability allows local attackers to disclose sensitive information on affected installations of X.Org Server. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.1. The following CVEs are assigned: CVE-2026-109909.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1158: X.Org Server libfontenc Encoding File Parsing Improper Validation of Array Index Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31888</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1158/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of X.Org Server. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-109908.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1157: ASUS Control Center Express User Creation Improper Authorization Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28945</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1157/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to escalate privileges on affected installations of ASUS Control Center Express. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 9.9. The following CVEs are assigned: CVE-2026-114205.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1156: ASUS Control Center Express Use of Hard-coded Cryptographic Key Authentication Bypass Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28917</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1156/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to bypass authentication of affected installations of ASUS Control Center Express. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 9.0. The following CVEs are assigned: CVE-2026-114204.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1155: ASUS Control Center Express Use of Hard-coded Cryptographic Key Authentication Bypass Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31365</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1155/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to bypass authentication on affected installations of ASUS Control Center Express. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 10.0. The following CVEs are assigned: CVE-2026-114202.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1154: Oracle Outside In Technology PNG File Parsing Integer Overflow Remote Code  Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32169</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1154/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Oracle Outside In Technology. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-91483.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1153: Oracle Outside In Technology BMP File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31765</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1153/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Oracle Outside In Technology. Interaction with this library is required to exploit this vulnerability but attack vectors may vary depending on the implementation. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-91459.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1152: Oracle Outside In Technology TIFF File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31777</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1152/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Oracle Outside In Technology. Interaction with this library is required to exploit this vulnerability but attack vectors may vary depending on the implementation. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-91460.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1151: Oracle Outside In Technology  BMP File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31767</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1151/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Oracle Outside In Technology. Interaction with this library is required to exploit this vulnerability but attack vectors may vary depending on the implementation. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-91457.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1150: Oracle Outside In Technology XLSX File Parsing Stack-based Buffer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31766</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1150/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Oracle Outside In Technology. Interaction with this library is required to exploit this vulnerability but attack vectors may vary depending on the implementation. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-91458.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1149: (Pwn2Own) Oracle Autonomous AI Database ORDS AutoUpgrade Servlet Command Injection Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-36128</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1149/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Oracle Autonomous AI Database. Although authentication is required to exploit this vulnerability, the existing authentication mechanism can be bypassed. The ZDI has assigned a CVSS rating of 7.5.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1148: Autodesk AutoCAD DWG File Parsing Integer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-33418</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1148/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Autodesk AutoCAD. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-104868.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1147: Autodesk AutoCAD DDS File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32917</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1147/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Autodesk AutoCAD. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-85648.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1146: Autodesk AutoCAD DWG File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32898</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1146/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Autodesk AutoCAD. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-85647.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1145: Autodesk AutoCAD DWF File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32899</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1145/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Autodesk AutoCAD. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-85646.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1144: Autodesk AutoCAD DGN File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32895</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1144/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Autodesk AutoCAD. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-84855.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1143: Oracle PeopleSoft PeopleSoftListeningConnector Server-Side Request Forgery Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31842</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1143/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to initiate arbitrary server-side requests on affected installations of Oracle PeopleSoft. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 9.3. The following CVEs are assigned: CVE-2026-114934.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1142: Autodesk AutoCAD DXF File Parsing NTLM Response Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32513</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1142/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to disclose NTLM responses on affected installations of Autodesk AutoCAD. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 3.3. The following CVEs are assigned: CVE-2026-77944.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1141: Autodesk AutoCAD DXF File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32177</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1141/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Autodesk AutoCAD. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-77943.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1140: Autodesk AutoCAD IES File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32508</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1140/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Autodesk AutoCAD. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-77942.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1139: (Pwn2Own) Oracle Autonomous AI Database ONNX Runtime GPT GreedySearch Type Confusion Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-36051</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1139/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Oracle Autonomous AI Database. Although authentication is required to exploit this vulnerability, the existing authentication mechanism can be bypassed. The ZDI has assigned a CVSS rating of 7.2. The following CVEs are assigned: CVE-2026-114822.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1138: Autodesk AutoCAD AeciIb NTLM Response Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32176</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1138/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to disclose NTLM responses on affected installations of Autodesk AutoCAD. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 3.3. The following CVEs are assigned: CVE-2026-77940.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1137: (Pwn2Own) Oracle Autonomous AI Database ONNX Runtime Tree Ensemble Use-After-Free Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-36050</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1137/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to disclose sensitive information on affected installations of Oracle Autonomous AI Database. Although authentication is required to exploit this vulnerability, the existing authentication mechanism can be bypassed. The ZDI has assigned a CVSS rating of 4.9. The following CVEs are assigned: CVE-2026-114822.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1136: Autodesk AutoCAD AcPal NTLM Response Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31880</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1136/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to disclose NTLM responses on affected installations of Autodesk AutoCAD. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 3.3. The following CVEs are assigned: CVE-2026-77941.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1135: (Pwn2Own) Oracle Autonomous AI Database APEX Integrity Check Interpretation Conflict Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-36048</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1135/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to bypass form integrity controls on affected installations of Oracle Autonomous AI Database. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 5.9. The following CVEs are assigned: CVE-2026-114850.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1134: Autodesk AutoCAD DWG File Data Link Exposed Dangerous Method Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32023</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1134/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Autodesk AutoCAD. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-18827.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1133: (Pwn2Own) Oracle Autonomous AI Database APEX Password Change Missing Authorization Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-36047</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1133/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to bypass authorization checks on affected installations of Oracle Autonomous AI Database. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 5.9. The following CVEs are assigned: CVE-2026-114850.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1132: Autodesk AutoCAD DXF File Parsing _FldPtr Type Confusion Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31917</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1132/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Autodesk AutoCAD. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-18826.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1131: (Pwn2Own) Oracle Autonomous AI Database APEX Workspace Resolution Improper Handling of Exceptional Conditions Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-36046</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1131/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to bypass a validation check on affected installations of Oracle Autonomous AI Database. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 3.7. The following CVEs are assigned: CVE-2026-114850.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1130: Autodesk AutoCAD DXF File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31821</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1130/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Autodesk AutoCAD. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-16780.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1129: (Pwn2Own) Oracle Autonomous AI Database APEX Password Change External Control of Critical State Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-36045</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1129/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to tamper with session state on affected installations of Oracle Autonomous AI Database. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 3.7. The following CVEs are assigned: CVE-2026-114850.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1128: (Pwn2Own) Oracle Autonomous AI Database APEX Request Integrity Improper Verification of Cryptographic Signature Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-35795</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1128/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to bypass URL integrity protections on affected installations of Oracle Autonomous AI Database. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5. The following CVEs are assigned: CVE-2026-114850.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1127: (Pwn2Own) Oracle Autonomous AI Database Export Directory Exposure of Resource to Wrong Sphere Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-36035</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1127/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Oracle Autonomous AI Database. Although authentication is required to exploit this vulnerability, the existing authentication mechanism can be bypassed. The ZDI has assigned a CVSS rating of 7.2. The following CVEs are assigned: CVE-2026-114849.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1126: (Pwn2Own) Oracle Autonomous AI Database APEX Dynamic Execution Improper Authorization Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-36034</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1126/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to escalate privileges on affected installations of Oracle Autonomous AI Database. Although authentication is required to exploit this vulnerability, the existing authentication mechanism can be bypassed. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-114849.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1125: (Pwn2Own) Oracle Autonomous AI Database APEX Improper Input Validation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-35893</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1125/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to bypass security checks on affected installations of Oracle Autonomous AI Database. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 4.8. The following CVEs are assigned: CVE-2026-114849.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1124: (Pwn2Own) Oracle Autonomous AI Database APEX wwv_flow.show Missing Authorization Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-35892</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1124/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to escalate privileges on affected installations of Oracle Autonomous AI Database. Although authentication is required to exploit this vulnerability, the existing authentication mechanism can be bypassed. The ZDI has assigned a CVSS rating of 4.3. The following CVEs are assigned: CVE-2026-114849.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1123: (Pwn2Own) Oracle Autonomous AI Database PL/SQL Gateway Authentication Bypass Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-35794</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1123/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to bypass authentication on affected installations of Oracle Autonomous AI Database. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 5.3. The following CVEs are assigned: CVE-2026-114849.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1122: (Pwn2Own) Oracle Autonomous AI Database ORDS APEX SSO Exchange Token Authentication Bypass Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-36142</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1122/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to bypass authentication on affected installations of Oracle Autonomous AI Database. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.1. The following CVEs are assigned: CVE-2026-114849.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1121: (Pwn2Own) LM Studio MCP Tool Schema Code Injection Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31292</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1121/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of LM Studio. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 9.8. The following CVEs are assigned: CVE-2026-133995.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1120: (Pwn2Own) LM Studio Plugin Sandbox Directory Traversal Arbitrary File Creation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31436</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1120/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to create arbitrary files on affected installations of LM Studio. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 9.1. The following CVEs are assigned: CVE-2026-133994.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1119: (Pwn2Own) LM Studio Weak Credentials Authentication Bypass Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31435</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1119/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to bypass authentication on affected installations of LM Studio. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.1. The following CVEs are assigned: CVE-2026-133992.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1118: (Pwn2Own) LM Studio JSON Schema Validation Error Message Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31434</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1118/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to disclose sensitive information on affected installations of LM Studio. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 5.9. The following CVEs are assigned: CVE-2026-133991.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1117: (Pwn2Own) LM Studio JSON Schema Server-Side Request Forgery Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31295</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1117/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to disclose sensitive information on affected installations of LM Studio. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.8. The following CVEs are assigned: CVE-2026-133989.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1116: (Pwn2Own) Synology DiskStation DS925+ VerifySamlResponse Authentication Bypass Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28454</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1116/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to bypass authentication on affected installations of Synology DiskStation DS925+ devices. Although authentication is required to exploit this vulnerability, the existing authentication mechanism can be bypassed. The ZDI has assigned a CVSS rating of 8.0. The following CVEs are assigned: CVE-2025-15716.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1115: (Pwn2Own) ChargePoint Home Flex Debug Interface With Improper Access Control Authentication Bypass Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28997</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1115/</link>
+      <description><![CDATA[This vulnerability allows physically present attackers to bypass authentication on affected ChargePoint Home Flex EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 4.3. The following CVEs are assigned: CVE-2026-131819.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1114: (Pwn2Own) ChargePoint Home Flex busybox Unnecessary Privileges Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-29090</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1114/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of ChargePoint Home Flex EV chargers. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-131818.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1113: (Pwn2Own) ChargePoint Home Flex wpa_passphrase Command Injection Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-29000</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1113/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of ChargePoint Home Flex EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-131817.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1112: (Pwn2Own) ChargePoint Home Flex ssh Hard-coded Credentials Authentication Bypass Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28996</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1112/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to bypass authentication on affected installations of ChargePoint Home Flex EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.3. The following CVEs are assigned: CVE-2026-131816.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1111: (Pwn2Own) ChargePoint Home Flex uploadsm filetype Link Following Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-29096</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1111/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of ChargePoint Home Flex EV chargers. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-131815.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1110: (Pwn2Own) ChargePoint Home Flex dwnldlogsm tar Command Injection Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-29057</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1110/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of ChargePoint Home Flex EV chargers. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-131814.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1109: Microsoft Windows EMF File Parsing NTLM Response Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30879</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1109/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to disclose NTLM responses on affected installations of Microsoft Windows. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 3.3. The following CVEs are assigned: CVE-2026-121680.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1108: (Pwn2Own) NVIDIA GPU Display Drivers TLS State Deadlock Denial-of-Service Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31493</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1108/</link>
+      <description><![CDATA[This vulnerability allows local attackers to create a denial-of-service condition on affected installations of NVIDIA GPU Display Drivers. An attacker must first obtain the ability to execute low-privileged code on the target system, even if only within a container, in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 3.8. The following CVEs are assigned: CVE-2026-24182.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1107: (Pwn2Own) NVIDIA GPU Display Drivers FINN Serializer Untrusted Pointer Dereference Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31492</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1107/</link>
+      <description><![CDATA[This vulnerability allows local attackers to disclose sensitive information on affected installations of NVIDIA GPU Display Drivers. An attacker must first obtain the ability to execute low-privileged code on the target system, even if only within a container, in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.4. The following CVEs are assigned: CVE-2026-47602.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1106: (Pwn2Own) NVIDIA Megatron Bridge _validate_target_prefix Permissive List of Allowed Inputs Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31266</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1106/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of NVIDIA Megatron Bridge. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-61752.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1105: (Pwn2Own) NVIDIA Megatron Bridge ModelConfig Unsafe Reflection Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31280</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1105/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of NVIDIA Megatron Bridge. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-61754.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1104: (Pwn2Own) NVIDIA Megatron Bridge Weight Map Directory Traversal Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31306</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1104/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of NVIDIA Megatron Bridge. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-61753.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1103: (Pwn2Own) NVIDIA GPU Display Drivers Video Encoder Improper Update of Reference Count Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31259</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1103/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of NVIDIA GPU Display Drivers. An attacker must first obtain the ability to execute low-privileged code on the target system, even if only within a container, in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-47588.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1102: (Pwn2Own) NVIDIA GPU Display Drivers Resource Manager Use-After-Free Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31273</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1102/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of NVIDIA GPU Display Drivers. An attacker must first obtain the ability to execute low-privileged code on the target system, even if only within a container, in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-47597.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1101: NVIDIA GPU Display Drivers NVOS32_FUNCTION_ALLOC_OS_DESCRIPTOR Incorrect Permission Assignment Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-33067</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1101/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of NVIDIA GPU Display Drivers. An attacker must first obtain the ability to execute low-privileged code on the target system, even if only within a container, in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-47591.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1100: NVIDIA Megatron Dataset Cache Deserialization of Untrusted Data Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31088</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1100/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of NVIDIA Megatron. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-100968.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1099: NVIDIA AIStore Object Rename Directory Traversal Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32114</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1099/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of NVIDIA AIStore. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.1. The following CVEs are assigned: CVE-2026-65103.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1098: NVIDIA AIStore dsort Server-Side Request Forgery Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32106</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1098/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to initiate arbitrary server-side requests on affected installations of NVIDIA AIStore. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 9.3. The following CVEs are assigned: CVE-2026-65101.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1097: NVIDIA AIStore ht Server-Side Request Forgery Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32105</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1097/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to initiate arbitrary server-side requests on affected installations of NVIDIA AIStore. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 9.3. The following CVEs are assigned: CVE-2026-65170.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1096: NVIDIA GPU Display Drivers NV_ESC_RM_ACCESS_REGISTRY Missing Authorization Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31994</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1096/</link>
+      <description><![CDATA[This vulnerability allows local attackers to disclose sensitive information on affected installations of NVIDIA GPU Display Drivers. An attacker must first obtain the ability to execute low-privileged code on the target system, even if only within a container, in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.3. The following CVEs are assigned: CVE-2026-47552.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1095: NVIDIA AIStore Promote API External Control of File Path Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30702</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1095/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to disclose sensitive information on affected installations of NVIDIA AIStore. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-65161.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1094: NVIDIA NeMo Framework nemo File Parsing Directory Traversal Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-29471</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1094/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of NVIDIA NeMo Framework. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-65111.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1093: Bosch Rexroth IndraWorks CTAPRJ.ZIP File Parsing Directory Traversal Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28149</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1093/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to create arbitrary files on affected installations of Bosch Rexroth IndraWorks. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-102448.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1092: Bosch Rexroth IndraWorks MTX XIWP File Parsing Directory Traversal Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-27995</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1092/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to create arbitrary files on affected installations of Bosch Rexroth IndraWorks MTX. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.0. The following CVEs are assigned: CVE-2026-102448.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1091: Bosch Rexroth IndraWorks MTX XIWP File Parsing Deserialization of Untrusted Data Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28243</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1091/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Bosch Rexroth IndraWorks. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2025-60037.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1090: Bosch Rexroth IndraWorks MTX XIWP File Parsing Deserialization of Untrusted Data Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28242</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1090/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Bosch Rexroth IndraWorks. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2025-60037.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1089: Bosch Rexroth IndraWorks MTX IWZ File Parsing Deserialization of Untrusted Data Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28239</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1089/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Bosch Rexroth IndraWorks. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2025-60037.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1088: Bosch Rexroth IndraWorks XIWP File Parsing Deserialization Of Untrusted Data Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28115</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1088/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Bosch Rexroth IndraWorks. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2025-60037.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1087: Bosch Rexroth IndraWorks XML Print Settings File Parsing Deserialization Of Untrusted Data Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28114</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1087/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Bosch Rexroth IndraWorks. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2025-60037.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1086: Bosch Rexroth IndraWorks XIWP File Parsing Deserialization Of Untrusted Data Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28113</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1086/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Bosch Rexroth IndraWorks. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2025-60037.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1085: (Pwn2Own) LiteLLM Secret Manager oidc Resolver Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31482</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1085/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to disclose sensitive information on affected installations of LiteLLM. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 5.3. The following CVEs are assigned: CVE-2026-136540.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1084: (Pwn2Own) LiteLLM Pass-Through Endpoint Code Injection Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31433</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1084/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of LiteLLM. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.2. The following CVEs are assigned: CVE-2026-136539.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1083: LiteLLM Virtual Key Model Alias Incorrect Authorization Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32649</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1083/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to escalate privileges on affected installations of LiteLLM. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5. The following CVEs are assigned: CVE-2026-136538.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1082: LiteLLM key_management_endpoints Missing Authorization Security Feature Bypass Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32342</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1082/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to bypass security features on affected installations of LiteLLM. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5. The following CVEs are assigned: CVE-2026-136537.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1081: LiteLLM is_request_body_safe  Server-Side Request Forgery Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-29838</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1081/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to disclose sensitive information on affected installations of LiteLLM. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.4. The following CVEs are assigned: CVE-2026-136536.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1080: RustDesk Client for Windows reg_recovery Missing Authorization Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-34805</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1080/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of RustDesk Client for Windows. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-131827.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1079: llama.cpp server_context_impl destroy vocab Use-After-Free Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30902</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1079/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of llama.cpp. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.1. The following CVEs are assigned: CVE-2026-131837.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1078: llama.cpp GGUF File Parsing MINICPM-V Heap-based Buffer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31125</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1078/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of llama.cpp. User interaction is required to exploit this vulnerability in that the target must load a malicious model file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-131836.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1077: llama.cpp GGUF File Parsing HunyuanVL Heap-based Buffer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31127</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1077/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of llama.cpp. User interaction is required to exploit this vulnerability in that the target must load a malicious model file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-131835.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1076: llama.cpp Multimodal  GGUF File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30900</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1076/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of llama.cpp. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-131834.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1075: llama.cpp GGUF File Parsing set_swa_pattern Heap-based Buffer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31784</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1075/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of llama.cpp. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-131833.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1074: llama.cpp GGUF File Parsing GEMMA4A Heap-based Buffer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31124</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1074/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of llama.cpp. User interaction is required to exploit this vulnerability in that the target must load a malicious model file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-131832.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1073: llama.cpp MTMD Multimodal GGUF File Parsing Out-Of-Bounds Read Denial-of-Service Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30979</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1073/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to cause a denial of service on affected installations of llama.cpp. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 5.5. The following CVEs are assigned: CVE-2026-131831.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1072: llama.cpp  GGUF File Parsing Integer Overflow Denial-of-Service Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30911</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1072/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to create a denial-of-service condition on affected installations of llama.cpp. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 5.5. The following CVEs are assigned: CVE-2026-131830.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1071: llama.cpp GGUF File Parsing Integer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30203</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1071/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of llama.cpp. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-131828.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1070: Devman OpenCart Google Marketing Tools Extension product_id_key Deserialization of Untrusted Data Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31724</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1070/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Devman OpenCart Google Marketing Tools. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 9.8. The following CVEs are assigned: CVE-2026-126961.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1069: (0Day) BusyBox ftpd Directory Traversal Arbitrary File Read and Write Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-27555</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1069/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to create or delete arbitrary files or disclose sensitive information on affected installations of BusyBox. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5. The following CVEs are assigned: CVE-2026-136442.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1068: (0Day) Firebird SQL SRP Authentication Bypass Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30575</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1068/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to bypass authentication on affected installations of Firebird SQL. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 9.1. The following CVEs are assigned: CVE-2026-61580.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1067: (0Day) Bytebase DBHub MCP Incorrect Authorization Authentication Bypass Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-27635</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1067/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to bypass authentication on affected installations of Bytebase DBHub. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 9.8. The following CVEs are assigned: CVE-2026-136441.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1066: (0Day) Python Packaging Authority pip Configuration File Incorrect Permission Assignment Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-25377</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1066/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of Python Packaging Authority pip. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. User interaction on the part of a target user is also required. The ZDI has assigned a CVSS rating of 7.3. The following CVEs are assigned: CVE-2026-136440.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1065: (0Day) DeepSpeed _get_zero_stage Deserialization of Untrusted Data Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-29242</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1065/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of DeepSpeed. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-136439.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1064: (0Day) DeepSpeed build_engine_from_ds_checkpoint Deserialization of Untrusted Data Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-29241</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1064/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of DeepSpeed. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-136438.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1063: (0Day) DeepSpeed parse_optim_states Deserialization of Untrusted Data Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-29243</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1063/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of DeepSpeed. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-136437.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1062: (0Day) DeepSpeed torch_checkpoint_engine Deserialization of Untrusted Data Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-29214</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1062/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of DeepSpeed. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-136436.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1061: (0Day) DeepSpeed InferenceEngine Deserialization of Untrusted Data Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28091</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1061/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of DeepSpeed. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-136435.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1060: (0Day) Super Magic PHPSandbox Command Injection Sandbox Escape Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28102</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1060/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to bypass the sandbox on affected installations of Super Magic. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 9.8. The following CVEs are assigned: CVE-2026-136434.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1059: (0Day) PyTorch Foundation PyTorch torch_save_to_dcp Deserialization of Untrusted Data Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32834</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1059/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of PyTorch Foundation PyTorch. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-136433.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1058: (0Day) PyTorch Foundation PyTorch load_state_dict_from_url Deserialization of Untrusted Data Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32601</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1058/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of PyTorch Foundation PyTorch. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-136431.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1057: (0Day) PyTorch Foundation PyTorch AOTIModelPackageLoader  Directory Traversal Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-33055</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1057/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of PyTorch Foundation PyTorch. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-136430.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1056: (0Day) PyTorch Foundation PyTorch PT2 File Parsing Exposed Dangerous Method Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32653</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1056/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of PyTorch Foundation PyTorch. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.0. The following CVEs are assigned: CVE-2026-136429.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1055: (0Day) PyTorch Foundation PyTorch load_compiled_function Deserialization of Untrusted Data Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32603</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1055/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of PyTorch Foundation PyTorch. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-136428.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1054: (0Day) PyTorch Foundation PyTorch FileSystemReader Deserialization of Untrusted Data Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32600</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1054/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of PyTorch. Interaction with this library is required to exploit this vulnerability but attack vectors may vary depending on the implementation. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-136432.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1053: (0Day) PyTorch Foundation PyTorch AOTIModelPackageLoader Command Injection Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32262</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1053/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of PyTorch. Interaction with this library is required to exploit this vulnerability but attack vectors may vary depending on the implementation. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-136427.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1052: (0Day) PyTorch Foundation PyTorch PT2 File Parsing Code Injection Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32602</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1052/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of PyTorch. Interaction with this library is required to exploit this vulnerability but attack vectors may vary depending on the implementation. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-136426.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1051: (0Day) Soda PDF Desktop App Object Use-After-Free Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31959</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1051/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Soda PDF Desktop. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-136425.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1050: (0Day) Soda PDF Desktop PDF File Parsing Memory Corruption Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31961</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1050/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Soda PDF Desktop. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-136424.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1049: (0Day) Soda PDF Desktop PDF File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31960</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1049/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Soda PDF Desktop. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-136423.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1048: (0Day) Soda PDF Desktop PDF File Parsing Memory Corruption Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31995</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1048/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Soda PDF Desktop. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-136422.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1047: (0Day) rocket.chat Server-Side Request Forgery Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-29853</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1047/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to disclose sensitive information on affected installations of rocket.chat. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.4. The following CVEs are assigned: CVE-2026-136421.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1046: (0Day) Texas Instruments Smart Amplifier Driver for Speakers Stack-based Buffer Overflow Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-29133</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1046/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of Texas Instruments Smart Amplifier Driver for Speakers. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1045: (0Day) Devin Desktop Uncontrolled Search Path Element Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-33385</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1045/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of Devin Desktop. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.3. The following CVEs are assigned: CVE-2026-136534.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1044: (0Day) GNU Inetutils FTP Client File Retrieval Command Injection Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-29119</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1044/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of GNU Inetutils FTP Client. User interaction is required to exploit this vulnerability in that the target must interact with a malicious FTP server. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-136613.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1043: (0Day) GNU Inetutils talkd Stack-based Buffer Overflow Denial-of-Service Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-29120</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1043/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to create a denial-of-service condition on affected installations of GNU Inetutils. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 5.9. The following CVEs are assigned: CVE-2026-136614.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1042: Parallels Desktop CSHAShellExt Improper Access Control Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30030</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1042/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of Parallels Desktop. An attacker must first obtain the ability to execute low-privileged code on the target guest system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-121756.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1041: Parallels Desktop Handle-based Rename Time-Of-Check Time-Of-Use Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30608</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1041/</link>
+      <description><![CDATA[This vulnerability allows local attackers to disclose sensitive information on affected installations of Parallels Desktop. An attacker must first obtain the ability to execute low-privileged code on the target guest system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5. The following CVEs are assigned: CVE-2026-121755.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1040: Parallels Desktop inittool2 Link Following Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30268</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1040/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of Parallels Desktop. An attacker must first obtain the ability to execute low-privileged code on the target host system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-121754.]]></description>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1039: Oracle PeopleSoft register Incorrect Authorization Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32013</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1039/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Oracle PeopleSoft. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 9.9. The following CVEs are assigned: CVE-2026-35273.]]></description>
+      <pubDate>Thu, 19 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1038: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A OCPP UpdateFirmware Out-Of-Bounds Write Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-29487</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1038/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-131813.]]></description>
+      <pubDate>Thu, 19 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1037: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A OCPP Backend Configuration Authentication Bypass Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-29063</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1037/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to bypass authentication on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.6. The following CVEs are assigned: CVE-2026-131809.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1036: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A Wi-Fi Configuration Server Missing Authentication Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-29068</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1036/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to modify Wi-Fi configuration on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.3. The following CVEs are assigned: CVE-2026-131808.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1035: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A Download of Code Without Integrity Check Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28957</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1035/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-131810.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1034: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A FTP URL Path Parsing Stack-based Buffer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28960</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1034/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-131812.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1033: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A OCPP GetConfiguration Stack-based Buffer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28968</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1033/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-131807.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1032: (0Day) (Pwn2Own) United Chargers Grizzl-E Smart 40A OCPP Backend Configuration Hard-Coded Credentials Authentication Bypass Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-29056</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1032/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to bypass authentication on affected installations of United Chargers Grizzl-E Smart 40A EV chargers. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.6. The following CVEs are assigned: CVE-2026-131811.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1031: (0Day) LiteLLM MCP Command Injection Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31815</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1031/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of LiteLLM. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.2. The following CVEs are assigned: CVE-2026-136535.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1030: (0Day) G DATA Total Security TSNxGService Link Following Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28663</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1030/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of G DATA Total Security. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-19776.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1029: (0Day) G DATA Total Security AVKProxy Link Following Denial-of-Service Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28662</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1029/</link>
+      <description><![CDATA[This vulnerability allows local attackers to create a denial-of-service condition on affected installations of G DATA Total Security. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.1. The following CVEs are assigned: CVE-2026-19777.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1028: (0Day) G DATA Total Security Backup Service Uncontrolled Search Path Element Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28666</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1028/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of G DATA Total Security. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.3. The following CVEs are assigned: CVE-2026-19779.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1027: (0Day) Open Robotics RViz fillIndexBuffer Heap-based Buffer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32652</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1027/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-134052.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1026: (0Day) Open Robotics RViz XYZPCTransformer PointField Out-Of-Bounds Read Denial-of-Service Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32642</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1026/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5. The following CVEs are assigned: CVE-2026-134051.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1025: (0Day) Open Robotics RViz AxisColorPCTransformer PointField Out-Of-Bounds Read Denial-of-Service Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32646</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1025/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5. The following CVEs are assigned: CVE-2026-134050.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1024: (0Day) Open Robotics RViz RGBF32PCTransformer PointField Out-Of-Bounds Read Denial-of-Service Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32644</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1024/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5. The following CVEs are assigned: CVE-2026-134049.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1023: (0Day) Open Robotics RViz RGB8PCTransformer PointField Out-Of-Bounds Read Denial-of-Service Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32643</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1023/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5. The following CVEs are assigned: CVE-2026-134048.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1022: (0Day) Open Robotics RViz IntensityPCTransformer PointField Out-Of-Bounds Read Denial-of-Service Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32645</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1022/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5. The following CVEs are assigned: CVE-2026-134047.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1021: (0Day) Open Robotics RViz MapDisplay OccupancyGridUpdate Out-Of-Bounds Read Denial-of-Service Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32122</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1021/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5. The following CVEs are assigned: CVE-2026-134046.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1020: (0Day) Open Robotics RViz PointCloud2Display PointField Out-of-Bounds Read Denial-of-Service Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32123</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1020/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of Open Robotics RViz. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5. The following CVEs are assigned: CVE-2026-134045.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1019: (0Day) Open Robotics ROS 2 sros2 load_policy XML External Entity Processing Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32121</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1019/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to disclose sensitive information on affected installations of Open Robotics ROS 2. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 5.5. The following CVEs are assigned: CVE-2026-134044.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1018: (0Day) Krita TIF File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28517</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1018/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-134043.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1017: (0Day) Krita HEIC File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28656</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1017/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-134042.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1016: (0Day) Krita EXR File Parsing Integer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28752</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1016/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-134041.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1015: (0Day) Krita HEIC File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28657</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1015/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-134040.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1014: (0Day) Krita TIFF File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28771</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1014/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-134039.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1013: (0Day) Krita PSB File Parsing Integer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28905</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1013/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-134038.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1012: (0Day) Krita ASL File Parsing Integer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28906</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1012/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-134037.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1011: (0Day) Krita ABR File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28785</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1011/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-134036.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1010: (0Day) Krita JC2 File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28646</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1010/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Krita. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-134035.]]></description>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1009: (Pwn2Own) Synology DiskStation DS925+ C2 Identity Plugin Exposed Dangerous Method Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28325</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1009/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to disclose sensitive information on affected installations of Synology DiskStation DS925+ devices. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5. The following CVEs are assigned: CVE-2025-14713.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1008: (Pwn2Own) Qualcomm Technologies QCA7005 GreenPhy Heap-based Buffer Overflow Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28952</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1008/</link>
+      <description><![CDATA[This vulnerability allows physically present attackers to execute arbitrary code on affected installations of Qualcomm Technologies QCA7005 powerline chips. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.8. The following CVEs are assigned: CVE-2026-25293.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1007: Linux Kernel BPF Local Storage Race Condition Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-33360</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1007/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of Linux Kernel. An attacker must first obtain the ability to execute high-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.5.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1006: Linux Kernel skbuff skb_zerocopy Improper Ownership Management Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-33367</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1006/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of Linux Kernel. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-99284.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1005: Linux Kernel eBPF Race Condition Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-31417</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1005/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of Linux Kernel. An attacker must first obtain the ability to execute high-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.5.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1004: Linux Kernel KSMBD Request Buffer Use of Uninitialized Resource Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32436</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1004/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to disclose sensitive information on affected installations of Linux Kernel KSMBD. Authentication is not required to exploit this vulnerability. However, only systems with ksmbd enabled are vulnerable. The ZDI has assigned a CVSS rating of 6.3. The following CVEs are assigned: CVE-2026-99534.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1003: Linux Kernel ksmbd smb_inherit_dacl Out-Of-Bounds Read Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30364</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1003/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to disclose sensitive information on affected installations of Linux Kernel. Authentication is required to exploit this vulnerability. However, only systems with ksmbd enabled are vulnerable. The ZDI has assigned a CVSS rating of 7.1. The following CVEs are assigned: CVE-2026-64138.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1002: Linux Kernel Net Scheduler Qdisc Improper Validation of Array Index Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-33072</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1002/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of Linux Kernel. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-98797.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1001: Linux Kernel SCTP Subsystem Race Condition Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32927</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1001/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of Linux Kernel. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-98130.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-1000: Linux Kernel GSM Multiplexing Race Condition Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-25086</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-1000/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of Linux Kernel. An attacker must first obtain the ability to execute high-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2024-50073.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-999: Linux Kernel Proc File System Pagemap Scan Use-After-Free Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-33264</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-999/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of Linux Kernel. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.8.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-998: Linux Kernel KSMBD SMB Direct Integer Underflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-33549</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-998/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Linux Kernel KSMBD. Authentication may or may not be required to exploit this vulnerability, depending upon configuration. Only systems with SMB Direct enabled are vulnerable. The ZDI has assigned a CVSS rating of 9.0. The following CVEs are assigned: CVE-2026-99388.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-997: SmarterTools SmarterMail Insufficient Entropy Authentication Bypass Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-33568</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-997/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to bypass authentication on affected installations of SmarterTools SmarterMail. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 9.1. The following CVEs are assigned: CVE-2026-126969.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-996: SmarterTools SmarterMail Missing Authorization Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-33567</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-996/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to disclose sensitive information on affected installations of SmarterTools SmarterMail. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5. The following CVEs are assigned: CVE-2026-126968.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-995: SmarterTools SmarterMail Missing Authorization Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-33566</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-995/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to escalate privileges on affected installations of SmarterTools SmarterMail. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-126966.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-994: SmarterTools SmarterMail File Edit API Directory Traversal Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30742</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-994/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of SmarterTools SmarterMail. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-126967.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-993: ATEN eco DC chartDefine SQL Injection Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-29124</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-993/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to disclose sensitive information on affected installations of ATEN eco DC. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 2.7. The following CVEs are assigned: CVE-2026-126965.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-992: ATEN eco DC fwDeletes.json Directory Traversal Arbitrary File Deletion Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28621</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-992/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to delete arbitrary files on affected installations of ATEN eco DC. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 5.5. The following CVEs are assigned: CVE-2026-126964.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-991: Hinemos Agent Improper Certificate Validation Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28837</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-991/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of Hinemos Agent. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-126963.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-990: open62541 Subscription Use-After-Free Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30231</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-990/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of open62541. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-126962.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-989: TrendAI Apex One Uncontrolled Search Path Element Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30350</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-989/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of TrendAI Apex One server. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-111777.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-988: TrendAI Vision One Security Agent Origin Validation Error Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-29910</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-988/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of TrendAI Vision One Security Agent. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-111790.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-987: TrendAI Vision One Security Agent TMBMServer Type Confusion Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30180</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-987/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of TrendAI Vision One Security Agent. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-111788.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-986: TrendAI Vision One Security Agent TMBMServer Type Confusion Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30179</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-986/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of TrendAI Vision One Security Agent. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-111787.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-985: TrendAI Vision One Security Agent TMBMServer Out-Of-Bounds Read Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30215</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-985/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of TrendAI Vision One Security Agent. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-111786.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-984: TrendAI Vision One Security Agent TMBMServer Heap-based Buffer Overflow Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30002</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-984/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of TrendAI Vision One Security Agent. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-111785.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-983: TrendAI Vision One Security Agent TMBMServer Null Pointer Dereference Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-29793</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-983/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of TrendAI Vision One Security Agent. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-111784.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-982: TrendAI Vision One Security Agent TMBMServer Heap-based Buffer Overflow Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-29794</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-982/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of TrendAI Vision One Security Agent. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-111783.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-981: TrendAI Vision One Security Agent Stack-based Buffer Overflow Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30858</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-981/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of TrendAI Vision One Security Agent. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-111782.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-980: TrendAI Vision One Security Agent Origin Validation Error Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30497</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-980/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of TrendAI Vision One Security Agent. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-111781.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-979: TrendAI Vision One Security Agent Origin Validation Error Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30282</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-979/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of TrendAI Vision One Security Agent. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-111780.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-978: TrendAI Vision One Security Agent Origin Validation Error Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30436</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-978/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of TrendAI Vision One Security Agent. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-111779.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-977: TrendAI Vision One Security Agent Origin Validation Error Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30495</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-977/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of TrendAI Vision One Security Agent. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-111778.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-976: llama.cpp GGUF File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-34558</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-976/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of llama.cpp. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-126975.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-975: llama.cpp GGUF File Parsing Integer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-34553</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-975/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of llama.cpp. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-126974.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-974: PostgreSQL pg_stat_statements Extension Heap-based Buffer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30576</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-974/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of PostgreSQL. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-14676.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-973: EmbedThis Updater Heap-based Buffer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-27329</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-973/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of EmbedThis Updater. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 7.5.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-972: Hong Kong University Data Intelligence Lab nanobot WebFetch Server-Side Request Forgery Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-29369</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-972/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to disclose sensitive information on affected installations of Hong Kong University Data Intelligence Lab nanobot. Interaction with this product is required to exploit this vulnerability but attack vectors may vary depending on the implementation. The ZDI has assigned a CVSS rating of 9.3.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-971: Signal for Windows Insufficient UI Warning Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28556</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-971/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Signal for Windows. User interaction is required to exploit this vulnerability in that the target must accept a malicious attachment. The ZDI has assigned a CVSS rating of 7.5.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-970: libhevc HEVC Video Decoder Out-Of-Bounds Read Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-33216</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-970/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to disclose sensitive information on affected installations of Google Android. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 4.4.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-969: libhevc HEVC Video Decoder Out-Of-Bounds Read Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-33215</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-969/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to disclose sensitive information on affected installations of Google Android. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file. The ZDI has assigned a CVSS rating of 4.4.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-968: (Pwn2Own) OpenAI Codex GUI OpenProjectInCodex Argument Injection Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-35548</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-968/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of OpenAI Codex. User interaction is required to exploit this vulnerability in that the target must open a malicious file. The ZDI has assigned a CVSS rating of 7.8. The following CVEs are assigned: CVE-2026-110930.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-967: Microsoft Windows Remote Desktop Connection Client Link Following Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-30756</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-967/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Microsoft Windows. User interaction is required to exploit this vulnerability in that the target must connect to a malicious server. The ZDI has assigned a CVSS rating of 7.5. The following CVEs are assigned: CVE-2026-119824.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-966: (Pwn2Own) Philips Hue Bridge HomeKit Authentication Bypass Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28468</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-966/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to bypass authentication on affected installations of Philips Hue Bridge. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.1. The following CVEs are assigned: CVE-2026-126981.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-965: (Pwn2Own) Philips Hue Bridge HomeKit Observable Discrepancy Information Disclosure Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28470</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-965/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to disclose sensitive information on affected installations of Philips Hue Bridge. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 6.5. The following CVEs are assigned: CVE-2026-126980.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-964: (Pwn2Own) Philips Hue Bridge HomeKit Accessory Protocol chacha20_decrypt Integer Underflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28332</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-964/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of Philips Hue Bridge. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-126979.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-963: (Pwn2Own) Philips Hue Bridge hap_pair_setup_handler Heap-based Buffer Overflow Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28434</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-963/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of Philips Hue Bridge. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-126978.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-962: (Pwn2Own) Philips Hue Bridge HomeKit Pair-Setup Default Password Authentication Bypass Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-28323</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-962/</link>
+      <description><![CDATA[This vulnerability allows network-adjacent attackers to bypass authentication on affected installations of Philips Hue Bridge. Authentication is not required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.1. The following CVEs are assigned: CVE-2026-126977.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-961: Winmate HotTab Exposed Dangerous Function Local Privilege Escalation Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-29948</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-961/</link>
+      <description><![CDATA[This vulnerability allows local attackers to escalate privileges on affected installations of Winmate devices. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-118630.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+    <item>
+      <title><![CDATA[ZDI-26-960: Netgate pfSense CE XMLRPC Incorrect Authorization Remote Code Execution Vulnerability]]></title>
+      <guid isPermaLink="false">ZDI-CAN-32353</guid>
+      <link>http://www.zerodayinitiative.com/advisories/ZDI-26-960/</link>
+      <description><![CDATA[This vulnerability allows remote attackers to execute arbitrary code on affected installations of Netgate pfSense. Authentication is required to exploit this vulnerability. The ZDI has assigned a CVSS rating of 8.8. The following CVEs are assigned: CVE-2026-92182.]]></description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 -0600</pubDate>
+    </item>
+    
+  </channel>
+</rss>
